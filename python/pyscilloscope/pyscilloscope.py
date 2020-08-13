@@ -70,11 +70,13 @@ class PySilloscope(object):
             aout_list.append(aout)
         return l, aout_list
 
-### MAIN PROGRAM #####    
-# this is a brutal infinite loop calling your realtime data plot
-pscope = PySilloscope('/dev/ttyACM1',115200,window_width=1000)
-while True: pscope.update()
-
-### END QtApp ####
-qt.QApplication.exec_() # you MUST put this at the end
-##################
+if __name__=='__main__':
+    
+    ### MAIN PROGRAM #####    
+    # this is a brutal infinite loop calling your realtime data plot
+    pscope = PySilloscope('/dev/ttyACM1',115200,window_width=1000)
+    while True: pscope.update()
+    
+    ### END QtApp ####
+    qt.QApplication.exec_() # you MUST put this at the end
+    ##################
