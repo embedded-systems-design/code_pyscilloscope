@@ -1,3 +1,5 @@
 *pyscilloscope.egg-info*
 *.whl
 *.pyc
+build*
+dist*
