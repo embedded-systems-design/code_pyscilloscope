@@ -38,7 +38,8 @@ class PySilloscope(object):
 
         self.string_stream = ''
     def update(self):
-        l,aout_list = self.readlines()
+        aout_list = self.readlines()
+        l = len(aout_list)
         self.Xm[:-l] = self.Xm[l:]
         # self.y[:-l] = self.y[l:]
         self.Xm[-l:] = aout_list                 # vector containing the instantaneous values      
@@ -59,16 +60,20 @@ class PySilloscope(object):
         lines = self.string_stream.split('\r\n')
         self.string_stream = lines[-1]
         lines = lines[:-1]
-        l = len(lines)
+        # l = len(lines)
         aout_list = []
         for line in lines:
-            time,ain,a0,a1,a2 = line.split(',')
-            time = float(time)
-            ain = float(ain)
-            aout = float (a1)
-            aout = aout/4095*3.3
-            aout_list.append(aout)
-        return l, aout_list
+            # print(line)
+            try:
+                time,ain,a0,a1,a2 = line.split(',')
+                time = float(time)
+                ain = float(ain)
+                aout = float (a1)
+                aout = aout/4095*3.3
+                aout_list.append(aout)
+            except ValueError as e:
+                print(e)
+        return aout_list
 
 if __name__=='__main__':
     
