@@ -68,7 +68,7 @@ class PySilloscope(object):
                 time,ain,a0,a1,a2 = line.split(',')
                 time = float(time)
                 ain = float(ain)
-                aout = float (a1)
+                aout = float (a0)
                 aout = aout/4095*3.3
                 aout_list.append(aout)
             except ValueError as e:

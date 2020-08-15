@@ -12,6 +12,6 @@ import PyQt5.Qt as qt
 
 if __name__=='__main__':
     
-    pscope = PySilloscope('/dev/ttyACM1',115200,window_width=1000)
+    pscope = PySilloscope('/dev/ttyACM0',115200,window_width=250)
     while True: pscope.update()
     qt.QApplication.exec_()
