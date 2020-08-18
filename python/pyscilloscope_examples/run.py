@@ -7,7 +7,7 @@ Created on Wed Aug 12 20:13:53 2020
 """
 
 
-from pyscilloscope.pyscilloscope import PySilloscope
+from pyscilloscope.serial_scope import SerialScope
 import PyQt5.Qt as qt
 
 if __name__=='__main__':

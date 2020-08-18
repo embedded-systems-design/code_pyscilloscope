@@ -18,7 +18,7 @@ import PyQt5.QtWidgets as pw
 import pyqtgraph as pg
 import serial
 
-class PySilloscope(object):
+class SerialScope(object):
 
     def __init__(self,comport,baudrate=9600,window_width = 100,buffer_width = 1000,scaling = None):
     
@@ -79,7 +79,7 @@ if __name__=='__main__':
     
     ### MAIN PROGRAM #####    
     # this is a brutal infinite loop calling your realtime data plot
-    pscope = PySilloscope('/dev/ttyACM1',115200,window_width=1000)
+    pscope = SerialScope('/dev/ttyACM1',115200,window_width=1000)
     while True: pscope.update()
     
     ### END QtApp ####
