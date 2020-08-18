@@ -74,13 +74,17 @@ class SerialScope(object):
             except ValueError as e:
                 print(e)
         return aout_list
+    def run(self):
+        while True: 
+            self.update()
+        
 
 if __name__=='__main__':
     
     ### MAIN PROGRAM #####    
     # this is a brutal infinite loop calling your realtime data plot
-    pscope = SerialScope('/dev/ttyACM1',115200,window_width=1000)
-    while True: pscope.update()
+    pscope = SerialScope('/dev/ttyACM0',115200,window_width=1000)
+    pscope.run()
     
     ### END QtApp ####
     qt.QApplication.exec_() # you MUST put this at the end
