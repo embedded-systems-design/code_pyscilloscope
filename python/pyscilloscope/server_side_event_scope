@@ -66,8 +66,8 @@ class ServerSideEventScope(object):
             self.Xm[-l:] = self.values_a[:self.data_width] # vector containing the instantaneous values      
             # # self.y[-l:] = aout_list                 # vector containing the instantaneous values      
             self.ptr += l                              # update x position for displaying the curve
-            self.curve.setData(self.Xm)                     # set the curve with this data
-            self.curve.setPos(self.ptr,0)                   # set x position in the graph to 0
+            self.curve.setData(self.values_a)                     # set the curve with this data
+            self.curve.setPos(0,0)                   # set x position in the graph to 0
             qt.QApplication.processEvents()    # you MUST process the plot now
             
     def run(self):
