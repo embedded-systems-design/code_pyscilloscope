@@ -1,0 +1,1718 @@
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 1152
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 45       		.byte	69
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 03       		.byte	3
+  34 0005 52       		.byte	82
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 01       		.byte	1
+  38 0009 5B       		.byte	91
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 01       		.byte	1
+  42 000d 64       		.byte	100
+  43 000e 00       		.byte	0
+  44 000f 40       		.byte	64
+  45 0010 02       		.byte	2
+  46 0011 01       		.byte	1
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 01       		.byte	1
+  50 0015 03       		.byte	3
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 01       		.byte	1
+  54 0019 05       		.byte	5
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 01       		.byte	1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 2
+
+
+  58 001d 07       		.byte	7
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 0E       		.byte	14
+  62 0021 08       		.byte	8
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 30       		.byte	48
+  66 0025 09       		.byte	9
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 33       		.byte	51
+  70 0029 0A       		.byte	10
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 43       		.byte	67
+  74 002d 0B       		.byte	11
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 14       		.byte	20
+  78 0031 0C       		.byte	12
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 32       		.byte	50
+  82 0035 0D       		.byte	13
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 0E       		.byte	14
+  86 0039 0E       		.byte	14
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 20       		.byte	32
+  90 003d 0F       		.byte	15
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 01       		.byte	1
+  94 0041 15       		.byte	21
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 01       		.byte	1
+  98 0045 17       		.byte	23
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 0E       		.byte	14
+ 102 0049 18       		.byte	24
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 24       		.byte	36
+ 106 004d 19       		.byte	25
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 0E       		.byte	14
+ 110 0051 1A       		.byte	26
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 24       		.byte	36
+ 114 0055 1B       		.byte	27
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 0D       		.byte	13
+ 118 0059 40       		.byte	64
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 05       		.byte	5
+ 122 005d 41       		.byte	65
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 03       		.byte	3
+ 126 0061 42       		.byte	66
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 03       		.byte	3
+ 130 0065 43       		.byte	67
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 02       		.byte	2
+ 134 0069 44       		.byte	68
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 0A       		.byte	10
+ 138 006d 45       		.byte	69
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 07       		.byte	7
+ 142 0071 46       		.byte	70
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 09       		.byte	9
+ 146 0075 47       		.byte	71
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 04       		.byte	4
+ 150 0079 48       		.byte	72
+ 151 007a 01       		.byte	1
+ 152 007b 40       		.byte	64
+ 153 007c 01       		.byte	1
+ 154 007d 49       		.byte	73
+ 155 007e 01       		.byte	1
+ 156 007f 40       		.byte	64
+ 157 0080 04       		.byte	4
+ 158 0081 4C       		.byte	76
+ 159 0082 01       		.byte	1
+ 160 0083 40       		.byte	64
+ 161 0084 05       		.byte	5
+ 162 0085 4D       		.byte	77
+ 163 0086 01       		.byte	1
+ 164 0087 40       		.byte	64
+ 165 0088 07       		.byte	7
+ 166 0089 50       		.byte	80
+ 167 008a 01       		.byte	1
+ 168 008b 40       		.byte	64
+ 169 008c 02       		.byte	2
+ 170 008d 51       		.byte	81
+ 171 008e 01       		.byte	1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 4
+
+
+ 172 008f 40       		.byte	64
+ 173 0090 7E       		.byte	126
+ 174 0091 02       		.byte	2
+ 175 0092 10       		.byte	16
+ 176 0093 01       		.byte	1
+ 177 0094 11       		.byte	17
+ 178 0095 05       		.byte	5
+ 179 0096 7C       		.byte	124
+ 180 0097 40       		.byte	64
+ 181 0098 27       		.byte	39
+ 182 0099 84       		.byte	-124
+ 183 009a 8B       		.byte	-117
+ 184 009b 02       		.byte	2
+ 185 009c E0       		.byte	-32
+ 186 009d 80       		.byte	-128
+ 187 009e E6       		.byte	-26
+ 188 009f 10       		.byte	16
+ 189 00a0 E2       		.byte	-30
+ 190 00a1 02       		.byte	2
+ 191 00a2 EE       		.byte	-18
+ 192 00a3 40       		.byte	64
+ 193 00a4 EE       		.byte	-18
+ 194 00a5 04       		.byte	4
+ 195 00a6 02       		.byte	2
+ 196 00a7 02       		.byte	2
+ 197 00a8 03       		.byte	3
+ 198 00a9 02       		.byte	2
+ 199 00aa 0A       		.byte	10
+ 200 00ab 01       		.byte	1
+ 201 00ac 0F       		.byte	15
+ 202 00ad 01       		.byte	1
+ 203 00ae 33       		.byte	51
+ 204 00af 02       		.byte	2
+ 205 00b0 34       		.byte	52
+ 206 00b1 02       		.byte	2
+ 207 00b2 35       		.byte	53
+ 208 00b3 01       		.byte	1
+ 209 00b4 36       		.byte	54
+ 210 00b5 01       		.byte	1
+ 211 00b6 58       		.byte	88
+ 212 00b7 04       		.byte	4
+ 213 00b8 59       		.byte	89
+ 214 00b9 04       		.byte	4
+ 215 00ba 5F       		.byte	95
+ 216 00bb 01       		.byte	1
+ 217 00bc D8       		.byte	-40
+ 218 00bd 04       		.byte	4
+ 219 00be D9       		.byte	-39
+ 220 00bf 04       		.byte	4
+ 221 00c0 DF       		.byte	-33
+ 222 00c1 01       		.byte	1
+ 223 00c2 00       		.byte	0
+ 224 00c3 10       		.byte	16
+ 225 00c4 01       		.byte	1
+ 226 00c5 82       		.byte	-126
+ 227 00c6 02       		.byte	2
+ 228 00c7 20       		.byte	32
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 5
+
+
+ 229 00c8 05       		.byte	5
+ 230 00c9 80       		.byte	-128
+ 231 00ca 06       		.byte	6
+ 232 00cb 08       		.byte	8
+ 233 00cc 07       		.byte	7
+ 234 00cd 60       		.byte	96
+ 235 00ce 09       		.byte	9
+ 236 00cf 20       		.byte	32
+ 237 00d0 0C       		.byte	12
+ 238 00d1 02       		.byte	2
+ 239 00d2 0D       		.byte	13
+ 240 00d3 28       		.byte	40
+ 241 00d4 0E       		.byte	14
+ 242 00d5 02       		.byte	2
+ 243 00d6 10       		.byte	16
+ 244 00d7 02       		.byte	2
+ 245 00d8 13       		.byte	19
+ 246 00d9 20       		.byte	32
+ 247 00da 17       		.byte	23
+ 248 00db 08       		.byte	8
+ 249 00dc 1D       		.byte	29
+ 250 00dd 30       		.byte	48
+ 251 00de 1E       		.byte	30
+ 252 00df 02       		.byte	2
+ 253 00e0 24       		.byte	36
+ 254 00e1 18       		.byte	24
+ 255 00e2 25       		.byte	37
+ 256 00e3 08       		.byte	8
+ 257 00e4 26       		.byte	38
+ 258 00e5 28       		.byte	40
+ 259 00e6 27       		.byte	39
+ 260 00e7 0C       		.byte	12
+ 261 00e8 29       		.byte	41
+ 262 00e9 92       		.byte	-110
+ 263 00ea 2C       		.byte	44
+ 264 00eb 02       		.byte	2
+ 265 00ec 2D       		.byte	45
+ 266 00ed 02       		.byte	2
+ 267 00ee 2F       		.byte	47
+ 268 00ef 20       		.byte	32
+ 269 00f0 30       		.byte	48
+ 270 00f1 02       		.byte	2
+ 271 00f2 33       		.byte	51
+ 272 00f3 34       		.byte	52
+ 273 00f4 35       		.byte	53
+ 274 00f5 90       		.byte	-112
+ 275 00f6 37       		.byte	55
+ 276 00f7 08       		.byte	8
+ 277 00f8 38       		.byte	56
+ 278 00f9 10       		.byte	16
+ 279 00fa 3C       		.byte	60
+ 280 00fb 10       		.byte	16
+ 281 00fc 3D       		.byte	61
+ 282 00fd 41       		.byte	65
+ 283 00fe 91       		.byte	-111
+ 284 00ff 41       		.byte	65
+ 285 0100 94       		.byte	-108
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 6
+
+
+ 286 0101 08       		.byte	8
+ 287 0102 99       		.byte	-103
+ 288 0103 82       		.byte	-126
+ 289 0104 9A       		.byte	-102
+ 290 0105 08       		.byte	8
+ 291 0106 9B       		.byte	-101
+ 292 0107 70       		.byte	112
+ 293 0108 9D       		.byte	-99
+ 294 0109 10       		.byte	16
+ 295 010a A0       		.byte	-96
+ 296 010b 02       		.byte	2
+ 297 010c A5       		.byte	-91
+ 298 010d 08       		.byte	8
+ 299 010e A6       		.byte	-90
+ 300 010f 01       		.byte	1
+ 301 0110 A9       		.byte	-87
+ 302 0111 40       		.byte	64
+ 303 0112 C0       		.byte	-64
+ 304 0113 FF       		.byte	-1
+ 305 0114 C2       		.byte	-62
+ 306 0115 F2       		.byte	-14
+ 307 0116 C4       		.byte	-60
+ 308 0117 23       		.byte	35
+ 309 0118 CA       		.byte	-54
+ 310 0119 DD       		.byte	-35
+ 311 011a CC       		.byte	-52
+ 312 011b 77       		.byte	119
+ 313 011c CE       		.byte	-50
+ 314 011d B4       		.byte	-76
+ 315 011e EA       		.byte	-22
+ 316 011f 01       		.byte	1
+ 317 0120 EE       		.byte	-18
+ 318 0121 04       		.byte	4
+ 319 0122 03       		.byte	3
+ 320 0123 02       		.byte	2
+ 321 0124 04       		.byte	4
+ 322 0125 01       		.byte	1
+ 323 0126 13       		.byte	19
+ 324 0127 01       		.byte	1
+ 325 0128 1E       		.byte	30
+ 326 0129 03       		.byte	3
+ 327 012a 21       		.byte	33
+ 328 012b 01       		.byte	1
+ 329 012c 30       		.byte	48
+ 330 012d 01       		.byte	1
+ 331 012e 31       		.byte	49
+ 332 012f 03       		.byte	3
+ 333 0130 34       		.byte	52
+ 334 0131 02       		.byte	2
+ 335 0132 56       		.byte	86
+ 336 0133 08       		.byte	8
+ 337 0134 58       		.byte	88
+ 338 0135 0C       		.byte	12
+ 339 0136 59       		.byte	89
+ 340 0137 04       		.byte	4
+ 341 0138 5B       		.byte	91
+ 342 0139 04       		.byte	4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 7
+
+
+ 343 013a 5C       		.byte	92
+ 344 013b 90       		.byte	-112
+ 345 013c 5D       		.byte	93
+ 346 013d 90       		.byte	-112
+ 347 013e 5F       		.byte	95
+ 348 013f 01       		.byte	1
+ 349 0140 80       		.byte	-128
+ 350 0141 80       		.byte	-128
+ 351 0142 82       		.byte	-126
+ 352 0143 40       		.byte	64
+ 353 0144 83       		.byte	-125
+ 354 0145 02       		.byte	2
+ 355 0146 84       		.byte	-124
+ 356 0147 40       		.byte	64
+ 357 0148 86       		.byte	-122
+ 358 0149 80       		.byte	-128
+ 359 014a 87       		.byte	-121
+ 360 014b 01       		.byte	1
+ 361 014c 8A       		.byte	-118
+ 362 014d 02       		.byte	2
+ 363 014e 8C       		.byte	-116
+ 364 014f 10       		.byte	16
+ 365 0150 8D       		.byte	-115
+ 366 0151 04       		.byte	4
+ 367 0152 8E       		.byte	-114
+ 368 0153 20       		.byte	32
+ 369 0154 91       		.byte	-111
+ 370 0155 01       		.byte	1
+ 371 0156 92       		.byte	-110
+ 372 0157 08       		.byte	8
+ 373 0158 96       		.byte	-106
+ 374 0159 04       		.byte	4
+ 375 015a 97       		.byte	-105
+ 376 015b 08       		.byte	8
+ 377 015c 98       		.byte	-104
+ 378 015d 08       		.byte	8
+ 379 015e 99       		.byte	-103
+ 380 015f 02       		.byte	2
+ 381 0160 9E       		.byte	-98
+ 382 0161 01       		.byte	1
+ 383 0162 A0       		.byte	-96
+ 384 0163 04       		.byte	4
+ 385 0164 A3       		.byte	-93
+ 386 0165 04       		.byte	4
+ 387 0166 A4       		.byte	-92
+ 388 0167 20       		.byte	32
+ 389 0168 A6       		.byte	-90
+ 390 0169 10       		.byte	16
+ 391 016a A7       		.byte	-89
+ 392 016b 10       		.byte	16
+ 393 016c A8       		.byte	-88
+ 394 016d 01       		.byte	1
+ 395 016e AC       		.byte	-84
+ 396 016f 02       		.byte	2
+ 397 0170 AD       		.byte	-83
+ 398 0171 08       		.byte	8
+ 399 0172 B3       		.byte	-77
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 8
+
+
+ 400 0173 1F       		.byte	31
+ 401 0174 B4       		.byte	-76
+ 402 0175 FF       		.byte	-1
+ 403 0176 B9       		.byte	-71
+ 404 0177 08       		.byte	8
+ 405 0178 BE       		.byte	-66
+ 406 0179 10       		.byte	16
+ 407 017a BF       		.byte	-65
+ 408 017b 04       		.byte	4
+ 409 017c D6       		.byte	-42
+ 410 017d 02       		.byte	2
+ 411 017e D7       		.byte	-41
+ 412 017f 39       		.byte	57
+ 413 0180 D8       		.byte	-40
+ 414 0181 04       		.byte	4
+ 415 0182 D9       		.byte	-39
+ 416 0183 04       		.byte	4
+ 417 0184 DB       		.byte	-37
+ 418 0185 0C       		.byte	12
+ 419 0186 DF       		.byte	-33
+ 420 0187 01       		.byte	1
+ 421 0188 00       		.byte	0
+ 422 0189 04       		.byte	4
+ 423 018a 04       		.byte	4
+ 424 018b 8A       		.byte	-118
+ 425 018c 05       		.byte	5
+ 426 018d 90       		.byte	-112
+ 427 018e 06       		.byte	6
+ 428 018f 20       		.byte	32
+ 429 0190 0A       		.byte	10
+ 430 0191 02       		.byte	2
+ 431 0192 0C       		.byte	12
+ 432 0193 02       		.byte	2
+ 433 0194 0D       		.byte	13
+ 434 0195 0A       		.byte	10
+ 435 0196 0E       		.byte	14
+ 436 0197 0A       		.byte	10
+ 437 0198 15       		.byte	21
+ 438 0199 01       		.byte	1
+ 439 019a 16       		.byte	22
+ 440 019b 0A       		.byte	10
+ 441 019c 17       		.byte	23
+ 442 019d 44       		.byte	68
+ 443 019e 18       		.byte	24
+ 444 019f 04       		.byte	4
+ 445 01a0 19       		.byte	25
+ 446 01a1 01       		.byte	1
+ 447 01a2 1A       		.byte	26
+ 448 01a3 40       		.byte	64
+ 449 01a4 1F       		.byte	31
+ 450 01a5 20       		.byte	32
+ 451 01a6 22       		.byte	34
+ 452 01a7 01       		.byte	1
+ 453 01a8 27       		.byte	39
+ 454 01a9 30       		.byte	48
+ 455 01aa 29       		.byte	41
+ 456 01ab 01       		.byte	1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 9
+
+
+ 457 01ac 2C       		.byte	44
+ 458 01ad 02       		.byte	2
+ 459 01ae 2D       		.byte	45
+ 460 01af 01       		.byte	1
+ 461 01b0 2E       		.byte	46
+ 462 01b1 10       		.byte	16
+ 463 01b2 2F       		.byte	47
+ 464 01b3 20       		.byte	32
+ 465 01b4 32       		.byte	50
+ 466 01b5 01       		.byte	1
+ 467 01b6 35       		.byte	53
+ 468 01b7 92       		.byte	-110
+ 469 01b8 36       		.byte	54
+ 470 01b9 05       		.byte	5
+ 471 01ba 3B       		.byte	59
+ 472 01bb 01       		.byte	1
+ 473 01bc 3D       		.byte	61
+ 474 01bd 80       		.byte	-128
+ 475 01be 3E       		.byte	62
+ 476 01bf 2A       		.byte	42
+ 477 01c0 58       		.byte	88
+ 478 01c1 40       		.byte	64
+ 479 01c2 5A       		.byte	90
+ 480 01c3 10       		.byte	16
+ 481 01c4 5B       		.byte	91
+ 482 01c5 10       		.byte	16
+ 483 01c6 5E       		.byte	94
+ 484 01c7 20       		.byte	32
+ 485 01c8 63       		.byte	99
+ 486 01c9 01       		.byte	1
+ 487 01ca 67       		.byte	103
+ 488 01cb 20       		.byte	32
+ 489 01cc 6C       		.byte	108
+ 490 01cd 01       		.byte	1
+ 491 01ce 6D       		.byte	109
+ 492 01cf 41       		.byte	65
+ 493 01d0 6E       		.byte	110
+ 494 01d1 08       		.byte	8
+ 495 01d2 6F       		.byte	111
+ 496 01d3 0C       		.byte	12
+ 497 01d4 76       		.byte	118
+ 498 01d5 0A       		.byte	10
+ 499 01d6 7B       		.byte	123
+ 500 01d7 02       		.byte	2
+ 501 01d8 7F       		.byte	127
+ 502 01d9 02       		.byte	2
+ 503 01da 89       		.byte	-119
+ 504 01db 48       		.byte	72
+ 505 01dc 90       		.byte	-112
+ 506 01dd 80       		.byte	-128
+ 507 01de 93       		.byte	-109
+ 508 01df 20       		.byte	32
+ 509 01e0 95       		.byte	-107
+ 510 01e1 80       		.byte	-128
+ 511 01e2 96       		.byte	-106
+ 512 01e3 40       		.byte	64
+ 513 01e4 98       		.byte	-104
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 10
+
+
+ 514 01e5 40       		.byte	64
+ 515 01e6 9D       		.byte	-99
+ 516 01e7 12       		.byte	18
+ 517 01e8 9E       		.byte	-98
+ 518 01e9 20       		.byte	32
+ 519 01ea 9F       		.byte	-97
+ 520 01eb 20       		.byte	32
+ 521 01ec A1       		.byte	-95
+ 522 01ed 02       		.byte	2
+ 523 01ee A2       		.byte	-94
+ 524 01ef 10       		.byte	16
+ 525 01f0 A3       		.byte	-93
+ 526 01f1 02       		.byte	2
+ 527 01f2 A5       		.byte	-91
+ 528 01f3 48       		.byte	72
+ 529 01f4 A6       		.byte	-90
+ 530 01f5 05       		.byte	5
+ 531 01f6 A7       		.byte	-89
+ 532 01f7 08       		.byte	8
+ 533 01f8 B6       		.byte	-74
+ 534 01f9 40       		.byte	64
+ 535 01fa C0       		.byte	-64
+ 536 01fb F4       		.byte	-12
+ 537 01fc C2       		.byte	-62
+ 538 01fd F1       		.byte	-15
+ 539 01fe C4       		.byte	-60
+ 540 01ff F0       		.byte	-16
+ 541 0200 CA       		.byte	-54
+ 542 0201 F1       		.byte	-15
+ 543 0202 CC       		.byte	-52
+ 544 0203 F1       		.byte	-15
+ 545 0204 CE       		.byte	-50
+ 546 0205 F1       		.byte	-15
+ 547 0206 D6       		.byte	-42
+ 548 0207 28       		.byte	40
+ 549 0208 D8       		.byte	-40
+ 550 0209 48       		.byte	72
+ 551 020a DE       		.byte	-34
+ 552 020b 18       		.byte	24
+ 553 020c EE       		.byte	-18
+ 554 020d 40       		.byte	64
+ 555 020e 1A       		.byte	26
+ 556 020f 02       		.byte	2
+ 557 0210 24       		.byte	36
+ 558 0211 01       		.byte	1
+ 559 0212 2B       		.byte	43
+ 560 0213 01       		.byte	1
+ 561 0214 2C       		.byte	44
+ 562 0215 01       		.byte	1
+ 563 0216 30       		.byte	48
+ 564 0217 02       		.byte	2
+ 565 0218 31       		.byte	49
+ 566 0219 01       		.byte	1
+ 567 021a 34       		.byte	52
+ 568 021b 01       		.byte	1
+ 569 021c 38       		.byte	56
+ 570 021d 20       		.byte	32
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 11
+
+
+ 571 021e 3E       		.byte	62
+ 572 021f 10       		.byte	16
+ 573 0220 52       		.byte	82
+ 574 0221 03       		.byte	3
+ 575 0222 53       		.byte	83
+ 576 0223 02       		.byte	2
+ 577 0224 58       		.byte	88
+ 578 0225 04       		.byte	4
+ 579 0226 59       		.byte	89
+ 580 0227 04       		.byte	4
+ 581 0228 5B       		.byte	91
+ 582 0229 04       		.byte	4
+ 583 022a 5F       		.byte	95
+ 584 022b 01       		.byte	1
+ 585 022c D4       		.byte	-44
+ 586 022d 01       		.byte	1
+ 587 022e D8       		.byte	-40
+ 588 022f 04       		.byte	4
+ 589 0230 D9       		.byte	-39
+ 590 0231 04       		.byte	4
+ 591 0232 DB       		.byte	-37
+ 592 0233 0C       		.byte	12
+ 593 0234 DF       		.byte	-33
+ 594 0235 01       		.byte	1
+ 595 0236 00       		.byte	0
+ 596 0237 14       		.byte	20
+ 597 0238 01       		.byte	1
+ 598 0239 02       		.byte	2
+ 599 023a 04       		.byte	4
+ 600 023b 14       		.byte	20
+ 601 023c 05       		.byte	5
+ 602 023d 10       		.byte	16
+ 603 023e 06       		.byte	6
+ 604 023f 20       		.byte	32
+ 605 0240 07       		.byte	7
+ 606 0241 40       		.byte	64
+ 607 0242 09       		.byte	9
+ 608 0243 0A       		.byte	10
+ 609 0244 0D       		.byte	13
+ 610 0245 0A       		.byte	10
+ 611 0246 0E       		.byte	14
+ 612 0247 0A       		.byte	10
+ 613 0248 0F       		.byte	15
+ 614 0249 20       		.byte	32
+ 615 024a 12       		.byte	18
+ 616 024b 02       		.byte	2
+ 617 024c 13       		.byte	19
+ 618 024d 20       		.byte	32
+ 619 024e 15       		.byte	21
+ 620 024f 80       		.byte	-128
+ 621 0250 17       		.byte	23
+ 622 0251 24       		.byte	36
+ 623 0252 1D       		.byte	29
+ 624 0253 02       		.byte	2
+ 625 0254 1F       		.byte	31
+ 626 0255 11       		.byte	17
+ 627 0256 24       		.byte	36
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 12
+
+
+ 628 0257 80       		.byte	-128
+ 629 0258 25       		.byte	37
+ 630 0259 01       		.byte	1
+ 631 025a 26       		.byte	38
+ 632 025b 02       		.byte	2
+ 633 025c 27       		.byte	39
+ 634 025d 40       		.byte	64
+ 635 025e 29       		.byte	41
+ 636 025f 02       		.byte	2
+ 637 0260 2A       		.byte	42
+ 638 0261 20       		.byte	32
+ 639 0262 2B       		.byte	43
+ 640 0263 10       		.byte	16
+ 641 0264 2F       		.byte	47
+ 642 0265 09       		.byte	9
+ 643 0266 31       		.byte	49
+ 644 0267 16       		.byte	22
+ 645 0268 35       		.byte	53
+ 646 0269 16       		.byte	22
+ 647 026a 38       		.byte	56
+ 648 026b 80       		.byte	-128
+ 649 026c 3D       		.byte	61
+ 650 026d 82       		.byte	-126
+ 651 026e 3E       		.byte	62
+ 652 026f 20       		.byte	32
+ 653 0270 5A       		.byte	90
+ 654 0271 40       		.byte	64
+ 655 0272 6E       		.byte	110
+ 656 0273 20       		.byte	32
+ 657 0274 6F       		.byte	111
+ 658 0275 06       		.byte	6
+ 659 0276 7B       		.byte	123
+ 660 0277 02       		.byte	2
+ 661 0278 94       		.byte	-108
+ 662 0279 80       		.byte	-128
+ 663 027a 98       		.byte	-104
+ 664 027b 40       		.byte	64
+ 665 027c 99       		.byte	-103
+ 666 027d 04       		.byte	4
+ 667 027e 9D       		.byte	-99
+ 668 027f 12       		.byte	18
+ 669 0280 9E       		.byte	-98
+ 670 0281 20       		.byte	32
+ 671 0282 9F       		.byte	-97
+ 672 0283 20       		.byte	32
+ 673 0284 A5       		.byte	-91
+ 674 0285 0A       		.byte	10
+ 675 0286 B0       		.byte	-80
+ 676 0287 01       		.byte	1
+ 677 0288 C0       		.byte	-64
+ 678 0289 7E       		.byte	126
+ 679 028a C2       		.byte	-62
+ 680 028b FC       		.byte	-4
+ 681 028c C4       		.byte	-60
+ 682 028d E3       		.byte	-29
+ 683 028e CA       		.byte	-54
+ 684 028f 37       		.byte	55
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 13
+
+
+ 685 0290 CC       		.byte	-52
+ 686 0291 E7       		.byte	-25
+ 687 0292 CE       		.byte	-50
+ 688 0293 B8       		.byte	-72
+ 689 0294 D6       		.byte	-42
+ 690 0295 08       		.byte	8
+ 691 0296 DE       		.byte	-34
+ 692 0297 08       		.byte	8
+ 693 0298 E2       		.byte	-30
+ 694 0299 02       		.byte	2
+ 695 029a 09       		.byte	9
+ 696 029b 01       		.byte	1
+ 697 029c 0F       		.byte	15
+ 698 029d 01       		.byte	1
+ 699 029e 11       		.byte	17
+ 700 029f 01       		.byte	1
+ 701 02a0 15       		.byte	21
+ 702 02a1 01       		.byte	1
+ 703 02a2 19       		.byte	25
+ 704 02a3 01       		.byte	1
+ 705 02a4 21       		.byte	33
+ 706 02a5 01       		.byte	1
+ 707 02a6 27       		.byte	39
+ 708 02a7 01       		.byte	1
+ 709 02a8 37       		.byte	55
+ 710 02a9 01       		.byte	1
+ 711 02aa 58       		.byte	88
+ 712 02ab 04       		.byte	4
+ 713 02ac 59       		.byte	89
+ 714 02ad 04       		.byte	4
+ 715 02ae 5F       		.byte	95
+ 716 02af 01       		.byte	1
+ 717 02b0 D8       		.byte	-40
+ 718 02b1 04       		.byte	4
+ 719 02b2 D9       		.byte	-39
+ 720 02b3 04       		.byte	4
+ 721 02b4 DF       		.byte	-33
+ 722 02b5 01       		.byte	1
+ 723 02b6 00       		.byte	0
+ 724 02b7 10       		.byte	16
+ 725 02b8 01       		.byte	1
+ 726 02b9 02       		.byte	2
+ 727 02ba 04       		.byte	4
+ 728 02bb 10       		.byte	16
+ 729 02bc 05       		.byte	5
+ 730 02bd 16       		.byte	22
+ 731 02be 07       		.byte	7
+ 732 02bf 20       		.byte	32
+ 733 02c0 08       		.byte	8
+ 734 02c1 10       		.byte	16
+ 735 02c2 09       		.byte	9
+ 736 02c3 0A       		.byte	10
+ 737 02c4 0D       		.byte	13
+ 738 02c5 0A       		.byte	10
+ 739 02c6 12       		.byte	18
+ 740 02c7 40       		.byte	64
+ 741 02c8 13       		.byte	19
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 14
+
+
+ 742 02c9 20       		.byte	32
+ 743 02ca 14       		.byte	20
+ 744 02cb 10       		.byte	16
+ 745 02cc 16       		.byte	22
+ 746 02cd 60       		.byte	96
+ 747 02ce 20       		.byte	32
+ 748 02cf 02       		.byte	2
+ 749 02d0 29       		.byte	41
+ 750 02d1 06       		.byte	6
+ 751 02d2 2F       		.byte	47
+ 752 02d3 0A       		.byte	10
+ 753 02d4 31       		.byte	49
+ 754 02d5 1A       		.byte	26
+ 755 02d6 33       		.byte	51
+ 756 02d7 0A       		.byte	10
+ 757 02d8 35       		.byte	53
+ 758 02d9 16       		.byte	22
+ 759 02da 38       		.byte	56
+ 760 02db 80       		.byte	-128
+ 761 02dc 3A       		.byte	58
+ 762 02dd 60       		.byte	96
+ 763 02de 3B       		.byte	59
+ 764 02df 40       		.byte	64
+ 765 02e0 3E       		.byte	62
+ 766 02e1 20       		.byte	32
+ 767 02e2 3F       		.byte	63
+ 768 02e3 40       		.byte	64
+ 769 02e4 88       		.byte	-120
+ 770 02e5 40       		.byte	64
+ 771 02e6 C0       		.byte	-64
+ 772 02e7 7A       		.byte	122
+ 773 02e8 C2       		.byte	-62
+ 774 02e9 3E       		.byte	62
+ 775 02ea C4       		.byte	-60
+ 776 02eb 3A       		.byte	58
+ 777 02ec CA       		.byte	-54
+ 778 02ed 33       		.byte	51
+ 779 02ee CC       		.byte	-52
+ 780 02ef E7       		.byte	-25
+ 781 02f0 CE       		.byte	-50
+ 782 02f1 3C       		.byte	60
+ 783 02f2 E0       		.byte	-32
+ 784 02f3 80       		.byte	-128
+ 785 02f4 E6       		.byte	-26
+ 786 02f5 10       		.byte	16
+ 787 02f6 E8       		.byte	-24
+ 788 02f7 10       		.byte	16
+ 789 02f8 EE       		.byte	-18
+ 790 02f9 02       		.byte	2
+ 791 02fa 58       		.byte	88
+ 792 02fb 04       		.byte	4
+ 793 02fc 59       		.byte	89
+ 794 02fd 04       		.byte	4
+ 795 02fe 5F       		.byte	95
+ 796 02ff 01       		.byte	1
+ 797 0300 84       		.byte	-124
+ 798 0301 01       		.byte	1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 15
+
+
+ 799 0302 8A       		.byte	-118
+ 800 0303 01       		.byte	1
+ 801 0304 8C       		.byte	-116
+ 802 0305 01       		.byte	1
+ 803 0306 98       		.byte	-104
+ 804 0307 01       		.byte	1
+ 805 0308 A0       		.byte	-96
+ 806 0309 01       		.byte	1
+ 807 030a A8       		.byte	-88
+ 808 030b 01       		.byte	1
+ 809 030c AC       		.byte	-84
+ 810 030d 01       		.byte	1
+ 811 030e B6       		.byte	-74
+ 812 030f 01       		.byte	1
+ 813 0310 D8       		.byte	-40
+ 814 0311 04       		.byte	4
+ 815 0312 D9       		.byte	-39
+ 816 0313 04       		.byte	4
+ 817 0314 DF       		.byte	-33
+ 818 0315 01       		.byte	1
+ 819 0316 01       		.byte	1
+ 820 0317 90       		.byte	-112
+ 821 0318 02       		.byte	2
+ 822 0319 20       		.byte	32
+ 823 031a 04       		.byte	4
+ 824 031b 08       		.byte	8
+ 825 031c 05       		.byte	5
+ 826 031d 80       		.byte	-128
+ 827 031e 09       		.byte	9
+ 828 031f 20       		.byte	32
+ 829 0320 0C       		.byte	12
+ 830 0321 42       		.byte	66
+ 831 0322 0D       		.byte	13
+ 832 0323 28       		.byte	40
+ 833 0324 0E       		.byte	14
+ 834 0325 02       		.byte	2
+ 835 0326 10       		.byte	16
+ 836 0327 42       		.byte	66
+ 837 0328 12       		.byte	18
+ 838 0329 08       		.byte	8
+ 839 032a 15       		.byte	21
+ 840 032b 10       		.byte	16
+ 841 032c 17       		.byte	23
+ 842 032d 20       		.byte	32
+ 843 032e 18       		.byte	24
+ 844 032f 02       		.byte	2
+ 845 0330 28       		.byte	40
+ 846 0331 40       		.byte	64
+ 847 0332 29       		.byte	41
+ 848 0333 80       		.byte	-128
+ 849 0334 2C       		.byte	44
+ 850 0335 62       		.byte	98
+ 851 0336 2D       		.byte	45
+ 852 0337 10       		.byte	16
+ 853 0338 30       		.byte	48
+ 854 0339 02       		.byte	2
+ 855 033a 31       		.byte	49
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 16
+
+
+ 856 033b 18       		.byte	24
+ 857 033c 35       		.byte	53
+ 858 033d 90       		.byte	-112
+ 859 033e 36       		.byte	54
+ 860 033f 08       		.byte	8
+ 861 0340 38       		.byte	56
+ 862 0341 08       		.byte	8
+ 863 0342 39       		.byte	57
+ 864 0343 10       		.byte	16
+ 865 0344 90       		.byte	-112
+ 866 0345 08       		.byte	8
+ 867 0346 99       		.byte	-103
+ 868 0347 90       		.byte	-112
+ 869 0348 9B       		.byte	-101
+ 870 0349 20       		.byte	32
+ 871 034a A0       		.byte	-96
+ 872 034b 02       		.byte	2
+ 873 034c A1       		.byte	-95
+ 874 034d 28       		.byte	40
+ 875 034e A2       		.byte	-94
+ 876 034f 29       		.byte	41
+ 877 0350 C0       		.byte	-64
+ 878 0351 A7       		.byte	-89
+ 879 0352 C2       		.byte	-62
+ 880 0353 F2       		.byte	-14
+ 881 0354 C4       		.byte	-60
+ 882 0355 4B       		.byte	75
+ 883 0356 CA       		.byte	-54
+ 884 0357 F9       		.byte	-7
+ 885 0358 CC       		.byte	-52
+ 886 0359 77       		.byte	119
+ 887 035a CE       		.byte	-50
+ 888 035b 06       		.byte	6
+ 889 035c EE       		.byte	-18
+ 890 035d 02       		.byte	2
+ 891 035e 58       		.byte	88
+ 892 035f 04       		.byte	4
+ 893 0360 59       		.byte	89
+ 894 0361 04       		.byte	4
+ 895 0362 5F       		.byte	95
+ 896 0363 01       		.byte	1
+ 897 0364 95       		.byte	-107
+ 898 0365 01       		.byte	1
+ 899 0366 99       		.byte	-103
+ 900 0367 01       		.byte	1
+ 901 0368 9D       		.byte	-99
+ 902 0369 01       		.byte	1
+ 903 036a A1       		.byte	-95
+ 904 036b 01       		.byte	1
+ 905 036c A7       		.byte	-89
+ 906 036d 01       		.byte	1
+ 907 036e AB       		.byte	-85
+ 908 036f 01       		.byte	1
+ 909 0370 AD       		.byte	-83
+ 910 0371 01       		.byte	1
+ 911 0372 B1       		.byte	-79
+ 912 0373 01       		.byte	1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 17
+
+
+ 913 0374 D8       		.byte	-40
+ 914 0375 04       		.byte	4
+ 915 0376 D9       		.byte	-39
+ 916 0377 04       		.byte	4
+ 917 0378 DF       		.byte	-33
+ 918 0379 01       		.byte	1
+ 919 037a 01       		.byte	1
+ 920 037b 40       		.byte	64
+ 921 037c 05       		.byte	5
+ 922 037d 90       		.byte	-112
+ 923 037e 07       		.byte	7
+ 924 037f 02       		.byte	2
+ 925 0380 08       		.byte	8
+ 926 0381 44       		.byte	68
+ 927 0382 09       		.byte	9
+ 928 0383 20       		.byte	32
+ 929 0384 0C       		.byte	12
+ 930 0385 42       		.byte	66
+ 931 0386 0E       		.byte	14
+ 932 0387 0A       		.byte	10
+ 933 0388 10       		.byte	16
+ 934 0389 30       		.byte	48
+ 935 038a 12       		.byte	18
+ 936 038b 28       		.byte	40
+ 937 038c 13       		.byte	19
+ 938 038d 02       		.byte	2
+ 939 038e 14       		.byte	20
+ 940 038f 14       		.byte	20
+ 941 0390 17       		.byte	23
+ 942 0391 20       		.byte	32
+ 943 0392 24       		.byte	36
+ 944 0393 80       		.byte	-128
+ 945 0394 28       		.byte	40
+ 946 0395 54       		.byte	84
+ 947 0396 29       		.byte	41
+ 948 0397 80       		.byte	-128
+ 949 0398 2C       		.byte	44
+ 950 0399 66       		.byte	102
+ 951 039a 2D       		.byte	45
+ 952 039b 40       		.byte	64
+ 953 039c 30       		.byte	48
+ 954 039d 02       		.byte	2
+ 955 039e 31       		.byte	49
+ 956 039f 10       		.byte	16
+ 957 03a0 32       		.byte	50
+ 958 03a1 08       		.byte	8
+ 959 03a2 35       		.byte	53
+ 960 03a3 90       		.byte	-112
+ 961 03a4 36       		.byte	54
+ 962 03a5 0C       		.byte	12
+ 963 03a6 8C       		.byte	-116
+ 964 03a7 40       		.byte	64
+ 965 03a8 99       		.byte	-103
+ 966 03a9 90       		.byte	-112
+ 967 03aa 9B       		.byte	-101
+ 968 03ab 20       		.byte	32
+ 969 03ac A0       		.byte	-96
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 18
+
+
+ 970 03ad 02       		.byte	2
+ 971 03ae A1       		.byte	-95
+ 972 03af 20       		.byte	32
+ 973 03b0 A2       		.byte	-94
+ 974 03b1 29       		.byte	41
+ 975 03b2 A4       		.byte	-92
+ 976 03b3 20       		.byte	32
+ 977 03b4 B4       		.byte	-76
+ 978 03b5 01       		.byte	1
+ 979 03b6 C0       		.byte	-64
+ 980 03b7 C1       		.byte	-63
+ 981 03b8 C2       		.byte	-62
+ 982 03b9 D7       		.byte	-41
+ 983 03ba C4       		.byte	-60
+ 984 03bb 6E       		.byte	110
+ 985 03bc CA       		.byte	-54
+ 986 03bd FF       		.byte	-1
+ 987 03be CC       		.byte	-52
+ 988 03bf 77       		.byte	119
+ 989 03c0 E8       		.byte	-24
+ 990 03c1 10       		.byte	16
+ 991 03c2 12       		.byte	18
+ 992 03c3 80       		.byte	-128
+ 993 03c4 16       		.byte	22
+ 994 03c5 80       		.byte	-128
+ 995 03c6 31       		.byte	49
+ 996 03c7 20       		.byte	32
+ 997 03c8 32       		.byte	50
+ 998 03c9 02       		.byte	2
+ 999 03ca 36       		.byte	54
+ 1000 03cb 40       		.byte	64
+ 1001 03cc 37       		.byte	55
+ 1002 03cd 04       		.byte	4
+ 1003 03ce 3B       		.byte	59
+ 1004 03cf 02       		.byte	2
+ 1005 03d0 3E       		.byte	62
+ 1006 03d1 80       		.byte	-128
+ 1007 03d2 8A       		.byte	-118
+ 1008 03d3 80       		.byte	-128
+ 1009 03d4 8F       		.byte	-113
+ 1010 03d5 04       		.byte	4
+ 1011 03d6 C4       		.byte	-60
+ 1012 03d7 30       		.byte	48
+ 1013 03d8 CC       		.byte	-52
+ 1014 03d9 F0       		.byte	-16
+ 1015 03da CE       		.byte	-50
+ 1016 03db 60       		.byte	96
+ 1017 03dc 86       		.byte	-122
+ 1018 03dd 02       		.byte	2
+ 1019 03de 97       		.byte	-105
+ 1020 03df 02       		.byte	2
+ 1021 03e0 A5       		.byte	-91
+ 1022 03e1 20       		.byte	32
+ 1023 03e2 A6       		.byte	-90
+ 1024 03e3 42       		.byte	66
+ 1025 03e4 E2       		.byte	-30
+ 1026 03e5 40       		.byte	64
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 19
+
+
+ 1027 03e6 97       		.byte	-105
+ 1028 03e7 02       		.byte	2
+ 1029 03e8 A6       		.byte	-90
+ 1030 03e9 40       		.byte	64
+ 1031 03ea B5       		.byte	-75
+ 1032 03eb 20       		.byte	32
+ 1033 03ec A6       		.byte	-90
+ 1034 03ed 40       		.byte	64
+ 1035 03ee AB       		.byte	-85
+ 1036 03ef 01       		.byte	1
+ 1037 03f0 EE       		.byte	-18
+ 1038 03f1 20       		.byte	32
+ 1039 03f2 8F       		.byte	-113
+ 1040 03f3 01       		.byte	1
+ 1041 03f4 E6       		.byte	-26
+ 1042 03f5 08       		.byte	8
+ 1043 03f6 50       		.byte	80
+ 1044 03f7 20       		.byte	32
+ 1045 03f8 58       		.byte	88
+ 1046 03f9 40       		.byte	64
+ 1047 03fa 5C       		.byte	92
+ 1048 03fb 40       		.byte	64
+ 1049 03fc 84       		.byte	-124
+ 1050 03fd 08       		.byte	8
+ 1051 03fe 97       		.byte	-105
+ 1052 03ff 01       		.byte	1
+ 1053 0400 98       		.byte	-104
+ 1054 0401 40       		.byte	64
+ 1055 0402 B0       		.byte	-80
+ 1056 0403 40       		.byte	64
+ 1057 0404 D4       		.byte	-44
+ 1058 0405 05       		.byte	5
+ 1059 0406 D6       		.byte	-42
+ 1060 0407 04       		.byte	4
+ 1061 0408 E8       		.byte	-24
+ 1062 0409 01       		.byte	1
+ 1063 040a 1B       		.byte	27
+ 1064 040b 04       		.byte	4
+ 1065 040c 27       		.byte	39
+ 1066 040d 20       		.byte	32
+ 1067 040e 94       		.byte	-108
+ 1068 040f 40       		.byte	64
+ 1069 0410 97       		.byte	-105
+ 1070 0411 01       		.byte	1
+ 1071 0412 A4       		.byte	-92
+ 1072 0413 28       		.byte	40
+ 1073 0414 C6       		.byte	-58
+ 1074 0415 08       		.byte	8
+ 1075 0416 C8       		.byte	-56
+ 1076 0417 01       		.byte	1
+ 1077 0418 0B       		.byte	11
+ 1078 0419 41       		.byte	65
+ 1079 041a 0C       		.byte	12
+ 1080 041b 08       		.byte	8
+ 1081 041c 44       		.byte	68
+ 1082 041d 02       		.byte	2
+ 1083 041e 94       		.byte	-108
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 20
+
+
+ 1084 041f 40       		.byte	64
+ 1085 0420 97       		.byte	-105
+ 1086 0421 01       		.byte	1
+ 1087 0422 A4       		.byte	-92
+ 1088 0423 28       		.byte	40
+ 1089 0424 AB       		.byte	-85
+ 1090 0425 24       		.byte	36
+ 1091 0426 C2       		.byte	-62
+ 1092 0427 0E       		.byte	14
+ 1093 0428 D0       		.byte	-48
+ 1094 0429 04       		.byte	4
+ 1095 042a 24       		.byte	36
+ 1096 042b 08       		.byte	8
+ 1097 042c AE       		.byte	-82
+ 1098 042d 40       		.byte	64
+ 1099 042e C8       		.byte	-56
+ 1100 042f 20       		.byte	32
+ 1101 0430 EE       		.byte	-18
+ 1102 0431 40       		.byte	64
+ 1103 0432 B4       		.byte	-76
+ 1104 0433 04       		.byte	4
+ 1105 0434 94       		.byte	-108
+ 1106 0435 40       		.byte	64
+ 1107 0436 9C       		.byte	-100
+ 1108 0437 02       		.byte	2
+ 1109 0438 A4       		.byte	-92
+ 1110 0439 20       		.byte	32
+ 1111 043a AF       		.byte	-81
+ 1112 043b 40       		.byte	64
+ 1113 043c 8C       		.byte	-116
+ 1114 043d 20       		.byte	32
+ 1115 043e A4       		.byte	-92
+ 1116 043f 20       		.byte	32
+ 1117 0440 B4       		.byte	-76
+ 1118 0441 42       		.byte	66
+ 1119 0442 E4       		.byte	-28
+ 1120 0443 08       		.byte	8
+ 1121 0444 E8       		.byte	-24
+ 1122 0445 0A       		.byte	10
+ 1123 0446 00       		.byte	0
+ 1124 0447 01       		.byte	1
+ 1125 0448 01       		.byte	1
+ 1126 0449 01       		.byte	1
+ 1127 044a 0C       		.byte	12
+ 1128 044b 01       		.byte	1
+ 1129 044c 0D       		.byte	13
+ 1130 044d 01       		.byte	1
+ 1131 044e 0E       		.byte	14
+ 1132 044f 01       		.byte	1
+ 1133 0450 10       		.byte	16
+ 1134 0451 01       		.byte	1
+ 1135 0452 1C       		.byte	28
+ 1136 0453 01       		.byte	1
+ 1137 0454 00       		.byte	0
+ 1138 0455 AB       		.byte	-85
+ 1139 0456 10       		.byte	16
+ 1140 0457 0A       		.byte	10
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 21
+
+
+ 1141 0458 00       		.byte	0
+ 1142 0459 00       		.byte	0
+ 1143 045a 00       		.byte	0
+ 1144 045b 00       		.byte	0
+ 1145 045c 00       		.byte	0
+ 1146 045d 00       		.byte	0
+ 1147 045e 01       		.byte	1
+ 1148 045f 00       		.byte	0
+ 1149 0460 40       		.byte	64
+ 1150 0461 00       		.byte	0
+ 1151 0462 00       		.byte	0
+ 1152 0463 00       		.byte	0
+ 1153 0464 00       		.byte	0
+ 1154 0465 00       		.byte	0
+ 1155 0466 00       		.byte	0
+ 1156 0467 00       		.byte	0
+ 1157 0468 C0       		.byte	-64
+ 1158 0469 00       		.byte	0
+ 1159 046a 00       		.byte	0
+ 1160 046b 00       		.byte	0
+ 1161 046c 00       		.byte	0
+ 1162 046d 0B       		.byte	11
+ 1163 046e 0B       		.byte	11
+ 1164 046f 00       		.byte	0
+ 1165 0470 00       		.byte	0
+ 1166 0471 00       		.byte	0
+ 1167 0472 00       		.byte	0
+ 1168 0473 00       		.byte	0
+ 1169 0474 00       		.byte	0
+ 1170 0475 00       		.byte	0
+ 1171 0476 00       		.byte	0
+ 1172 0477 00       		.byte	0
+ 1173 0478 00       		.byte	0
+ 1174 0479 07       		.byte	7
+ 1175 047a 07       		.byte	7
+ 1176 047b 00       		.byte	0
+ 1177 047c 00       		.byte	0
+ 1178 047d 01       		.byte	1
+ 1179 047e 00       		.byte	0
+ 1180 047f 00       		.byte	0
+ 1181              		.section	.cywolatch,"a",%progbits
+ 1182              		.align	2
+ 1183              		.type	cy_meta_wonvl, %object
+ 1184              		.size	cy_meta_wonvl, 4
+ 1185              	cy_meta_wonvl:
+ 1186 0000 BC       		.byte	-68
+ 1187 0001 90       		.byte	-112
+ 1188 0002 AC       		.byte	-84
+ 1189 0003 AF       		.byte	-81
+ 1190              		.section	.cycustnvl,"a",%progbits
+ 1191              		.align	2
+ 1192              		.type	cy_meta_custnvl, %object
+ 1193              		.size	cy_meta_custnvl, 4
+ 1194              	cy_meta_custnvl:
+ 1195 0000 00       		.byte	0
+ 1196 0001 00       		.byte	0
+ 1197 0002 40       		.byte	64
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 22
+
+
+ 1198 0003 05       		.byte	5
+ 1199              		.section	.cymeta,"a",%progbits
+ 1200              		.align	2
+ 1201              		.type	cy_metadata, %object
+ 1202              		.size	cy_metadata, 12
+ 1203              	cy_metadata:
+ 1204 0000 00       		.byte	0
+ 1205 0001 01       		.byte	1
+ 1206 0002 2E       		.byte	46
+ 1207 0003 16       		.byte	22
+ 1208 0004 10       		.byte	16
+ 1209 0005 69       		.byte	105
+ 1210 0006 00       		.byte	0
+ 1211 0007 01       		.byte	1
+ 1212 0008 00       		.byte	0
+ 1213 0009 00       		.byte	0
+ 1214 000a 00       		.byte	0
+ 1215 000b 00       		.byte	0
+ 1216              		.section	.cyflashprotect,"a",%progbits
+ 1217              		.align	2
+ 1218              		.type	cy_meta_flashprotect, %object
+ 1219              		.size	cy_meta_flashprotect, 256
+ 1220              	cy_meta_flashprotect:
+ 1221 0000 00000000 		.space	256
+ 1221      00000000 
+ 1221      00000000 
+ 1221      00000000 
+ 1221      00000000 
+ 1222              		.text
+ 1223              	.Letext0:
+ 1224              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1225              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1226              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1227              		.section	.debug_info,"",%progbits
+ 1228              	.Ldebug_info0:
+ 1229 0000 32010000 		.4byte	0x132
+ 1230 0004 0400     		.2byte	0x4
+ 1231 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1232 000a 04       		.byte	0x4
+ 1233 000b 01       		.uleb128 0x1
+ 1234 000c 68000000 		.4byte	.LASF17
+ 1235 0010 0C       		.byte	0xc
+ 1236 0011 C2010000 		.4byte	.LASF18
+ 1237 0015 00000000 		.4byte	.LASF19
+ 1238 0019 00000000 		.4byte	.Ldebug_line0
+ 1239 001d 02       		.uleb128 0x2
+ 1240 001e 01       		.byte	0x1
+ 1241 001f 06       		.byte	0x6
+ 1242 0020 B6010000 		.4byte	.LASF0
+ 1243 0024 03       		.uleb128 0x3
+ 1244 0025 44000000 		.4byte	.LASF9
+ 1245 0029 01       		.byte	0x1
+ 1246 002a 1D       		.byte	0x1d
+ 1247 002b 2F000000 		.4byte	0x2f
+ 1248 002f 02       		.uleb128 0x2
+ 1249 0030 01       		.byte	0x1
+ 1250 0031 08       		.byte	0x8
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 23
+
+
+ 1251 0032 5A000000 		.4byte	.LASF1
+ 1252 0036 02       		.uleb128 0x2
+ 1253 0037 02       		.byte	0x2
+ 1254 0038 05       		.byte	0x5
+ 1255 0039 A3010000 		.4byte	.LASF2
+ 1256 003d 02       		.uleb128 0x2
+ 1257 003e 02       		.byte	0x2
+ 1258 003f 07       		.byte	0x7
+ 1259 0040 08010000 		.4byte	.LASF3
+ 1260 0044 02       		.uleb128 0x2
+ 1261 0045 04       		.byte	0x4
+ 1262 0046 05       		.byte	0x5
+ 1263 0047 AD010000 		.4byte	.LASF4
+ 1264 004b 02       		.uleb128 0x2
+ 1265 004c 04       		.byte	0x4
+ 1266 004d 07       		.byte	0x7
+ 1267 004e F6000000 		.4byte	.LASF5
+ 1268 0052 02       		.uleb128 0x2
+ 1269 0053 08       		.byte	0x8
+ 1270 0054 05       		.byte	0x5
+ 1271 0055 95010000 		.4byte	.LASF6
+ 1272 0059 02       		.uleb128 0x2
+ 1273 005a 08       		.byte	0x8
+ 1274 005b 07       		.byte	0x7
+ 1275 005c 4A010000 		.4byte	.LASF7
+ 1276 0060 04       		.uleb128 0x4
+ 1277 0061 04       		.byte	0x4
+ 1278 0062 05       		.byte	0x5
+ 1279 0063 696E7400 		.ascii	"int\000"
+ 1280 0067 02       		.uleb128 0x2
+ 1281 0068 04       		.byte	0x4
+ 1282 0069 07       		.byte	0x7
+ 1283 006a 3D010000 		.4byte	.LASF8
+ 1284 006e 03       		.uleb128 0x3
+ 1285 006f 61010000 		.4byte	.LASF10
+ 1286 0073 02       		.byte	0x2
+ 1287 0074 18       		.byte	0x18
+ 1288 0075 24000000 		.4byte	0x24
+ 1289 0079 05       		.uleb128 0x5
+ 1290 007a 91000000 		.4byte	0x91
+ 1291 007e 8A000000 		.4byte	0x8a
+ 1292 0082 06       		.uleb128 0x6
+ 1293 0083 8A000000 		.4byte	0x8a
+ 1294 0087 7F04     		.2byte	0x47f
+ 1295 0089 00       		.byte	0
+ 1296 008a 02       		.uleb128 0x2
+ 1297 008b 04       		.byte	0x4
+ 1298 008c 07       		.byte	0x7
+ 1299 008d 8C010000 		.4byte	.LASF11
+ 1300 0091 07       		.uleb128 0x7
+ 1301 0092 6E000000 		.4byte	0x6e
+ 1302 0096 08       		.uleb128 0x8
+ 1303 0097 2B010000 		.4byte	.LASF12
+ 1304 009b 03       		.byte	0x3
+ 1305 009c 1F       		.byte	0x1f
+ 1306 009d A7000000 		.4byte	0xa7
+ 1307 00a1 05       		.uleb128 0x5
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 24
+
+
+ 1308 00a2 03       		.byte	0x3
+ 1309 00a3 00000000 		.4byte	cy_meta_configecc
+ 1310 00a7 07       		.uleb128 0x7
+ 1311 00a8 79000000 		.4byte	0x79
+ 1312 00ac 05       		.uleb128 0x5
+ 1313 00ad 91000000 		.4byte	0x91
+ 1314 00b1 BC000000 		.4byte	0xbc
+ 1315 00b5 09       		.uleb128 0x9
+ 1316 00b6 8A000000 		.4byte	0x8a
+ 1317 00ba 03       		.byte	0x3
+ 1318 00bb 00       		.byte	0
+ 1319 00bc 08       		.uleb128 0x8
+ 1320 00bd 1B010000 		.4byte	.LASF13
+ 1321 00c1 03       		.byte	0x3
+ 1322 00c2 BC       		.byte	0xbc
+ 1323 00c3 CD000000 		.4byte	0xcd
+ 1324 00c7 05       		.uleb128 0x5
+ 1325 00c8 03       		.byte	0x3
+ 1326 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1327 00cd 07       		.uleb128 0x7
+ 1328 00ce AC000000 		.4byte	0xac
+ 1329 00d2 08       		.uleb128 0x8
+ 1330 00d3 7E010000 		.4byte	.LASF14
+ 1331 00d7 03       		.byte	0x3
+ 1332 00d8 CA       		.byte	0xca
+ 1333 00d9 E3000000 		.4byte	0xe3
+ 1334 00dd 05       		.uleb128 0x5
+ 1335 00de 03       		.byte	0x3
+ 1336 00df 00000000 		.4byte	cy_meta_wonvl
+ 1337 00e3 07       		.uleb128 0x7
+ 1338 00e4 AC000000 		.4byte	0xac
+ 1339 00e8 05       		.uleb128 0x5
+ 1340 00e9 91000000 		.4byte	0x91
+ 1341 00ed F8000000 		.4byte	0xf8
+ 1342 00f1 09       		.uleb128 0x9
+ 1343 00f2 8A000000 		.4byte	0x8a
+ 1344 00f6 FF       		.byte	0xff
+ 1345 00f7 00       		.byte	0
+ 1346 00f8 08       		.uleb128 0x8
+ 1347 00f9 69010000 		.4byte	.LASF15
+ 1348 00fd 03       		.byte	0x3
+ 1349 00fe D8       		.byte	0xd8
+ 1350 00ff 09010000 		.4byte	0x109
+ 1351 0103 05       		.uleb128 0x5
+ 1352 0104 03       		.byte	0x3
+ 1353 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1354 0109 07       		.uleb128 0x7
+ 1355 010a E8000000 		.4byte	0xe8
+ 1356 010e 05       		.uleb128 0x5
+ 1357 010f 91000000 		.4byte	0x91
+ 1358 0113 1E010000 		.4byte	0x11e
+ 1359 0117 09       		.uleb128 0x9
+ 1360 0118 8A000000 		.4byte	0x8a
+ 1361 011c 0B       		.byte	0xb
+ 1362 011d 00       		.byte	0
+ 1363 011e 0A       		.uleb128 0xa
+ 1364 011f 4E000000 		.4byte	.LASF16
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 25
+
+
+ 1365 0123 03       		.byte	0x3
+ 1366 0124 0501     		.2byte	0x105
+ 1367 0126 30010000 		.4byte	0x130
+ 1368 012a 05       		.uleb128 0x5
+ 1369 012b 03       		.byte	0x3
+ 1370 012c 00000000 		.4byte	cy_metadata
+ 1371 0130 07       		.uleb128 0x7
+ 1372 0131 0E010000 		.4byte	0x10e
+ 1373 0135 00       		.byte	0
+ 1374              		.section	.debug_abbrev,"",%progbits
+ 1375              	.Ldebug_abbrev0:
+ 1376 0000 01       		.uleb128 0x1
+ 1377 0001 11       		.uleb128 0x11
+ 1378 0002 01       		.byte	0x1
+ 1379 0003 25       		.uleb128 0x25
+ 1380 0004 0E       		.uleb128 0xe
+ 1381 0005 13       		.uleb128 0x13
+ 1382 0006 0B       		.uleb128 0xb
+ 1383 0007 03       		.uleb128 0x3
+ 1384 0008 0E       		.uleb128 0xe
+ 1385 0009 1B       		.uleb128 0x1b
+ 1386 000a 0E       		.uleb128 0xe
+ 1387 000b 10       		.uleb128 0x10
+ 1388 000c 17       		.uleb128 0x17
+ 1389 000d 00       		.byte	0
+ 1390 000e 00       		.byte	0
+ 1391 000f 02       		.uleb128 0x2
+ 1392 0010 24       		.uleb128 0x24
+ 1393 0011 00       		.byte	0
+ 1394 0012 0B       		.uleb128 0xb
+ 1395 0013 0B       		.uleb128 0xb
+ 1396 0014 3E       		.uleb128 0x3e
+ 1397 0015 0B       		.uleb128 0xb
+ 1398 0016 03       		.uleb128 0x3
+ 1399 0017 0E       		.uleb128 0xe
+ 1400 0018 00       		.byte	0
+ 1401 0019 00       		.byte	0
+ 1402 001a 03       		.uleb128 0x3
+ 1403 001b 16       		.uleb128 0x16
+ 1404 001c 00       		.byte	0
+ 1405 001d 03       		.uleb128 0x3
+ 1406 001e 0E       		.uleb128 0xe
+ 1407 001f 3A       		.uleb128 0x3a
+ 1408 0020 0B       		.uleb128 0xb
+ 1409 0021 3B       		.uleb128 0x3b
+ 1410 0022 0B       		.uleb128 0xb
+ 1411 0023 49       		.uleb128 0x49
+ 1412 0024 13       		.uleb128 0x13
+ 1413 0025 00       		.byte	0
+ 1414 0026 00       		.byte	0
+ 1415 0027 04       		.uleb128 0x4
+ 1416 0028 24       		.uleb128 0x24
+ 1417 0029 00       		.byte	0
+ 1418 002a 0B       		.uleb128 0xb
+ 1419 002b 0B       		.uleb128 0xb
+ 1420 002c 3E       		.uleb128 0x3e
+ 1421 002d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 26
+
+
+ 1422 002e 03       		.uleb128 0x3
+ 1423 002f 08       		.uleb128 0x8
+ 1424 0030 00       		.byte	0
+ 1425 0031 00       		.byte	0
+ 1426 0032 05       		.uleb128 0x5
+ 1427 0033 01       		.uleb128 0x1
+ 1428 0034 01       		.byte	0x1
+ 1429 0035 49       		.uleb128 0x49
+ 1430 0036 13       		.uleb128 0x13
+ 1431 0037 01       		.uleb128 0x1
+ 1432 0038 13       		.uleb128 0x13
+ 1433 0039 00       		.byte	0
+ 1434 003a 00       		.byte	0
+ 1435 003b 06       		.uleb128 0x6
+ 1436 003c 21       		.uleb128 0x21
+ 1437 003d 00       		.byte	0
+ 1438 003e 49       		.uleb128 0x49
+ 1439 003f 13       		.uleb128 0x13
+ 1440 0040 2F       		.uleb128 0x2f
+ 1441 0041 05       		.uleb128 0x5
+ 1442 0042 00       		.byte	0
+ 1443 0043 00       		.byte	0
+ 1444 0044 07       		.uleb128 0x7
+ 1445 0045 26       		.uleb128 0x26
+ 1446 0046 00       		.byte	0
+ 1447 0047 49       		.uleb128 0x49
+ 1448 0048 13       		.uleb128 0x13
+ 1449 0049 00       		.byte	0
+ 1450 004a 00       		.byte	0
+ 1451 004b 08       		.uleb128 0x8
+ 1452 004c 34       		.uleb128 0x34
+ 1453 004d 00       		.byte	0
+ 1454 004e 03       		.uleb128 0x3
+ 1455 004f 0E       		.uleb128 0xe
+ 1456 0050 3A       		.uleb128 0x3a
+ 1457 0051 0B       		.uleb128 0xb
+ 1458 0052 3B       		.uleb128 0x3b
+ 1459 0053 0B       		.uleb128 0xb
+ 1460 0054 49       		.uleb128 0x49
+ 1461 0055 13       		.uleb128 0x13
+ 1462 0056 3F       		.uleb128 0x3f
+ 1463 0057 19       		.uleb128 0x19
+ 1464 0058 02       		.uleb128 0x2
+ 1465 0059 18       		.uleb128 0x18
+ 1466 005a 00       		.byte	0
+ 1467 005b 00       		.byte	0
+ 1468 005c 09       		.uleb128 0x9
+ 1469 005d 21       		.uleb128 0x21
+ 1470 005e 00       		.byte	0
+ 1471 005f 49       		.uleb128 0x49
+ 1472 0060 13       		.uleb128 0x13
+ 1473 0061 2F       		.uleb128 0x2f
+ 1474 0062 0B       		.uleb128 0xb
+ 1475 0063 00       		.byte	0
+ 1476 0064 00       		.byte	0
+ 1477 0065 0A       		.uleb128 0xa
+ 1478 0066 34       		.uleb128 0x34
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 27
+
+
+ 1479 0067 00       		.byte	0
+ 1480 0068 03       		.uleb128 0x3
+ 1481 0069 0E       		.uleb128 0xe
+ 1482 006a 3A       		.uleb128 0x3a
+ 1483 006b 0B       		.uleb128 0xb
+ 1484 006c 3B       		.uleb128 0x3b
+ 1485 006d 05       		.uleb128 0x5
+ 1486 006e 49       		.uleb128 0x49
+ 1487 006f 13       		.uleb128 0x13
+ 1488 0070 3F       		.uleb128 0x3f
+ 1489 0071 19       		.uleb128 0x19
+ 1490 0072 02       		.uleb128 0x2
+ 1491 0073 18       		.uleb128 0x18
+ 1492 0074 00       		.byte	0
+ 1493 0075 00       		.byte	0
+ 1494 0076 00       		.byte	0
+ 1495              		.section	.debug_aranges,"",%progbits
+ 1496 0000 14000000 		.4byte	0x14
+ 1497 0004 0200     		.2byte	0x2
+ 1498 0006 00000000 		.4byte	.Ldebug_info0
+ 1499 000a 04       		.byte	0x4
+ 1500 000b 00       		.byte	0
+ 1501 000c 0000     		.2byte	0
+ 1502 000e 0000     		.2byte	0
+ 1503 0010 00000000 		.4byte	0
+ 1504 0014 00000000 		.4byte	0
+ 1505              		.section	.debug_line,"",%progbits
+ 1506              	.Ldebug_line0:
+ 1507 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1507      02003701 
+ 1507      00000201 
+ 1507      FB0E0D00 
+ 1507      01010101 
+ 1508              	.LASF19:
+ 1509 0000 433A5C55 		.ascii	"C:\\Users\\danaukes\\Documents\\PSoC Creator\\Works"
+ 1509      73657273 
+ 1509      5C64616E 
+ 1509      61756B65 
+ 1509      735C446F 
+ 1510 002e 70616365 		.ascii	"pace01\\Design01.cydsn\000"
+ 1510      30315C44 
+ 1510      65736967 
+ 1510      6E30312E 
+ 1510      63796473 
+ 1511              	.LASF9:
+ 1512 0044 5F5F7569 		.ascii	"__uint8_t\000"
+ 1512      6E74385F 
+ 1512      7400
+ 1513              	.LASF16:
+ 1514 004e 63795F6D 		.ascii	"cy_metadata\000"
+ 1514      65746164 
+ 1514      61746100 
+ 1515              	.LASF1:
+ 1516 005a 756E7369 		.ascii	"unsigned char\000"
+ 1516      676E6564 
+ 1516      20636861 
+ 1516      7200
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 28
+
+
+ 1517              	.LASF17:
+ 1518 0068 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1518      43313120 
+ 1518      352E342E 
+ 1518      31203230 
+ 1518      31363036 
+ 1519 009b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1519      20726576 
+ 1519      6973696F 
+ 1519      6E203233 
+ 1519      37373135 
+ 1520 00ce 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1520      66756E63 
+ 1520      74696F6E 
+ 1520      2D736563 
+ 1520      74696F6E 
+ 1521              	.LASF5:
+ 1522 00f6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1522      20756E73 
+ 1522      69676E65 
+ 1522      6420696E 
+ 1522      7400
+ 1523              	.LASF3:
+ 1524 0108 73686F72 		.ascii	"short unsigned int\000"
+ 1524      7420756E 
+ 1524      7369676E 
+ 1524      65642069 
+ 1524      6E7400
+ 1525              	.LASF13:
+ 1526 011b 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1526      6574615F 
+ 1526      63757374 
+ 1526      6E766C00 
+ 1527              	.LASF12:
+ 1528 012b 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1528      6574615F 
+ 1528      636F6E66 
+ 1528      69676563 
+ 1528      6300
+ 1529              	.LASF8:
+ 1530 013d 756E7369 		.ascii	"unsigned int\000"
+ 1530      676E6564 
+ 1530      20696E74 
+ 1530      00
+ 1531              	.LASF7:
+ 1532 014a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1532      206C6F6E 
+ 1532      6720756E 
+ 1532      7369676E 
+ 1532      65642069 
+ 1533              	.LASF10:
+ 1534 0161 75696E74 		.ascii	"uint8_t\000"
+ 1534      385F7400 
+ 1535              	.LASF15:
+ 1536 0169 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1536      6574615F 
+ 1536      666C6173 
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccghQu7X.s 			page 29
+
+
+ 1536      6870726F 
+ 1536      74656374 
+ 1537              	.LASF14:
+ 1538 017e 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1538      6574615F 
+ 1538      776F6E76 
+ 1538      6C00
+ 1539              	.LASF11:
+ 1540 018c 73697A65 		.ascii	"sizetype\000"
+ 1540      74797065 
+ 1540      00
+ 1541              	.LASF6:
+ 1542 0195 6C6F6E67 		.ascii	"long long int\000"
+ 1542      206C6F6E 
+ 1542      6720696E 
+ 1542      7400
+ 1543              	.LASF2:
+ 1544 01a3 73686F72 		.ascii	"short int\000"
+ 1544      7420696E 
+ 1544      7400
+ 1545              	.LASF4:
+ 1546 01ad 6C6F6E67 		.ascii	"long int\000"
+ 1546      20696E74 
+ 1546      00
+ 1547              	.LASF0:
+ 1548 01b6 7369676E 		.ascii	"signed char\000"
+ 1548      65642063 
+ 1548      68617200 
+ 1549              	.LASF18:
+ 1550 01c2 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1550      72617465 
+ 1550      645F536F 
+ 1550      75726365 
+ 1550      5C50536F 
+ 1551              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
