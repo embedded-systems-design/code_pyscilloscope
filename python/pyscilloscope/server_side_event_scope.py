@@ -20,27 +20,24 @@ import pyqtgraph as pg
 
 from sseclient import SSEClient 
 
-
 class ServerSideEventScope(object):
 
     def __init__(self,url,window_width=300,data_width = 500):
     
         self.app = qt.QApplication([])
 
+        self.url = url
+        self.window_width = window_width
+        self.data_width = data_width
+ 
         self.win = pg.GraphicsWindow(title="Pyscilloscope")
         p = self.win.addPlot(title="Time vs. Voltage")
         self.curve = p.plot()
         
-        self.window_width = window_width
-        self.data_width = data_width
         self.Xm = numpy.linspace(0,0,self.data_width)
         self.ptr = -self.window_width
 
-        self.url = url
         self.messages = SSEClient(self.url)
-# Realtime data plot. Each time this function is called, the data display is updated
-
-        self.string_stream = ''
 
     def strip_special(self,s):
         substring = 'data":"'
@@ -64,7 +61,6 @@ class ServerSideEventScope(object):
             self.values_a=self.values_a*3.3/4095
             self.Xm[:-l] = self.Xm[l:]
             self.Xm[-l:] = self.values_a[:self.data_width] # vector containing the instantaneous values      
-            # # self.y[-l:] = aout_list                 # vector containing the instantaneous values      
             self.ptr += l                              # update x position for displaying the curve
             self.curve.setData(self.values_a)                     # set the curve with this data
             self.curve.setPos(0,0)                   # set x position in the graph to 0
@@ -76,11 +72,7 @@ class ServerSideEventScope(object):
 
 if __name__=='__main__':
     
-    ### MAIN PROGRAM #####    
-    # this is a brutal infinite loop calling your realtime data plot
     pscope = ServerSideEventScope('https://api.particle.io/v1/devices/events?access_token=d335bc89d666834185edb810cd21a9ded2627613')
     pscope.run()
     
-    ### END QtApp ####
     qt.QApplication.exec_() # you MUST put this at the end
-    #################
