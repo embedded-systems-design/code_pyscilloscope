@@ -38,13 +38,13 @@ class SerialScope(object):
 
         self.string_stream = ''
         self.ser = serial.Serial(comport,baudrate)
-        self.packet = self.read_new_packet()
-        self.width = len(self.packet)
 
         self.app = qt.QApplication([])
         self.win = pg.GraphicsWindow(title="Pyscilloscope")
         p = self.win.addPlot(title="Time vs. Voltage")
         
+        self.packet = self.read_new_packet()
+        self.width = len(self.packet)
         self.curves = []
         self.data_history = numpy.zeros((self.window_width,self.width))
         self.l = p.addLegend()
@@ -135,7 +135,7 @@ class SerialScope(object):
 
 if __name__=='__main__':
     
-    pscope = SerialScope('/dev/ttyACM0',115200,window_width=1000)
+    pscope = SerialScope('/dev/ttyACM0',115200,window_width=10000)
     pscope.run()
     
     qt.QApplication.exec_() # you MUST put this at the end

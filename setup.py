@@ -21,7 +21,7 @@ package_data['pyscilloscope'] = []
 
 setup_kwargs = {}
 setup_kwargs['name']='pyscilloscope'
-setup_kwargs['version']='0.0.2'
+setup_kwargs['version']='0.0.3'
 setup_kwargs['classifiers']=['Programming Language :: Python','Programming Language :: Python :: 3']   
 setup_kwargs['description']='Pyscilloscope is a simple, serial-based data viewing GUI'
 setup_kwargs['author']='Dan Aukes'
