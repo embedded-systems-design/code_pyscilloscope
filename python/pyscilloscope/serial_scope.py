@@ -64,16 +64,16 @@ class SerialScope(object):
         lines = lines[:-1]
         return lines
 
-    def string_to_array(self,line):
-        try:
-            time,ain,a0,a1,a2 = line.split(',')
-            time = float(time)
-            ain = float(ain)
-            aout = float (a0)
-            aout = aout/4095*3.3
-            return aout
-        except ValueError as e:
-            print(e)
+    # def string_to_array(self,line):
+    #     try:
+    #         time,ain,a0,a1,a2 = line.split(',')
+    #         time = float(time)
+    #         ain = float(ain)
+    #         aout = float (a0)
+    #         aout = aout/4095*3.3
+    #         return aout
+    #     except ValueError as e:
+    #         print(e)
     
     def strings_to_array(self,lines):
         aout_list = []
