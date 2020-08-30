@@ -237,14 +237,7 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Design01.cydsn\Design01.cydwr" />
 <name v=".\Design01.cydsn\main.c" />
-<name v=".\Design01.cydsn\Generated_Source\PSoC5\myUSB.h" />
-<name v=".\Design01.cydsn\Generated_Source\PSoC5\myUSB.c" />
-<name v=".\Design01.cydsn\Generated_Source\PSoC5\myUSB_cdc.c" />
-<name v=".\Design01.cydsn\Generated_Source\PSoC5\CyLib.h" />
-<name v=".\Design01.cydsn\Generated_Source\PSoC5\CyLib.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -252,7 +245,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1239, 1683" SelectedTabbedMdiWindow="236a94d8-2216-4f0e-b774-6f474aabc826"><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="6046111f-4b0b-4346-b798-b4010ddbe134" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Design01.cydwr" Guid="7205c701-f111-4c5a-9277-ca8cca727fd7" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\main.c" Guid="236a94d8-2216-4f0e-b774-6f474aabc826" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Generated_Source\PSoC5\myUSB.h" Guid="6f9badf3-7954-43d9-a2c2-a5c545ae9d76" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Generated_Source\PSoC5\myUSB.c" Guid="8307726f-73c5-4666-9bf5-5d1e1350f129" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Generated_Source\PSoC5\myUSB_cdc.c" Guid="24b23928-662f-4fd7-be5f-a1558ab4397f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="494eaa39-696c-43bb-ba66-0e904b0f4d5f" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Generated_Source\PSoC5\CyLib.h" Guid="c90092b0-0469-4c3e-940f-b5d908ea91d0" /><DocumentWindow Key="C:\Users\danaukes\Documents\PSoC Creator\Workspace01\Design01.cydsn\Generated_Source\PSoC5\CyLib.c" Guid="5265ce18-82a5-4c1d-84e9-b1f66a75a0b9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1494, 1696" SelectedTabbedMdiWindow="316cfd48-da36-4296-a783-c6bac0903785"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="494eaa39-696c-43bb-ba66-0e904b0f4d5f" /><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\main.c" Guid="316cfd48-da36-4296-a783-c6bac0903785" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
