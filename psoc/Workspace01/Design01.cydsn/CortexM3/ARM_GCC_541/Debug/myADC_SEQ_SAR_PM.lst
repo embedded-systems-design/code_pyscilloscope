@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
   28:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** 
   29:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** 
   30:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 2
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 2
 
 
   31:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** * Function Name: myADC_SEQ_SAR_SaveConfig
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
   47              		@ args = 0, pretend = 0, frame = 0
   48              		@ frame_needed = 0, uses_anonymous_args = 0
   49              		@ link register save eliminated.
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 3
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 3
 
 
   50 0000 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
   94:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c ****         if((myADC_SEQ_SAR_SAR_CSR0_REG & myADC_SEQ_SAR_SAR_SOF_START_CONV) != 0u)
   76              		.loc 1 94 0
   77 000c 0A4B     		ldr	r3, .L9+4
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 4
 
 
   78 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  108:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** }
  109:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** 
  110:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** 
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 5
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 5
 
 
  111:Generated_Source\PSoC5/myADC_SEQ_SAR_PM.c **** /*******************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  143 001a 08BD     		pop	{r3, pc}
  144              	.L15:
  145              		.align	2
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 6
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 6
 
 
  146              	.L14:
@@ -324,48 +324,48 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  166 0006 00000000 		.4byte	.Ldebug_abbrev0
  167 000a 04       		.byte	0x4
  168 000b 01       		.uleb128 0x1
- 169 000c D9000000 		.4byte	.LASF22
+ 169 000c 95000000 		.4byte	.LASF22
  170 0010 0C       		.byte	0xc
- 171 0011 58000000 		.4byte	.LASF23
- 172 0015 00000000 		.4byte	.LASF24
+ 171 0011 14000000 		.4byte	.LASF23
+ 172 0015 AD010000 		.4byte	.LASF24
  173 0019 00000000 		.4byte	.Ldebug_ranges0+0
  174 001d 00000000 		.4byte	0
  175 0021 00000000 		.4byte	.Ldebug_line0
  176 0025 02       		.uleb128 0x2
  177 0026 01       		.byte	0x1
  178 0027 06       		.byte	0x6
- 179 0028 45020000 		.4byte	.LASF0
+ 179 0028 4F020000 		.4byte	.LASF0
  180 002c 02       		.uleb128 0x2
  181 002d 01       		.byte	0x1
  182 002e 08       		.byte	0x8
- 183 002f CB000000 		.4byte	.LASF1
+ 183 002f 87000000 		.4byte	.LASF1
  184 0033 02       		.uleb128 0x2
  185 0034 02       		.byte	0x2
  186 0035 05       		.byte	0x5
- 187 0036 20020000 		.4byte	.LASF2
+ 187 0036 2A020000 		.4byte	.LASF2
  188 003a 02       		.uleb128 0x2
  189 003b 02       		.byte	0x2
  190 003c 07       		.byte	0x7
- 191 003d 7E010000 		.4byte	.LASF3
+ 191 003d 3A010000 		.4byte	.LASF3
  192 0041 02       		.uleb128 0x2
  193 0042 04       		.byte	0x4
  194 0043 05       		.byte	0x5
- 195 0044 30020000 		.4byte	.LASF4
+ 195 0044 3A020000 		.4byte	.LASF4
  196 0048 02       		.uleb128 0x2
  197 0049 04       		.byte	0x4
  198 004a 07       		.byte	0x7
- 199 004b 6C010000 		.4byte	.LASF5
+ 199 004b 28010000 		.4byte	.LASF5
  200 004f 02       		.uleb128 0x2
  201 0050 08       		.byte	0x8
  202 0051 05       		.byte	0x5
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 7
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 7
 
 
- 203 0052 0D020000 		.4byte	.LASF6
+ 203 0052 17020000 		.4byte	.LASF6
  204 0056 02       		.uleb128 0x2
  205 0057 08       		.byte	0x8
  206 0058 07       		.byte	0x7
- 207 0059 C1010000 		.4byte	.LASF7
+ 207 0059 7D010000 		.4byte	.LASF7
  208 005d 03       		.uleb128 0x3
  209 005e 04       		.byte	0x4
  210 005f 05       		.byte	0x5
@@ -373,26 +373,26 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  212 0064 02       		.uleb128 0x2
  213 0065 04       		.byte	0x4
  214 0066 07       		.byte	0x7
- 215 0067 B4010000 		.4byte	.LASF8
+ 215 0067 70010000 		.4byte	.LASF8
  216 006b 04       		.uleb128 0x4
- 217 006c 2A020000 		.4byte	.LASF12
+ 217 006c 34020000 		.4byte	.LASF12
  218 0070 02       		.byte	0x2
  219 0071 E401     		.2byte	0x1e4
  220 0073 2C000000 		.4byte	0x2c
  221 0077 02       		.uleb128 0x2
  222 0078 04       		.byte	0x4
  223 0079 04       		.byte	0x4
- 224 007a C5000000 		.4byte	.LASF9
+ 224 007a 81000000 		.4byte	.LASF9
  225 007e 02       		.uleb128 0x2
  226 007f 08       		.byte	0x8
  227 0080 04       		.byte	0x4
- 228 0081 91010000 		.4byte	.LASF10
+ 228 0081 4D010000 		.4byte	.LASF10
  229 0085 02       		.uleb128 0x2
  230 0086 01       		.byte	0x1
  231 0087 08       		.byte	0x8
- 232 0088 1B020000 		.4byte	.LASF11
+ 232 0088 25020000 		.4byte	.LASF11
  233 008c 04       		.uleb128 0x4
- 234 008d 67010000 		.4byte	.LASF13
+ 234 008d 23010000 		.4byte	.LASF13
  235 0091 02       		.byte	0x2
  236 0092 8E02     		.2byte	0x28e
  237 0094 98000000 		.4byte	0x98
@@ -404,21 +404,21 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  243 00a0 2A       		.byte	0x2a
  244 00a1 B2000000 		.4byte	0xb2
  245 00a5 07       		.uleb128 0x7
- 246 00a6 39020000 		.4byte	.LASF25
+ 246 00a6 43020000 		.4byte	.LASF25
  247 00aa 03       		.byte	0x3
  248 00ab 2C       		.byte	0x2c
  249 00ac 6B000000 		.4byte	0x6b
  250 00b0 00       		.byte	0
  251 00b1 00       		.byte	0
  252 00b2 08       		.uleb128 0x8
- 253 00b3 98010000 		.4byte	.LASF14
+ 253 00b3 54010000 		.4byte	.LASF14
  254 00b7 03       		.byte	0x3
  255 00b8 2D       		.byte	0x2d
  256 00b9 9D000000 		.4byte	0x9d
  257 00bd 09       		.uleb128 0x9
- 258 00be D8010000 		.4byte	.LASF15
+ 258 00be 94010000 		.4byte	.LASF15
  259 00c2 01       		.byte	0x1
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 8
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 8
 
 
  260 00c3 2C       		.byte	0x2c
@@ -427,7 +427,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  263 00cc 01       		.uleb128 0x1
  264 00cd 9C       		.byte	0x9c
  265 00ce 09       		.uleb128 0x9
- 266 00cf F1010000 		.4byte	.LASF16
+ 266 00cf FB010000 		.4byte	.LASF16
  267 00d3 01       		.byte	0x1
  268 00d4 40       		.byte	0x40
  269 00d5 00000000 		.4byte	.LFB1
@@ -435,7 +435,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  271 00dd 01       		.uleb128 0x1
  272 00de 9C       		.byte	0x9c
  273 00df 0A       		.uleb128 0xa
- 274 00e0 44000000 		.4byte	.LASF17
+ 274 00e0 00000000 		.4byte	.LASF17
  275 00e4 01       		.byte	0x1
  276 00e5 5A       		.byte	0x5a
  277 00e6 00000000 		.4byte	.LFB2
@@ -448,7 +448,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  284 00f9 37010000 		.4byte	0x137
  285 00fd 00       		.byte	0
  286 00fe 0A       		.uleb128 0xa
- 287 00ff 82000000 		.4byte	.LASF18
+ 287 00ff 3E000000 		.4byte	.LASF18
  288 0103 01       		.byte	0x1
  289 0104 84       		.byte	0x84
  290 0105 00000000 		.4byte	.LFB3
@@ -464,7 +464,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  300 0121 4D010000 		.4byte	0x14d
  301 0125 00       		.byte	0
  302 0126 0C       		.uleb128 0xc
- 303 0127 51020000 		.4byte	.LASF26
+ 303 0127 5B020000 		.4byte	.LASF26
  304 012b 01       		.byte	0x1
  305 012c 18       		.byte	0x18
  306 012d B2000000 		.4byte	0xb2
@@ -472,21 +472,21 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  308 0132 03       		.byte	0x3
  309 0133 00000000 		.4byte	myADC_SEQ_SAR_backup
  310 0137 0D       		.uleb128 0xd
- 311 0138 B2000000 		.4byte	.LASF19
- 312 013c B2000000 		.4byte	.LASF19
+ 311 0138 6E000000 		.4byte	.LASF19
+ 312 013c 6E000000 		.4byte	.LASF19
  313 0140 03       		.byte	0x3
  314 0141 35       		.byte	0x35
  315 0142 0D       		.uleb128 0xd
- 316 0143 66020000 		.4byte	.LASF20
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 9
+ 316 0143 70020000 		.4byte	.LASF20
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 9
 
 
- 317 0147 66020000 		.4byte	.LASF20
+ 317 0147 70020000 		.4byte	.LASF20
  318 014b 03       		.byte	0x3
  319 014c 44       		.byte	0x44
  320 014d 0D       		.uleb128 0xd
- 321 014e 97000000 		.4byte	.LASF21
- 322 0152 97000000 		.4byte	.LASF21
+ 321 014e 53000000 		.4byte	.LASF21
+ 322 0152 53000000 		.4byte	.LASF21
  323 0156 03       		.byte	0x3
  324 0157 D1       		.byte	0xd1
  325 0158 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  371 002b 00       		.byte	0
  372 002c 03       		.uleb128 0x3
  373 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 10
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 10
 
 
  374 002e 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  428 0064 00       		.byte	0
  429 0065 00       		.byte	0
  430 0066 09       		.uleb128 0x9
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 11
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 11
 
 
  431 0067 2E       		.uleb128 0x2e
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  485 00a1 00       		.byte	0
  486 00a2 00       		.byte	0
  487 00a3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 12
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 12
 
 
  488 00a4 34       		.uleb128 0x34
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  542 0008 00000000 		.4byte	.LFB1
  543 000c 02000000 		.4byte	.LFE1
  544 0010 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 13
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 13
 
 
  545 0014 40000000 		.4byte	.LFE2
@@ -733,159 +733,159 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 1
  552      00000201 
  552      FB0E0D00 
  552      01010101 
- 553              	.LASF24:
- 554 0000 433A5C55 		.ascii	"C:\\Users\\danaukes\\Documents\\PSoC Creator\\Works"
- 554      73657273 
- 554      5C64616E 
- 554      61756B65 
- 554      735C446F 
- 555 002e 70616365 		.ascii	"pace01\\Design01.cydsn\000"
- 555      30315C44 
- 555      65736967 
- 555      6E30312E 
- 555      63796473 
- 556              	.LASF17:
- 557 0044 6D794144 		.ascii	"myADC_SEQ_SAR_Sleep\000"
- 557      435F5345 
- 557      515F5341 
- 557      525F536C 
- 557      65657000 
- 558              	.LASF23:
- 559 0058 47656E65 		.ascii	"Generated_Source\\PSoC5\\myADC_SEQ_SAR_PM.c\000"
- 559      72617465 
- 559      645F536F 
- 559      75726365 
- 559      5C50536F 
- 560              	.LASF18:
- 561 0082 6D794144 		.ascii	"myADC_SEQ_SAR_Wakeup\000"
- 561      435F5345 
- 561      515F5341 
- 561      525F5761 
- 561      6B657570 
- 562              	.LASF21:
- 563 0097 6D794144 		.ascii	"myADC_SEQ_SAR_StartConvert\000"
- 563      435F5345 
- 563      515F5341 
- 563      525F5374 
- 563      61727443 
- 564              	.LASF19:
- 565 00b2 6D794144 		.ascii	"myADC_SEQ_SAR_Stop\000"
- 565      435F5345 
- 565      515F5341 
- 565      525F5374 
- 565      6F7000
- 566              	.LASF9:
- 567 00c5 666C6F61 		.ascii	"float\000"
- 567      7400
- 568              	.LASF1:
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 14
+ 553              	.LASF17:
+ 554 0000 6D794144 		.ascii	"myADC_SEQ_SAR_Sleep\000"
+ 554      435F5345 
+ 554      515F5341 
+ 554      525F536C 
+ 554      65657000 
+ 555              	.LASF23:
+ 556 0014 47656E65 		.ascii	"Generated_Source\\PSoC5\\myADC_SEQ_SAR_PM.c\000"
+ 556      72617465 
+ 556      645F536F 
+ 556      75726365 
+ 556      5C50536F 
+ 557              	.LASF18:
+ 558 003e 6D794144 		.ascii	"myADC_SEQ_SAR_Wakeup\000"
+ 558      435F5345 
+ 558      515F5341 
+ 558      525F5761 
+ 558      6B657570 
+ 559              	.LASF21:
+ 560 0053 6D794144 		.ascii	"myADC_SEQ_SAR_StartConvert\000"
+ 560      435F5345 
+ 560      515F5341 
+ 560      525F5374 
+ 560      61727443 
+ 561              	.LASF19:
+ 562 006e 6D794144 		.ascii	"myADC_SEQ_SAR_Stop\000"
+ 562      435F5345 
+ 562      515F5341 
+ 562      525F5374 
+ 562      6F7000
+ 563              	.LASF9:
+ 564 0081 666C6F61 		.ascii	"float\000"
+ 564      7400
+ 565              	.LASF1:
+ 566 0087 756E7369 		.ascii	"unsigned char\000"
+ 566      676E6564 
+ 566      20636861 
+ 566      7200
+ 567              	.LASF22:
+ 568 0095 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 568      43313120 
+ 568      352E342E 
+ 568      31203230 
+ 568      31363036 
+ 569 00c8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 14
 
 
- 569 00cb 756E7369 		.ascii	"unsigned char\000"
- 569      676E6564 
- 569      20636861 
- 569      7200
- 570              	.LASF22:
- 571 00d9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 571      43313120 
- 571      352E342E 
- 571      31203230 
- 571      31363036 
- 572 010c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 572      20726576 
- 572      6973696F 
- 572      6E203233 
- 572      37373135 
- 573 013f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 573      66756E63 
- 573      74696F6E 
- 573      2D736563 
- 573      74696F6E 
- 574              	.LASF13:
- 575 0167 72656738 		.ascii	"reg8\000"
- 575      00
- 576              	.LASF5:
- 577 016c 6C6F6E67 		.ascii	"long unsigned int\000"
- 577      20756E73 
- 577      69676E65 
- 577      6420696E 
- 577      7400
- 578              	.LASF3:
- 579 017e 73686F72 		.ascii	"short unsigned int\000"
- 579      7420756E 
- 579      7369676E 
- 579      65642069 
- 579      6E7400
- 580              	.LASF10:
- 581 0191 646F7562 		.ascii	"double\000"
- 581      6C6500
- 582              	.LASF14:
- 583 0198 6D794144 		.ascii	"myADC_SEQ_SAR_BACKUP_STRUCT\000"
- 583      435F5345 
- 583      515F5341 
- 583      525F4241 
- 583      434B5550 
- 584              	.LASF8:
- 585 01b4 756E7369 		.ascii	"unsigned int\000"
- 585      676E6564 
- 585      20696E74 
- 585      00
- 586              	.LASF7:
- 587 01c1 6C6F6E67 		.ascii	"long long unsigned int\000"
- 587      206C6F6E 
- 587      6720756E 
- 587      7369676E 
- 587      65642069 
- 588              	.LASF15:
- 589 01d8 6D794144 		.ascii	"myADC_SEQ_SAR_SaveConfig\000"
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\cc5ZGxqH.s 			page 15
+ 569      20726576 
+ 569      6973696F 
+ 569      6E203233 
+ 569      37373135 
+ 570 00fb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 570      66756E63 
+ 570      74696F6E 
+ 570      2D736563 
+ 570      74696F6E 
+ 571              	.LASF13:
+ 572 0123 72656738 		.ascii	"reg8\000"
+ 572      00
+ 573              	.LASF5:
+ 574 0128 6C6F6E67 		.ascii	"long unsigned int\000"
+ 574      20756E73 
+ 574      69676E65 
+ 574      6420696E 
+ 574      7400
+ 575              	.LASF3:
+ 576 013a 73686F72 		.ascii	"short unsigned int\000"
+ 576      7420756E 
+ 576      7369676E 
+ 576      65642069 
+ 576      6E7400
+ 577              	.LASF10:
+ 578 014d 646F7562 		.ascii	"double\000"
+ 578      6C6500
+ 579              	.LASF14:
+ 580 0154 6D794144 		.ascii	"myADC_SEQ_SAR_BACKUP_STRUCT\000"
+ 580      435F5345 
+ 580      515F5341 
+ 580      525F4241 
+ 580      434B5550 
+ 581              	.LASF8:
+ 582 0170 756E7369 		.ascii	"unsigned int\000"
+ 582      676E6564 
+ 582      20696E74 
+ 582      00
+ 583              	.LASF7:
+ 584 017d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 584      206C6F6E 
+ 584      6720756E 
+ 584      7369676E 
+ 584      65642069 
+ 585              	.LASF15:
+ 586 0194 6D794144 		.ascii	"myADC_SEQ_SAR_SaveConfig\000"
+ 586      435F5345 
+ 586      515F5341 
+ 586      525F5361 
+ 586      7665436F 
+ 587              	.LASF24:
+ 588 01ad 433A5C55 		.ascii	"C:\\Users\\danaukes\\projects\\code_pyscilloscope\\"
+ 588      73657273 
+ 588      5C64616E 
+ 588      61756B65 
+ 588      735C7072 
+ 589 01db 70736F63 		.ascii	"psoc\\Workspace01\\Design01.cydsn\000"
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccps0jad.s 			page 15
 
 
- 589      435F5345 
- 589      515F5341 
- 589      525F5361 
- 589      7665436F 
+ 589      5C576F72 
+ 589      6B737061 
+ 589      63653031 
+ 589      5C446573 
  590              	.LASF16:
- 591 01f1 6D794144 		.ascii	"myADC_SEQ_SAR_RestoreConfig\000"
+ 591 01fb 6D794144 		.ascii	"myADC_SEQ_SAR_RestoreConfig\000"
  591      435F5345 
  591      515F5341 
  591      525F5265 
  591      73746F72 
  592              	.LASF6:
- 593 020d 6C6F6E67 		.ascii	"long long int\000"
+ 593 0217 6C6F6E67 		.ascii	"long long int\000"
  593      206C6F6E 
  593      6720696E 
  593      7400
  594              	.LASF11:
- 595 021b 63686172 		.ascii	"char\000"
+ 595 0225 63686172 		.ascii	"char\000"
  595      00
  596              	.LASF2:
- 597 0220 73686F72 		.ascii	"short int\000"
+ 597 022a 73686F72 		.ascii	"short int\000"
  597      7420696E 
  597      7400
  598              	.LASF12:
- 599 022a 75696E74 		.ascii	"uint8\000"
+ 599 0234 75696E74 		.ascii	"uint8\000"
  599      3800
  600              	.LASF4:
- 601 0230 6C6F6E67 		.ascii	"long int\000"
+ 601 023a 6C6F6E67 		.ascii	"long int\000"
  601      20696E74 
  601      00
  602              	.LASF25:
- 603 0239 656E6162 		.ascii	"enableState\000"
+ 603 0243 656E6162 		.ascii	"enableState\000"
  603      6C655374 
  603      61746500 
  604              	.LASF0:
- 605 0245 7369676E 		.ascii	"signed char\000"
+ 605 024f 7369676E 		.ascii	"signed char\000"
  605      65642063 
  605      68617200 
  606              	.LASF26:
- 607 0251 6D794144 		.ascii	"myADC_SEQ_SAR_backup\000"
+ 607 025b 6D794144 		.ascii	"myADC_SEQ_SAR_backup\000"
  607      435F5345 
  607      515F5341 
  607      525F6261 
  607      636B7570 
  608              	.LASF20:
- 609 0266 6D794144 		.ascii	"myADC_SEQ_SAR_Enable\000"
+ 609 0270 6D794144 		.ascii	"myADC_SEQ_SAR_Enable\000"
  609      435F5345 
  609      515F5341 
  609      525F456E 
