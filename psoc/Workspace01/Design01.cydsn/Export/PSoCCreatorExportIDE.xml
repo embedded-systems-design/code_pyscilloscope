@@ -150,6 +150,11 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myADC_SEQ_FinalBuf_dma.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myADC_SEQ_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myADC_SEQ_IRQ.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myCounter.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myCounter.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\myCounter_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\Export\ARM_GCC_Generic">

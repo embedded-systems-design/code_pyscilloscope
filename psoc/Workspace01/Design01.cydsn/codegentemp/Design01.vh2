@@ -2,7 +2,7 @@
 --	Conversion of Design01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Aug 30 13:21:13 2020
+--	Wed Sep 09 15:03:31 2020
 --
 
 USE cypress.cypress.all;
@@ -417,6 +417,17 @@ SIGNAL tmpFB_0__Pin_3_net_0 : bit;
 SIGNAL tmpIO_0__Pin_3_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_3_net_0 : bit;
+SIGNAL Net_274 : bit;
+SIGNAL \myCounter:Net_82\ : bit;
+SIGNAL \myCounter:Net_91\ : bit;
+SIGNAL \myCounter:Net_48\ : bit;
+SIGNAL \myCounter:Net_47\ : bit;
+SIGNAL \myCounter:Net_42\ : bit;
+SIGNAL Net_280 : bit;
+SIGNAL Net_277 : bit;
+SIGNAL \myCounter:Net_89\ : bit;
+SIGNAL \myCounter:Net_95\ : bit;
+SIGNAL \myCounter:Net_102\ : bit;
 SIGNAL \myADC_SEQ:AMuxHw_2_Decoder_old_id_5\\D\ : bit;
 SIGNAL \myADC_SEQ:AMuxHw_2_Decoder_old_id_4\\D\ : bit;
 SIGNAL \myADC_SEQ:AMuxHw_2_Decoder_old_id_3\\D\ : bit;
@@ -1399,6 +1410,26 @@ Pin_3:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_3_net_0);
+myClock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"c8fda3cd-2f9f-46cd-aa38-487d0453fee1",
+		source_clock_id=>"315365C3-2E3E-4f04-84A2-BB564A173261",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_274,
+		dig_domain_out=>open);
+\myCounter:CounterHW\:cy_psoc3_timer_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_274,
+		kill=>zero,
+		enable=>zero,
+		capture=>zero,
+		timer_reset=>zero,
+		tc=>\myCounter:Net_48\,
+		compare=>\myCounter:Net_47\,
+		interrupt=>\myCounter:Net_42\);
 \myADC_SEQ:AMuxHw_2_Decoder_old_id_5\:cy_dff
 	PORT MAP(d=>\myADC_SEQ:ch_addr_5\,
 		clk=>\myADC_SEQ:clock\,

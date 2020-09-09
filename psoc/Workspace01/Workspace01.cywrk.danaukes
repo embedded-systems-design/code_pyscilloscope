@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Design01\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\Design01\TopDesign">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\Design01</v>
@@ -65,6 +65,8 @@
 <v>Workspace01\Design01\Generated_Source\PSoC5\myADC_SEQ_IRQ</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\myADC_SEQ_SAR</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\myADC_SEQ_TempBuf</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\myClock</v>
+<v>Workspace01\Design01\Generated_Source\PSoC5\myCounter</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\myDAC</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\myUSB</v>
 <v>Workspace01\Design01\Generated_Source\PSoC5\myUSB\myUSB.c</v>
@@ -162,6 +164,9 @@
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myADC_SEQ_SAR_INT.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myADC_SEQ_SAR_PM.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myADC_SEQ_TempBuf_dma.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myClock.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myCounter.lst</v>
+<v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myCounter_PM.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myDAC.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myDAC_PM.lst</v>
 <v>Workspace01\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\myUSB.lst</v>
@@ -211,6 +216,8 @@
 <v>Workspace01\Design01\System Reference Guides</v>
 <v>Workspace01\Design01\System Reference Guides\cy_boot_v5_90</v>
 <v>Workspace01\Design01\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>Workspace01\Design01\Counter_v3_0.pdf</v>
+<v>Workspace01\Design01\cy_clock_v2_20.pdf</v>
 <v>Workspace01\Design01\cy_pins_v2_20</v>
 <v>Workspace01\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Workspace01\Design01\USBFS_v3_20.pdf</v>
@@ -224,6 +231,8 @@
 <v>Workspace01\Design01\System Reference Guides</v>
 <v>Workspace01\Design01\System Reference Guides\cy_boot_v5_90</v>
 <v>Workspace01\Design01\ADC_SAR_SEQ_v2_10.pdf</v>
+<v>Workspace01\Design01\Counter_v3_0.pdf</v>
+<v>Workspace01\Design01\cy_clock_v2_20.pdf</v>
 <v>Workspace01\Design01\cy_pins_v2_20</v>
 <v>Workspace01\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Workspace01\Design01\USBFS_v3_20.pdf</v>
@@ -238,6 +247,9 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Design01.cydsn\main.c" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\Generated_Source\PSoC5\myUSB_cdc.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -245,7 +257,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1494, 1696" SelectedTabbedMdiWindow="316cfd48-da36-4296-a783-c6bac0903785"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="494eaa39-696c-43bb-ba66-0e904b0f4d5f" /><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\main.c" Guid="316cfd48-da36-4296-a783-c6bac0903785" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1494, 1696" SelectedTabbedMdiWindow="316cfd48-da36-4296-a783-c6bac0903785"><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\main.c" Guid="316cfd48-da36-4296-a783-c6bac0903785" /><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\Design01.cydwr" Guid="0ebf9a6c-6583-414b-8221-d094669e1796" /><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="dfe36ae3-73bc-47f4-b608-667f919eedea" /><DocumentWindow Key="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\Generated_Source\PSoC5\myUSB_cdc.c" Guid="87c70f44-0175-4dd4-890e-05e2b750a92f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="494eaa39-696c-43bb-ba66-0e904b0f4d5f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

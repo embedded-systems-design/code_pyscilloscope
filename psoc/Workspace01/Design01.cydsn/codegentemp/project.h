@@ -37,6 +37,8 @@
 #include "Pin_2.h"
 #include "Pin_3_aliases.h"
 #include "Pin_3.h"
+#include "myClock.h"
+#include "myCounter.h"
 #include "myUSB_Dm_aliases.h"
 #include "myUSB_Dm.h"
 #include "myUSB_Dp_aliases.h"

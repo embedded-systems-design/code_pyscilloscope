@@ -37,6 +37,8 @@ int main(void)
     myADC_SEQ_Start();
     //Start the DAC subsystem
     myDAC_Start();
+    //start my counter
+    myCounter_Start();
     
     //create a new empty message string
     char message[255]="";
@@ -51,16 +53,30 @@ int main(void)
     uint16 value1=0;
     uint16 value2=0;
     
+    //define count variable
+    uint32 count=0;
+    uint32 count_last=0;
+    uint jj=0;
+    
     //create floating point variables to store floating poing voltages.
     float faout=0;
     float fvalue0=0;
     float fvalue1=0;
     float fvalue2=0;
+    
+    //take an initial time read
+    count = myCounter_ReadCounter();
+    count_last = count;
 
     for(;;)
     {
-        //define t as a function of the number of loops divided by 1000
-        t = ((float)ii)/1000;
+        //read the current time from the 1khz counter
+        count = myCounter_ReadCounter();
+        //if the counter has reset, increment jj
+        if (count_last<count) jj++;
+        
+        //define t as a function of the counter value divided by 1000 plus the number of counter resets * 60
+        t = ((float)(60000-count)/1000) + jj*60;
         
         //compute y as a function of sine
         y = AMPLITUDE*sin(2*PI*t*FREQUENCY)+OFFSET;
@@ -94,8 +110,8 @@ int main(void)
         
         //increment ii
         ii++;
-        //pause 1 ms
-        CyDelay(1);
+        //store last counter value
+        count_last = count;
     }
 }
 

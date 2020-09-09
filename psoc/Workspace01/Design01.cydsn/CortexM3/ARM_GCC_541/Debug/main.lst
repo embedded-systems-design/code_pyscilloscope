@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 1
 
 
    1              		.syntax unified
@@ -21,22 +21,23 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 1
   18              		.cfi_sections	.debug_frame
   19              		.global	__aeabi_ui2f
   20              		.global	__aeabi_fdiv
-  21              		.global	__aeabi_f2d
-  22              		.global	__aeabi_dmul
-  23              		.global	__aeabi_dadd
-  24              		.global	__aeabi_d2iz
-  25              		.global	__aeabi_d2f
-  26              		.global	__aeabi_ddiv
-  27              		.global	__aeabi_fmul
-  28              		.section	.text.main,"ax",%progbits
-  29              		.align	2
-  30              		.global	main
-  31              		.thumb
-  32              		.thumb_func
-  33              		.type	main, %function
-  34              	main:
-  35              	.LFB64:
-  36              		.file 1 "main.c"
+  21              		.global	__aeabi_fadd
+  22              		.global	__aeabi_f2d
+  23              		.global	__aeabi_dmul
+  24              		.global	__aeabi_dadd
+  25              		.global	__aeabi_d2iz
+  26              		.global	__aeabi_d2f
+  27              		.global	__aeabi_ddiv
+  28              		.global	__aeabi_fmul
+  29              		.section	.text.main,"ax",%progbits
+  30              		.align	2
+  31              		.global	main
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	main, %function
+  35              	main:
+  36              	.LFB64:
+  37              		.file 1 "main.c"
    1:main.c        **** /* ========================================
    2:main.c        ****  *
    3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
@@ -57,10 +58,10 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 1
   18:main.c        **** //Define Constants for the script
   19:main.c        **** #define AMPLITUDE 127
   20:main.c        **** #define OFFSET 127
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 2
+
+
   21:main.c        **** #define FREQUENCY 10
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 2
-
-
   22:main.c        **** #define PI 3.141592
   23:main.c        **** #define DACBITS 255
   24:main.c        **** #define ADCBITS 4095
@@ -69,22 +70,21 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 1
   27:main.c        **** 
   28:main.c        **** int main(void)
   29:main.c        **** {
-  37              		.loc 1 29 0
-  38              		.cfi_startproc
-  39              		@ args = 0, pretend = 0, frame = 256
-  40              		@ frame_needed = 0, uses_anonymous_args = 0
-  41 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
-  42              		.cfi_def_cfa_offset 36
-  43              		.cfi_offset 4, -36
-  44              		.cfi_offset 5, -32
-  45              		.cfi_offset 6, -28
-  46              		.cfi_offset 7, -24
-  47              		.cfi_offset 8, -20
-  48              		.cfi_offset 9, -16
-  49              		.cfi_offset 10, -12
-  50              		.cfi_offset 11, -8
+  38              		.loc 1 29 0
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 264
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+  43              		.cfi_def_cfa_offset 32
+  44              		.cfi_offset 4, -32
+  45              		.cfi_offset 5, -28
+  46              		.cfi_offset 6, -24
+  47              		.cfi_offset 7, -20
+  48              		.cfi_offset 8, -16
+  49              		.cfi_offset 9, -12
+  50              		.cfi_offset 10, -8
   51              		.cfi_offset 14, -4
-  52 0004 C9B0     		sub	sp, sp, #292
+  52 0004 CAB0     		sub	sp, sp, #296
   53              		.cfi_def_cfa_offset 328
   30:main.c        ****     //the following code gets run once
   31:main.c        ****     
@@ -114,1339 +114,1541 @@ ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 1
   69              		.loc 1 39 0
   70 0014 FFF7FEFF 		bl	myDAC_Start
   71              	.LVL2:
-  40:main.c        ****     
-  41:main.c        ****     //create a new empty message string
-  42:main.c        ****     char message[255]="";
-  72              		.loc 1 42 0
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 3
+  40:main.c        ****     //start my counter
+  41:main.c        ****     myCounter_Start();
+  72              		.loc 1 41 0
+  73 0018 FFF7FEFF 		bl	myCounter_Start
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 3
 
 
-  73 0018 0024     		movs	r4, #0
-  74 001a 0894     		str	r4, [sp, #32]
-  75 001c FB22     		movs	r2, #251
-  76 001e 2146     		mov	r1, r4
-  77 0020 09A8     		add	r0, sp, #36
-  78 0022 FFF7FEFF 		bl	memset
-  79              	.LVL3:
-  80              	.L3:
-  43:main.c        ****     //create a counter ii for iterating
-  44:main.c        ****     uint ii=0;
-  45:main.c        ****     //creaate variable t for counting time
-  46:main.c        ****     double t=0;
-  47:main.c        ****     //create variable y for storing the DAC value to write
-  48:main.c        ****     double y=0;
-  49:main.c        ****     //create variables to hold ADC read    
-  50:main.c        ****     uint16 value0=0;
-  51:main.c        ****     uint16 value1=0;
-  52:main.c        ****     uint16 value2=0;
-  53:main.c        ****     
-  54:main.c        ****     //create floating point variables to store floating poing voltages.
-  55:main.c        ****     float faout=0;
-  56:main.c        ****     float fvalue0=0;
-  57:main.c        ****     float fvalue1=0;
-  58:main.c        ****     float fvalue2=0;
-  59:main.c        **** 
-  60:main.c        ****     for(;;)
-  61:main.c        ****     {
-  62:main.c        ****         //define t as a function of the number of loops divided by 1000
-  63:main.c        ****         t = ((float)ii)/1000;
-  81              		.loc 1 63 0
-  82 0026 2046     		mov	r0, r4
-  83 0028 FFF7FEFF 		bl	__aeabi_ui2f
-  84              	.LVL4:
-  85 002c 4E49     		ldr	r1, .L5+32
-  86 002e FFF7FEFF 		bl	__aeabi_fdiv
-  87              	.LVL5:
-  88 0032 FFF7FEFF 		bl	__aeabi_f2d
-  89              	.LVL6:
-  90 0036 0646     		mov	r6, r0
-  91 0038 0F46     		mov	r7, r1
-  92              	.LVL7:
-  64:main.c        ****         
-  65:main.c        ****         //compute y as a function of sine
-  66:main.c        ****         y = AMPLITUDE*sin(2*PI*t*FREQUENCY)+OFFSET;
-  93              		.loc 1 66 0
-  94 003a 43A3     		adr	r3, .L5
-  95 003c D3E90023 		ldrd	r2, [r3]
-  96 0040 FFF7FEFF 		bl	__aeabi_dmul
-  97              	.LVL8:
-  98 0044 0022     		movs	r2, #0
-  99 0046 494B     		ldr	r3, .L5+36
- 100 0048 FFF7FEFF 		bl	__aeabi_dmul
- 101              	.LVL9:
- 102 004c FFF7FEFF 		bl	sin
+  74              	.LVL3:
+  42:main.c        ****     
+  43:main.c        ****     //create a new empty message string
+  44:main.c        ****     char message[255]="";
+  75              		.loc 1 44 0
+  76 001c 0025     		movs	r5, #0
+  77 001e 0A95     		str	r5, [sp, #40]
+  78 0020 FB22     		movs	r2, #251
+  79 0022 2946     		mov	r1, r5
+  80 0024 0BA8     		add	r0, sp, #44
+  81 0026 FFF7FEFF 		bl	memset
+  82              	.LVL4:
+  45:main.c        ****     //create a counter ii for iterating
+  46:main.c        ****     uint ii=0;
+  47:main.c        ****     //creaate variable t for counting time
+  48:main.c        ****     double t=0;
+  49:main.c        ****     //create variable y for storing the DAC value to write
+  50:main.c        ****     double y=0;
+  51:main.c        ****     //create variables to hold ADC read    
+  52:main.c        ****     uint16 value0=0;
+  53:main.c        ****     uint16 value1=0;
+  54:main.c        ****     uint16 value2=0;
+  55:main.c        ****     
+  56:main.c        ****     //define count variable
+  57:main.c        ****     uint32 count=0;
+  58:main.c        ****     uint32 count_last=0;
+  59:main.c        ****     uint jj=0;
+  60:main.c        ****     
+  61:main.c        ****     //create floating point variables to store floating poing voltages.
+  62:main.c        ****     float faout=0;
+  63:main.c        ****     float fvalue0=0;
+  64:main.c        ****     float fvalue1=0;
+  65:main.c        ****     float fvalue2=0;
+  66:main.c        ****     
+  67:main.c        ****     //take an initial time read
+  68:main.c        ****     count = myCounter_ReadCounter();
+  83              		.loc 1 68 0
+  84 002a FFF7FEFF 		bl	myCounter_ReadCounter
+  85              	.LVL5:
+  86 002e 0646     		mov	r6, r0
+  87              	.LVL6:
+  88              	.L4:
+  69:main.c        ****     count_last = count;
+  70:main.c        **** 
+  71:main.c        ****     for(;;)
+  72:main.c        ****     {
+  73:main.c        ****         //read the current time from the 1khz counter
+  74:main.c        ****         count = myCounter_ReadCounter();
+  89              		.loc 1 74 0
+  90 0030 FFF7FEFF 		bl	myCounter_ReadCounter
+  91              	.LVL7:
+  92 0034 0446     		mov	r4, r0
+  93              	.LVL8:
+  75:main.c        ****         //if the counter has reset, increment jj
+  76:main.c        ****         if (count_last<count) jj++;
+  94              		.loc 1 76 0
+  95 0036 8642     		cmp	r6, r0
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 4
+
+
+  96 0038 00D2     		bcs	.L2
+  97              		.loc 1 76 0 is_stmt 0 discriminator 1
+  98 003a 0135     		adds	r5, r5, #1
+  99              	.LVL9:
+ 100              	.L2:
+  77:main.c        ****         
+  78:main.c        ****         //define t as a function of the counter value divided by 1000 plus the number of counter re
+  79:main.c        ****         t = ((float)(60000-count)/1000) + jj*60;
+ 101              		.loc 1 79 0 is_stmt 1
+ 102 003c C4F56A40 		rsb	r0, r4, #59904
  103              	.LVL10:
- 104 0050 3FA3     		adr	r3, .L5+8
- 105 0052 D3E90023 		ldrd	r2, [r3]
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 4
-
-
- 106 0056 FFF7FEFF 		bl	__aeabi_dmul
- 107              	.LVL11:
- 108 005a 3DA3     		adr	r3, .L5+8
- 109 005c D3E90023 		ldrd	r2, [r3]
- 110 0060 FFF7FEFF 		bl	__aeabi_dadd
- 111              	.LVL12:
- 112 0064 8046     		mov	r8, r0
- 113 0066 8946     		mov	r9, r1
- 114              	.LVL13:
-  67:main.c        ****         
-  68:main.c        ****         //set the DAC value
-  69:main.c        ****         myDAC_SetValue((int)y);
- 115              		.loc 1 69 0
- 116 0068 FFF7FEFF 		bl	__aeabi_d2iz
- 117              	.LVL14:
- 118 006c C0B2     		uxtb	r0, r0
- 119 006e FFF7FEFF 		bl	myDAC_SetValue
- 120              	.LVL15:
-  70:main.c        ****         
-  71:main.c        ****         //Begin ADC read
-  72:main.c        ****         myADC_SEQ_StartConvert();
- 121              		.loc 1 72 0
- 122 0072 FFF7FEFF 		bl	myADC_SEQ_StartConvert
- 123              	.LVL16:
-  73:main.c        ****         //wait for adc conversion to complete.
-  74:main.c        ****         myADC_SEQ_IsEndConversion(myADC_SEQ_WAIT_FOR_RESULT);
- 124              		.loc 1 74 0
- 125 0076 0020     		movs	r0, #0
- 126 0078 FFF7FEFF 		bl	myADC_SEQ_IsEndConversion
- 127              	.LVL17:
-  75:main.c        **** 
-  76:main.c        ****         //save ADC reads to local variables
-  77:main.c        ****         value0=myADC_SEQ_GetResult16(0);
- 128              		.loc 1 77 0
- 129 007c 0020     		movs	r0, #0
- 130 007e FFF7FEFF 		bl	myADC_SEQ_GetResult16
- 131              	.LVL18:
- 132 0082 1FFA80FB 		uxth	fp, r0
- 133              	.LVL19:
-  78:main.c        ****         value1=myADC_SEQ_GetResult16(1);
- 134              		.loc 1 78 0
- 135 0086 0120     		movs	r0, #1
- 136 0088 FFF7FEFF 		bl	myADC_SEQ_GetResult16
- 137              	.LVL20:
- 138 008c 1FFA80FA 		uxth	r10, r0
- 139              	.LVL21:
-  79:main.c        ****         value2=myADC_SEQ_GetResult16(2);
- 140              		.loc 1 79 0
- 141 0090 0220     		movs	r0, #2
- 142 0092 FFF7FEFF 		bl	myADC_SEQ_GetResult16
- 143              	.LVL22:
- 144 0096 85B2     		uxth	r5, r0
- 145              	.LVL23:
+ 104 0040 6030     		adds	r0, r0, #96
+ 105 0042 FFF7FEFF 		bl	__aeabi_ui2f
+ 106              	.LVL11:
+ 107 0046 5049     		ldr	r1, .L6+32
+ 108 0048 FFF7FEFF 		bl	__aeabi_fdiv
+ 109              	.LVL12:
+ 110 004c 0646     		mov	r6, r0
+ 111              	.LVL13:
+ 112 004e C5EB0513 		rsb	r3, r5, r5, lsl #4
+ 113 0052 9800     		lsls	r0, r3, #2
+ 114 0054 FFF7FEFF 		bl	__aeabi_ui2f
+ 115              	.LVL14:
+ 116 0058 3146     		mov	r1, r6
+ 117 005a FFF7FEFF 		bl	__aeabi_fadd
+ 118              	.LVL15:
+ 119 005e FFF7FEFF 		bl	__aeabi_f2d
+ 120              	.LVL16:
+ 121 0062 CDE90801 		strd	r0, [sp, #32]
+ 122              	.LVL17:
   80:main.c        ****         
-  81:main.c        ****         //convert uint to float for writing to serial
-  82:main.c        ****         faout = (float)y*DACREF/DACBITS;
- 146              		.loc 1 82 0
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 5
+  81:main.c        ****         //compute y as a function of sine
+  82:main.c        ****         y = AMPLITUDE*sin(2*PI*t*FREQUENCY)+OFFSET;
+ 123              		.loc 1 82 0
+ 124 0066 40A3     		adr	r3, .L6
+ 125 0068 D3E90023 		ldrd	r2, [r3]
+ 126 006c FFF7FEFF 		bl	__aeabi_dmul
+ 127              	.LVL18:
+ 128 0070 0022     		movs	r2, #0
+ 129 0072 464B     		ldr	r3, .L6+36
+ 130 0074 FFF7FEFF 		bl	__aeabi_dmul
+ 131              	.LVL19:
+ 132 0078 FFF7FEFF 		bl	sin
+ 133              	.LVL20:
+ 134 007c 3CA3     		adr	r3, .L6+8
+ 135 007e D3E90023 		ldrd	r2, [r3]
+ 136 0082 FFF7FEFF 		bl	__aeabi_dmul
+ 137              	.LVL21:
+ 138 0086 3AA3     		adr	r3, .L6+8
+ 139 0088 D3E90023 		ldrd	r2, [r3]
+ 140 008c FFF7FEFF 		bl	__aeabi_dadd
+ 141              	.LVL22:
+ 142 0090 8046     		mov	r8, r0
+ 143 0092 8946     		mov	r9, r1
+ 144              	.LVL23:
+  83:main.c        ****         
+  84:main.c        ****         //set the DAC value
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 5
 
 
- 147 0098 4046     		mov	r0, r8
- 148 009a 4946     		mov	r1, r9
- 149 009c FFF7FEFF 		bl	__aeabi_d2f
- 150              	.LVL24:
- 151 00a0 FFF7FEFF 		bl	__aeabi_f2d
- 152              	.LVL25:
- 153 00a4 2CA3     		adr	r3, .L5+16
- 154 00a6 D3E90023 		ldrd	r2, [r3]
- 155 00aa FFF7FEFF 		bl	__aeabi_dmul
- 156              	.LVL26:
- 157 00ae 2CA3     		adr	r3, .L5+24
- 158 00b0 D3E90023 		ldrd	r2, [r3]
- 159 00b4 FFF7FEFF 		bl	__aeabi_ddiv
- 160              	.LVL27:
- 161 00b8 FFF7FEFF 		bl	__aeabi_d2f
- 162              	.LVL28:
- 163 00bc 8046     		mov	r8, r0
- 164              	.LVL29:
-  83:main.c        ****         fvalue0 = (float)value0*ADCREF/ADCBITS;
- 165              		.loc 1 83 0
- 166 00be 5846     		mov	r0, fp
- 167              	.LVL30:
- 168 00c0 FFF7FEFF 		bl	__aeabi_ui2f
- 169              	.LVL31:
- 170 00c4 2A49     		ldr	r1, .L5+40
- 171 00c6 FFF7FEFF 		bl	__aeabi_fmul
- 172              	.LVL32:
- 173 00ca 2A49     		ldr	r1, .L5+44
- 174 00cc FFF7FEFF 		bl	__aeabi_fdiv
- 175              	.LVL33:
- 176 00d0 8146     		mov	r9, r0
- 177              	.LVL34:
-  84:main.c        ****         fvalue1 = (float)value1*ADCREF/ADCBITS;
- 178              		.loc 1 84 0
- 179 00d2 5046     		mov	r0, r10
- 180              	.LVL35:
- 181 00d4 FFF7FEFF 		bl	__aeabi_ui2f
- 182              	.LVL36:
- 183 00d8 2549     		ldr	r1, .L5+40
- 184 00da FFF7FEFF 		bl	__aeabi_fmul
- 185              	.LVL37:
- 186 00de 2549     		ldr	r1, .L5+44
- 187 00e0 FFF7FEFF 		bl	__aeabi_fdiv
- 188              	.LVL38:
- 189 00e4 8246     		mov	r10, r0
- 190              	.LVL39:
-  85:main.c        ****         fvalue2 = (float)value2*ADCREF/ADCBITS;
- 191              		.loc 1 85 0
- 192 00e6 2846     		mov	r0, r5
- 193              	.LVL40:
- 194 00e8 FFF7FEFF 		bl	__aeabi_ui2f
- 195              	.LVL41:
- 196 00ec 2049     		ldr	r1, .L5+40
- 197 00ee FFF7FEFF 		bl	__aeabi_fmul
- 198              	.LVL42:
- 199 00f2 2049     		ldr	r1, .L5+44
- 200 00f4 FFF7FEFF 		bl	__aeabi_fdiv
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 6
-
-
- 201              	.LVL43:
+  85:main.c        ****         myDAC_SetValue((int)y);
+ 145              		.loc 1 85 0
+ 146 0094 FFF7FEFF 		bl	__aeabi_d2iz
+ 147              	.LVL24:
+ 148 0098 C0B2     		uxtb	r0, r0
+ 149 009a FFF7FEFF 		bl	myDAC_SetValue
+ 150              	.LVL25:
   86:main.c        ****         
-  87:main.c        ****         //convert floating point values to string and store in message pointer
-  88:main.c        ****         sprintf(message,"%.3f,%.3f,%.3f,%.3f,%.3f\r\n",t,faout,fvalue0,fvalue1,fvalue2);
- 202              		.loc 1 88 0
- 203 00f8 FFF7FEFF 		bl	__aeabi_f2d
- 204              	.LVL44:
- 205 00fc CDE90601 		strd	r0, [sp, #24]
- 206 0100 5046     		mov	r0, r10
- 207 0102 FFF7FEFF 		bl	__aeabi_f2d
- 208              	.LVL45:
- 209 0106 CDE90401 		strd	r0, [sp, #16]
- 210 010a 4846     		mov	r0, r9
- 211 010c FFF7FEFF 		bl	__aeabi_f2d
+  87:main.c        ****         //Begin ADC read
+  88:main.c        ****         myADC_SEQ_StartConvert();
+ 151              		.loc 1 88 0
+ 152 009e FFF7FEFF 		bl	myADC_SEQ_StartConvert
+ 153              	.LVL26:
+  89:main.c        ****         //wait for adc conversion to complete.
+  90:main.c        ****         myADC_SEQ_IsEndConversion(myADC_SEQ_WAIT_FOR_RESULT);
+ 154              		.loc 1 90 0
+ 155 00a2 0020     		movs	r0, #0
+ 156 00a4 FFF7FEFF 		bl	myADC_SEQ_IsEndConversion
+ 157              	.LVL27:
+  91:main.c        **** 
+  92:main.c        ****         //save ADC reads to local variables
+  93:main.c        ****         value0=myADC_SEQ_GetResult16(0);
+ 158              		.loc 1 93 0
+ 159 00a8 0020     		movs	r0, #0
+ 160 00aa FFF7FEFF 		bl	myADC_SEQ_GetResult16
+ 161              	.LVL28:
+ 162 00ae 1FFA80FA 		uxth	r10, r0
+ 163              	.LVL29:
+  94:main.c        ****         value1=myADC_SEQ_GetResult16(1);
+ 164              		.loc 1 94 0
+ 165 00b2 0120     		movs	r0, #1
+ 166 00b4 FFF7FEFF 		bl	myADC_SEQ_GetResult16
+ 167              	.LVL30:
+ 168 00b8 87B2     		uxth	r7, r0
+ 169              	.LVL31:
+  95:main.c        ****         value2=myADC_SEQ_GetResult16(2);
+ 170              		.loc 1 95 0
+ 171 00ba 0220     		movs	r0, #2
+ 172 00bc FFF7FEFF 		bl	myADC_SEQ_GetResult16
+ 173              	.LVL32:
+ 174 00c0 86B2     		uxth	r6, r0
+ 175              	.LVL33:
+  96:main.c        ****         
+  97:main.c        ****         //convert uint to float for writing to serial
+  98:main.c        ****         faout = (float)y*DACREF/DACBITS;
+ 176              		.loc 1 98 0
+ 177 00c2 4046     		mov	r0, r8
+ 178 00c4 4946     		mov	r1, r9
+ 179 00c6 FFF7FEFF 		bl	__aeabi_d2f
+ 180              	.LVL34:
+ 181 00ca FFF7FEFF 		bl	__aeabi_f2d
+ 182              	.LVL35:
+ 183 00ce 2AA3     		adr	r3, .L6+16
+ 184 00d0 D3E90023 		ldrd	r2, [r3]
+ 185 00d4 FFF7FEFF 		bl	__aeabi_dmul
+ 186              	.LVL36:
+ 187 00d8 29A3     		adr	r3, .L6+24
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 6
+
+
+ 188 00da D3E90023 		ldrd	r2, [r3]
+ 189 00de FFF7FEFF 		bl	__aeabi_ddiv
+ 190              	.LVL37:
+ 191 00e2 FFF7FEFF 		bl	__aeabi_d2f
+ 192              	.LVL38:
+ 193 00e6 8046     		mov	r8, r0
+ 194              	.LVL39:
+  99:main.c        ****         fvalue0 = (float)value0*ADCREF/ADCBITS;
+ 195              		.loc 1 99 0
+ 196 00e8 5046     		mov	r0, r10
+ 197              	.LVL40:
+ 198 00ea FFF7FEFF 		bl	__aeabi_ui2f
+ 199              	.LVL41:
+ 200 00ee 2849     		ldr	r1, .L6+40
+ 201 00f0 FFF7FEFF 		bl	__aeabi_fmul
+ 202              	.LVL42:
+ 203 00f4 2749     		ldr	r1, .L6+44
+ 204 00f6 FFF7FEFF 		bl	__aeabi_fdiv
+ 205              	.LVL43:
+ 206 00fa 8146     		mov	r9, r0
+ 207              	.LVL44:
+ 100:main.c        ****         fvalue1 = (float)value1*ADCREF/ADCBITS;
+ 208              		.loc 1 100 0
+ 209 00fc 3846     		mov	r0, r7
+ 210              	.LVL45:
+ 211 00fe FFF7FEFF 		bl	__aeabi_ui2f
  212              	.LVL46:
- 213 0110 CDE90201 		strd	r0, [sp, #8]
- 214 0114 4046     		mov	r0, r8
- 215 0116 FFF7FEFF 		bl	__aeabi_f2d
- 216              	.LVL47:
- 217 011a CDE90001 		strd	r0, [sp]
- 218 011e 3246     		mov	r2, r6
- 219 0120 3B46     		mov	r3, r7
- 220 0122 1549     		ldr	r1, .L5+48
- 221 0124 08A8     		add	r0, sp, #32
- 222 0126 FFF7FEFF 		bl	sprintf
- 223              	.LVL48:
- 224              	.L2:
-  89:main.c        **** 
-  90:main.c        ****         //wait until myUSB subsystem is ready
-  91:main.c        ****         while (!myUSB_CDCIsReady());
- 225              		.loc 1 91 0 discriminator 1
- 226 012a FFF7FEFF 		bl	myUSB_CDCIsReady
- 227              	.LVL49:
- 228 012e 0028     		cmp	r0, #0
- 229 0130 FBD0     		beq	.L2
-  92:main.c        ****         //write message to USB
-  93:main.c        ****         myUSB_PutString(message);
- 230              		.loc 1 93 0
- 231 0132 08A8     		add	r0, sp, #32
- 232 0134 FFF7FEFF 		bl	myUSB_PutString
- 233              	.LVL50:
-  94:main.c        ****         
-  95:main.c        ****         //increment ii
-  96:main.c        ****         ii++;
- 234              		.loc 1 96 0
- 235 0138 0134     		adds	r4, r4, #1
- 236              	.LVL51:
-  97:main.c        ****         //pause 1 ms
-  98:main.c        ****         CyDelay(1);
- 237              		.loc 1 98 0
- 238 013a 0120     		movs	r0, #1
- 239 013c FFF7FEFF 		bl	CyDelay
- 240              	.LVL52:
-  99:main.c        ****     }
- 241              		.loc 1 99 0
- 242 0140 71E7     		b	.L3
- 243              	.L6:
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 7
+ 213 0102 2349     		ldr	r1, .L6+40
+ 214 0104 FFF7FEFF 		bl	__aeabi_fmul
+ 215              	.LVL47:
+ 216 0108 2249     		ldr	r1, .L6+44
+ 217 010a FFF7FEFF 		bl	__aeabi_fdiv
+ 218              	.LVL48:
+ 219 010e 0746     		mov	r7, r0
+ 220              	.LVL49:
+ 101:main.c        ****         fvalue2 = (float)value2*ADCREF/ADCBITS;
+ 221              		.loc 1 101 0
+ 222 0110 3046     		mov	r0, r6
+ 223              	.LVL50:
+ 224 0112 FFF7FEFF 		bl	__aeabi_ui2f
+ 225              	.LVL51:
+ 226 0116 1E49     		ldr	r1, .L6+40
+ 227 0118 FFF7FEFF 		bl	__aeabi_fmul
+ 228              	.LVL52:
+ 229 011c 1D49     		ldr	r1, .L6+44
+ 230 011e FFF7FEFF 		bl	__aeabi_fdiv
+ 231              	.LVL53:
+ 102:main.c        ****         
+ 103:main.c        ****         //convert floating point values to string and store in message pointer
+ 104:main.c        ****         sprintf(message,"%.3f,%.3f,%.3f,%.3f,%.3f\r\n",t,faout,fvalue0,fvalue1,fvalue2);
+ 232              		.loc 1 104 0
+ 233 0122 FFF7FEFF 		bl	__aeabi_f2d
+ 234              	.LVL54:
+ 235 0126 CDE90601 		strd	r0, [sp, #24]
+ 236 012a 3846     		mov	r0, r7
+ 237 012c FFF7FEFF 		bl	__aeabi_f2d
+ 238              	.LVL55:
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 7
 
 
- 244 0142 00BFAFF3 		.align	3
- 244      0080
- 245              	.L5:
- 246 0148 7A008BFC 		.word	-57999238
- 247 014c FA211940 		.word	1075388922
- 248 0150 00000000 		.word	0
- 249 0154 00C05F40 		.word	1080016896
- 250 0158 FCA9F1D2 		.word	-755914244
- 251 015c 4D62F03F 		.word	1072718413
- 252 0160 00000000 		.word	0
- 253 0164 00E06F40 		.word	1081073664
- 254 0168 00007A44 		.word	1148846080
- 255 016c 00002440 		.word	1076101120
- 256 0170 0000A040 		.word	1084227584
- 257 0174 00F07F45 		.word	1166012416
- 258 0178 00000000 		.word	.LC0
- 259              		.cfi_endproc
- 260              	.LFE64:
- 261              		.size	main, .-main
- 262              		.section	.rodata.str1.4,"aMS",%progbits,1
- 263              		.align	2
- 264              	.LC0:
- 265 0000 252E3366 		.ascii	"%.3f,%.3f,%.3f,%.3f,%.3f\015\012\000"
- 265      2C252E33 
- 265      662C252E 
- 265      33662C25 
- 265      2E33662C 
- 266              		.text
- 267              	.Letext0:
- 268              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 269              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 270              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 271              		.file 5 "Generated_Source\\PSoC5/cytypes.h"
- 272              		.file 6 "Generated_Source\\PSoC5/myUSB.h"
- 273              		.file 7 "Generated_Source\\PSoC5/myADC_SEQ.h"
- 274              		.file 8 "Generated_Source\\PSoC5/myDAC.h"
- 275              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 276              		.file 10 "Generated_Source\\PSoC5/myUSB_cdc.h"
- 277              		.file 11 "Generated_Source\\PSoC5/CyLib.h"
- 278              		.file 12 "Generated_Source\\PSoC5/core_cm3.h"
- 279              		.file 13 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4
- 280              		.section	.debug_info,"",%progbits
- 281              	.Ldebug_info0:
- 282 0000 1C030000 		.4byte	0x31c
- 283 0004 0400     		.2byte	0x4
- 284 0006 00000000 		.4byte	.Ldebug_abbrev0
- 285 000a 04       		.byte	0x4
- 286 000b 01       		.uleb128 0x1
- 287 000c 46000000 		.4byte	.LASF37
- 288 0010 0C       		.byte	0xc
- 289 0011 44020000 		.4byte	.LASF38
- 290 0015 BD010000 		.4byte	.LASF39
- 291 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 292 001d 00000000 		.4byte	0
- 293 0021 00000000 		.4byte	.Ldebug_line0
- 294 0025 02       		.uleb128 0x2
- 295 0026 04       		.byte	0x4
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 8
+ 239 0130 CDE90401 		strd	r0, [sp, #16]
+ 240 0134 4846     		mov	r0, r9
+ 241 0136 FFF7FEFF 		bl	__aeabi_f2d
+ 242              	.LVL56:
+ 243 013a CDE90201 		strd	r0, [sp, #8]
+ 244 013e 4046     		mov	r0, r8
+ 245 0140 FFF7FEFF 		bl	__aeabi_f2d
+ 246              	.LVL57:
+ 247 0144 CDE90001 		strd	r0, [sp]
+ 248 0148 DDE90823 		ldrd	r2, [sp, #32]
+ 249 014c 1249     		ldr	r1, .L6+48
+ 250 014e 0AA8     		add	r0, sp, #40
+ 251 0150 FFF7FEFF 		bl	sprintf
+ 252              	.LVL58:
+ 253              	.L3:
+ 105:main.c        **** 
+ 106:main.c        ****         //wait until myUSB subsystem is ready
+ 107:main.c        ****         while (!myUSB_CDCIsReady());
+ 254              		.loc 1 107 0 discriminator 1
+ 255 0154 FFF7FEFF 		bl	myUSB_CDCIsReady
+ 256              	.LVL59:
+ 257 0158 0028     		cmp	r0, #0
+ 258 015a FBD0     		beq	.L3
+ 108:main.c        ****         //write message to USB
+ 109:main.c        ****         myUSB_PutString(message);
+ 259              		.loc 1 109 0
+ 260 015c 0AA8     		add	r0, sp, #40
+ 261 015e FFF7FEFF 		bl	myUSB_PutString
+ 262              	.LVL60:
+ 110:main.c        ****         
+ 111:main.c        ****         //increment ii
+ 112:main.c        ****         ii++;
+ 113:main.c        ****         //store last counter value
+ 114:main.c        ****         count_last = count;
+ 263              		.loc 1 114 0
+ 264 0162 2646     		mov	r6, r4
+ 265              	.LVL61:
+ 115:main.c        ****     }
+ 266              		.loc 1 115 0
+ 267 0164 64E7     		b	.L4
+ 268              	.L7:
+ 269 0166 00BF     		.align	3
+ 270              	.L6:
+ 271 0168 7A008BFC 		.word	-57999238
+ 272 016c FA211940 		.word	1075388922
+ 273 0170 00000000 		.word	0
+ 274 0174 00C05F40 		.word	1080016896
+ 275 0178 FCA9F1D2 		.word	-755914244
+ 276 017c 4D62F03F 		.word	1072718413
+ 277 0180 00000000 		.word	0
+ 278 0184 00E06F40 		.word	1081073664
+ 279 0188 00007A44 		.word	1148846080
+ 280 018c 00002440 		.word	1076101120
+ 281 0190 0000A040 		.word	1084227584
+ 282 0194 00F07F45 		.word	1166012416
+ 283 0198 00000000 		.word	.LC0
+ 284              		.cfi_endproc
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 8
 
 
- 296 0027 05       		.byte	0x5
- 297 0028 696E7400 		.ascii	"int\000"
- 298 002c 03       		.uleb128 0x3
- 299 002d 04       		.byte	0x4
- 300 002e 07       		.byte	0x7
- 301 002f 85010000 		.4byte	.LASF0
- 302 0033 03       		.uleb128 0x3
- 303 0034 08       		.byte	0x8
- 304 0035 05       		.byte	0x5
- 305 0036 36020000 		.4byte	.LASF1
- 306 003a 03       		.uleb128 0x3
- 307 003b 08       		.byte	0x8
- 308 003c 04       		.byte	0x4
- 309 003d 7F020000 		.4byte	.LASF2
- 310 0041 03       		.uleb128 0x3
- 311 0042 01       		.byte	0x1
- 312 0043 06       		.byte	0x6
- 313 0044 8B020000 		.4byte	.LASF3
- 314 0048 03       		.uleb128 0x3
- 315 0049 01       		.byte	0x1
- 316 004a 08       		.byte	0x8
- 317 004b 77010000 		.4byte	.LASF4
- 318 004f 03       		.uleb128 0x3
- 319 0050 02       		.byte	0x2
- 320 0051 05       		.byte	0x5
- 321 0052 5B020000 		.4byte	.LASF5
- 322 0056 03       		.uleb128 0x3
- 323 0057 02       		.byte	0x2
- 324 0058 07       		.byte	0x7
- 325 0059 04010000 		.4byte	.LASF6
- 326 005d 04       		.uleb128 0x4
- 327 005e 08000000 		.4byte	.LASF14
- 328 0062 02       		.byte	0x2
- 329 0063 3F       		.byte	0x3f
- 330 0064 68000000 		.4byte	0x68
- 331 0068 03       		.uleb128 0x3
- 332 0069 04       		.byte	0x4
- 333 006a 05       		.byte	0x5
- 334 006b 65020000 		.4byte	.LASF7
- 335 006f 03       		.uleb128 0x3
- 336 0070 04       		.byte	0x4
- 337 0071 07       		.byte	0x7
- 338 0072 F2000000 		.4byte	.LASF8
- 339 0076 03       		.uleb128 0x3
- 340 0077 08       		.byte	0x8
- 341 0078 07       		.byte	0x7
- 342 0079 92010000 		.4byte	.LASF9
- 343 007d 03       		.uleb128 0x3
- 344 007e 04       		.byte	0x4
- 345 007f 07       		.byte	0x7
- 346 0080 2D020000 		.4byte	.LASF10
- 347 0084 03       		.uleb128 0x3
- 348 0085 01       		.byte	0x1
- 349 0086 08       		.byte	0x8
- 350 0087 12000000 		.4byte	.LASF11
- 351 008b 03       		.uleb128 0x3
- 352 008c 08       		.byte	0x8
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 9
+ 285              	.LFE64:
+ 286              		.size	main, .-main
+ 287              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 288              		.align	2
+ 289              	.LC0:
+ 290 0000 252E3366 		.ascii	"%.3f,%.3f,%.3f,%.3f,%.3f\015\012\000"
+ 290      2C252E33 
+ 290      662C252E 
+ 290      33662C25 
+ 290      2E33662C 
+ 291              		.text
+ 292              	.Letext0:
+ 293              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 294              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 295              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 296              		.file 5 "Generated_Source\\PSoC5/cytypes.h"
+ 297              		.file 6 "Generated_Source\\PSoC5/myUSB.h"
+ 298              		.file 7 "Generated_Source\\PSoC5/myADC_SEQ.h"
+ 299              		.file 8 "Generated_Source\\PSoC5/myDAC.h"
+ 300              		.file 9 "Generated_Source\\PSoC5/myCounter.h"
+ 301              		.file 10 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4
+ 302              		.file 11 "Generated_Source\\PSoC5/myUSB_cdc.h"
+ 303              		.file 12 "Generated_Source\\PSoC5/core_cm3.h"
+ 304              		.file 13 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4
+ 305              		.section	.debug_info,"",%progbits
+ 306              	.Ldebug_info0:
+ 307 0000 78030000 		.4byte	0x378
+ 308 0004 0400     		.2byte	0x4
+ 309 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 310 000a 04       		.byte	0x4
+ 311 000b 01       		.uleb128 0x1
+ 312 000c 5D000000 		.4byte	.LASF41
+ 313 0010 0C       		.byte	0xc
+ 314 0011 7C020000 		.4byte	.LASF42
+ 315 0015 F5010000 		.4byte	.LASF43
+ 316 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 317 001d 00000000 		.4byte	0
+ 318 0021 00000000 		.4byte	.Ldebug_line0
+ 319 0025 02       		.uleb128 0x2
+ 320 0026 08       		.byte	0x8
+ 321 0027 04       		.byte	0x4
+ 322 0028 33000000 		.4byte	.LASF0
+ 323 002c 03       		.uleb128 0x3
+ 324 002d 04       		.byte	0x4
+ 325 002e 05       		.byte	0x5
+ 326 002f 696E7400 		.ascii	"int\000"
+ 327 0033 02       		.uleb128 0x2
+ 328 0034 04       		.byte	0x4
+ 329 0035 07       		.byte	0x7
+ 330 0036 BD010000 		.4byte	.LASF1
+ 331 003a 02       		.uleb128 0x2
+ 332 003b 08       		.byte	0x8
+ 333 003c 05       		.byte	0x5
+ 334 003d 6E020000 		.4byte	.LASF2
+ 335 0041 02       		.uleb128 0x2
+ 336 0042 08       		.byte	0x8
+ 337 0043 04       		.byte	0x4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 9
 
 
- 353 008d 04       		.byte	0x4
- 354 008e 42010000 		.4byte	.LASF12
- 355 0092 03       		.uleb128 0x3
- 356 0093 04       		.byte	0x4
- 357 0094 04       		.byte	0x4
- 358 0095 38000000 		.4byte	.LASF13
- 359 0099 04       		.uleb128 0x4
- 360 009a 0B020000 		.4byte	.LASF15
- 361 009e 03       		.byte	0x3
- 362 009f 2C       		.byte	0x2c
- 363 00a0 5D000000 		.4byte	0x5d
- 364 00a4 04       		.uleb128 0x4
- 365 00a5 5B010000 		.4byte	.LASF16
- 366 00a9 04       		.byte	0x4
- 367 00aa 6C       		.byte	0x6c
- 368 00ab 2C000000 		.4byte	0x2c
- 369 00af 05       		.uleb128 0x5
- 370 00b0 54010000 		.4byte	.LASF17
- 371 00b4 05       		.byte	0x5
- 372 00b5 E501     		.2byte	0x1e5
- 373 00b7 56000000 		.4byte	0x56
- 374 00bb 06       		.uleb128 0x6
- 375 00bc 4F010000 		.4byte	.LASF40
- 376 00c0 01       		.byte	0x1
- 377 00c1 1C       		.byte	0x1c
- 378 00c2 25000000 		.4byte	0x25
- 379 00c6 00000000 		.4byte	.LFB64
- 380 00ca 7C010000 		.4byte	.LFE64-.LFB64
- 381 00ce 01       		.uleb128 0x1
- 382 00cf 9C       		.byte	0x9c
- 383 00d0 70020000 		.4byte	0x270
- 384 00d4 07       		.uleb128 0x7
- 385 00d5 00000000 		.4byte	.LASF18
- 386 00d9 01       		.byte	0x1
- 387 00da 2A       		.byte	0x2a
- 388 00db 70020000 		.4byte	0x270
- 389 00df 03       		.uleb128 0x3
- 390 00e0 91       		.byte	0x91
- 391 00e1 D87D     		.sleb128 -296
- 392 00e3 08       		.uleb128 0x8
- 393 00e4 696900   		.ascii	"ii\000"
- 394 00e7 01       		.byte	0x1
- 395 00e8 2C       		.byte	0x2c
- 396 00e9 A4000000 		.4byte	0xa4
- 397 00ed 01       		.uleb128 0x1
- 398 00ee 54       		.byte	0x54
- 399 00ef 09       		.uleb128 0x9
- 400 00f0 7400     		.ascii	"t\000"
- 401 00f2 01       		.byte	0x1
- 402 00f3 2E       		.byte	0x2e
- 403 00f4 8B000000 		.4byte	0x8b
- 404 00f8 00000000 		.4byte	.LLST0
- 405 00fc 09       		.uleb128 0x9
- 406 00fd 7900     		.ascii	"y\000"
- 407 00ff 01       		.byte	0x1
- 408 0100 30       		.byte	0x30
- 409 0101 8B000000 		.4byte	0x8b
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 10
+ 338 0044 BD020000 		.4byte	.LASF3
+ 339 0048 02       		.uleb128 0x2
+ 340 0049 01       		.byte	0x1
+ 341 004a 06       		.byte	0x6
+ 342 004b C9020000 		.4byte	.LASF4
+ 343 004f 02       		.uleb128 0x2
+ 344 0050 01       		.byte	0x1
+ 345 0051 08       		.byte	0x8
+ 346 0052 AF010000 		.4byte	.LASF5
+ 347 0056 02       		.uleb128 0x2
+ 348 0057 02       		.byte	0x2
+ 349 0058 05       		.byte	0x5
+ 350 0059 99020000 		.4byte	.LASF6
+ 351 005d 02       		.uleb128 0x2
+ 352 005e 02       		.byte	0x2
+ 353 005f 07       		.byte	0x7
+ 354 0060 1F010000 		.4byte	.LASF7
+ 355 0064 04       		.uleb128 0x4
+ 356 0065 0D000000 		.4byte	.LASF14
+ 357 0069 02       		.byte	0x2
+ 358 006a 3F       		.byte	0x3f
+ 359 006b 6F000000 		.4byte	0x6f
+ 360 006f 02       		.uleb128 0x2
+ 361 0070 04       		.byte	0x4
+ 362 0071 05       		.byte	0x5
+ 363 0072 A3020000 		.4byte	.LASF8
+ 364 0076 02       		.uleb128 0x2
+ 365 0077 04       		.byte	0x4
+ 366 0078 07       		.byte	0x7
+ 367 0079 5D010000 		.4byte	.LASF9
+ 368 007d 02       		.uleb128 0x2
+ 369 007e 08       		.byte	0x8
+ 370 007f 07       		.byte	0x7
+ 371 0080 CA010000 		.4byte	.LASF10
+ 372 0084 02       		.uleb128 0x2
+ 373 0085 04       		.byte	0x4
+ 374 0086 07       		.byte	0x7
+ 375 0087 65020000 		.4byte	.LASF11
+ 376 008b 02       		.uleb128 0x2
+ 377 008c 01       		.byte	0x1
+ 378 008d 08       		.byte	0x8
+ 379 008e 17000000 		.4byte	.LASF12
+ 380 0092 02       		.uleb128 0x2
+ 381 0093 04       		.byte	0x4
+ 382 0094 04       		.byte	0x4
+ 383 0095 4F000000 		.4byte	.LASF13
+ 384 0099 04       		.uleb128 0x4
+ 385 009a 43020000 		.4byte	.LASF15
+ 386 009e 03       		.byte	0x3
+ 387 009f 2C       		.byte	0x2c
+ 388 00a0 64000000 		.4byte	0x64
+ 389 00a4 04       		.uleb128 0x4
+ 390 00a5 08000000 		.4byte	.LASF16
+ 391 00a9 04       		.byte	0x4
+ 392 00aa 6C       		.byte	0x6c
+ 393 00ab 33000000 		.4byte	0x33
+ 394 00af 05       		.uleb128 0x5
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 10
 
 
- 410 0105 18000000 		.4byte	.LLST1
- 411 0109 0A       		.uleb128 0xa
- 412 010a 23000000 		.4byte	.LASF19
- 413 010e 01       		.byte	0x1
- 414 010f 32       		.byte	0x32
- 415 0110 AF000000 		.4byte	0xaf
- 416 0114 30000000 		.4byte	.LLST2
- 417 0118 0A       		.uleb128 0xa
- 418 0119 2A000000 		.4byte	.LASF20
- 419 011d 01       		.byte	0x1
- 420 011e 33       		.byte	0x33
- 421 011f AF000000 		.4byte	0xaf
- 422 0123 43000000 		.4byte	.LLST3
- 423 0127 0A       		.uleb128 0xa
- 424 0128 31000000 		.4byte	.LASF21
- 425 012c 01       		.byte	0x1
- 426 012d 34       		.byte	0x34
- 427 012e AF000000 		.4byte	0xaf
- 428 0132 56000000 		.4byte	.LLST4
- 429 0136 0A       		.uleb128 0xa
- 430 0137 49010000 		.4byte	.LASF22
- 431 013b 01       		.byte	0x1
- 432 013c 37       		.byte	0x37
- 433 013d 92000000 		.4byte	0x92
- 434 0141 69000000 		.4byte	.LLST5
- 435 0145 0A       		.uleb128 0xa
- 436 0146 3E000000 		.4byte	.LASF23
- 437 014a 01       		.byte	0x1
- 438 014b 38       		.byte	0x38
- 439 014c 92000000 		.4byte	0x92
- 440 0150 87000000 		.4byte	.LLST6
- 441 0154 0A       		.uleb128 0xa
- 442 0155 33010000 		.4byte	.LASF24
- 443 0159 01       		.byte	0x1
- 444 015a 39       		.byte	0x39
- 445 015b 92000000 		.4byte	0x92
- 446 015f A5000000 		.4byte	.LLST7
- 447 0163 0A       		.uleb128 0xa
- 448 0164 D4000000 		.4byte	.LASF25
- 449 0168 01       		.byte	0x1
- 450 0169 3A       		.byte	0x3a
- 451 016a 92000000 		.4byte	0x92
- 452 016e C3000000 		.4byte	.LLST8
- 453 0172 0B       		.uleb128 0xb
- 454 0173 10000000 		.4byte	.LVL0
- 455 0177 91020000 		.4byte	0x291
- 456 017b 8A010000 		.4byte	0x18a
- 457 017f 0C       		.uleb128 0xc
- 458 0180 01       		.uleb128 0x1
- 459 0181 50       		.byte	0x50
- 460 0182 01       		.uleb128 0x1
- 461 0183 30       		.byte	0x30
- 462 0184 0C       		.uleb128 0xc
- 463 0185 01       		.uleb128 0x1
- 464 0186 51       		.byte	0x51
- 465 0187 01       		.uleb128 0x1
- 466 0188 31       		.byte	0x31
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 11
+ 395 00b0 7A010000 		.4byte	.LASF17
+ 396 00b4 05       		.byte	0x5
+ 397 00b5 E501     		.2byte	0x1e5
+ 398 00b7 5D000000 		.4byte	0x5d
+ 399 00bb 05       		.uleb128 0x5
+ 400 00bc A8010000 		.4byte	.LASF18
+ 401 00c0 05       		.byte	0x5
+ 402 00c1 E601     		.2byte	0x1e6
+ 403 00c3 76000000 		.4byte	0x76
+ 404 00c7 06       		.uleb128 0x6
+ 405 00c8 75010000 		.4byte	.LASF44
+ 406 00cc 01       		.byte	0x1
+ 407 00cd 1C       		.byte	0x1c
+ 408 00ce 2C000000 		.4byte	0x2c
+ 409 00d2 00000000 		.4byte	.LFB64
+ 410 00d6 9C010000 		.4byte	.LFE64-.LFB64
+ 411 00da 01       		.uleb128 0x1
+ 412 00db 9C       		.byte	0x9c
+ 413 00dc C1020000 		.4byte	0x2c1
+ 414 00e0 07       		.uleb128 0x7
+ 415 00e1 00000000 		.4byte	.LASF19
+ 416 00e5 01       		.byte	0x1
+ 417 00e6 2C       		.byte	0x2c
+ 418 00e7 C1020000 		.4byte	0x2c1
+ 419 00eb 03       		.uleb128 0x3
+ 420 00ec 91       		.byte	0x91
+ 421 00ed E07D     		.sleb128 -288
+ 422 00ef 08       		.uleb128 0x8
+ 423 00f0 696900   		.ascii	"ii\000"
+ 424 00f3 01       		.byte	0x1
+ 425 00f4 2E       		.byte	0x2e
+ 426 00f5 A4000000 		.4byte	0xa4
+ 427 00f9 00000000 		.4byte	.LLST0
+ 428 00fd 08       		.uleb128 0x8
+ 429 00fe 7400     		.ascii	"t\000"
+ 430 0100 01       		.byte	0x1
+ 431 0101 30       		.byte	0x30
+ 432 0102 25000000 		.4byte	0x25
+ 433 0106 14000000 		.4byte	.LLST1
+ 434 010a 08       		.uleb128 0x8
+ 435 010b 7900     		.ascii	"y\000"
+ 436 010d 01       		.byte	0x1
+ 437 010e 32       		.byte	0x32
+ 438 010f 25000000 		.4byte	0x25
+ 439 0113 4D000000 		.4byte	.LLST2
+ 440 0117 09       		.uleb128 0x9
+ 441 0118 3A000000 		.4byte	.LASF20
+ 442 011c 01       		.byte	0x1
+ 443 011d 34       		.byte	0x34
+ 444 011e AF000000 		.4byte	0xaf
+ 445 0122 79000000 		.4byte	.LLST3
+ 446 0126 09       		.uleb128 0x9
+ 447 0127 41000000 		.4byte	.LASF21
+ 448 012b 01       		.byte	0x1
+ 449 012c 35       		.byte	0x35
+ 450 012d AF000000 		.4byte	0xaf
+ 451 0131 98000000 		.4byte	.LLST4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 11
 
 
- 467 0189 00       		.byte	0
- 468 018a 0D       		.uleb128 0xd
- 469 018b 14000000 		.4byte	.LVL1
- 470 018f 9D020000 		.4byte	0x29d
- 471 0193 0D       		.uleb128 0xd
- 472 0194 18000000 		.4byte	.LVL2
- 473 0198 A8020000 		.4byte	0x2a8
- 474 019c 0B       		.uleb128 0xb
- 475 019d 26000000 		.4byte	.LVL3
- 476 01a1 B3020000 		.4byte	0x2b3
- 477 01a5 BD010000 		.4byte	0x1bd
- 478 01a9 0C       		.uleb128 0xc
- 479 01aa 01       		.uleb128 0x1
- 480 01ab 50       		.byte	0x50
- 481 01ac 03       		.uleb128 0x3
- 482 01ad 91       		.byte	0x91
- 483 01ae DC7D     		.sleb128 -292
- 484 01b0 0C       		.uleb128 0xc
- 485 01b1 01       		.uleb128 0x1
- 486 01b2 51       		.byte	0x51
- 487 01b3 02       		.uleb128 0x2
- 488 01b4 74       		.byte	0x74
- 489 01b5 00       		.sleb128 0
- 490 01b6 0C       		.uleb128 0xc
- 491 01b7 01       		.uleb128 0x1
- 492 01b8 52       		.byte	0x52
- 493 01b9 02       		.uleb128 0x2
- 494 01ba 08       		.byte	0x8
- 495 01bb FB       		.byte	0xfb
- 496 01bc 00       		.byte	0
- 497 01bd 0D       		.uleb128 0xd
- 498 01be 50000000 		.4byte	.LVL10
- 499 01c2 BC020000 		.4byte	0x2bc
- 500 01c6 0D       		.uleb128 0xd
- 501 01c7 72000000 		.4byte	.LVL15
- 502 01cb C7020000 		.4byte	0x2c7
- 503 01cf 0D       		.uleb128 0xd
- 504 01d0 76000000 		.4byte	.LVL16
- 505 01d4 D2020000 		.4byte	0x2d2
- 506 01d8 0B       		.uleb128 0xb
- 507 01d9 7C000000 		.4byte	.LVL17
- 508 01dd DD020000 		.4byte	0x2dd
- 509 01e1 EB010000 		.4byte	0x1eb
- 510 01e5 0C       		.uleb128 0xc
- 511 01e6 01       		.uleb128 0x1
- 512 01e7 50       		.byte	0x50
- 513 01e8 01       		.uleb128 0x1
- 514 01e9 30       		.byte	0x30
- 515 01ea 00       		.byte	0
- 516 01eb 0B       		.uleb128 0xb
- 517 01ec 82000000 		.4byte	.LVL18
- 518 01f0 E8020000 		.4byte	0x2e8
- 519 01f4 FE010000 		.4byte	0x1fe
- 520 01f8 0C       		.uleb128 0xc
- 521 01f9 01       		.uleb128 0x1
- 522 01fa 50       		.byte	0x50
- 523 01fb 01       		.uleb128 0x1
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 12
+ 452 0135 09       		.uleb128 0x9
+ 453 0136 48000000 		.4byte	.LASF22
+ 454 013a 01       		.byte	0x1
+ 455 013b 36       		.byte	0x36
+ 456 013c AF000000 		.4byte	0xaf
+ 457 0140 B7000000 		.4byte	.LLST5
+ 458 0144 09       		.uleb128 0x9
+ 459 0145 93020000 		.4byte	.LASF23
+ 460 0149 01       		.byte	0x1
+ 461 014a 39       		.byte	0x39
+ 462 014b BB000000 		.4byte	0xbb
+ 463 014f D6000000 		.4byte	.LLST6
+ 464 0153 09       		.uleb128 0x9
+ 465 0154 1C000000 		.4byte	.LASF24
+ 466 0158 01       		.byte	0x1
+ 467 0159 3A       		.byte	0x3a
+ 468 015a BB000000 		.4byte	0xbb
+ 469 015e 00010000 		.4byte	.LLST7
+ 470 0162 08       		.uleb128 0x8
+ 471 0163 6A6A00   		.ascii	"jj\000"
+ 472 0166 01       		.byte	0x1
+ 473 0167 3B       		.byte	0x3b
+ 474 0168 A4000000 		.4byte	0xa4
+ 475 016c 2A010000 		.4byte	.LLST8
+ 476 0170 09       		.uleb128 0x9
+ 477 0171 6F010000 		.4byte	.LASF25
+ 478 0175 01       		.byte	0x1
+ 479 0176 3E       		.byte	0x3e
+ 480 0177 92000000 		.4byte	0x92
+ 481 017b 49010000 		.4byte	.LLST9
+ 482 017f 09       		.uleb128 0x9
+ 483 0180 55000000 		.4byte	.LASF26
+ 484 0184 01       		.byte	0x1
+ 485 0185 3F       		.byte	0x3f
+ 486 0186 92000000 		.4byte	0x92
+ 487 018a 77010000 		.4byte	.LLST10
+ 488 018e 09       		.uleb128 0x9
+ 489 018f 4E010000 		.4byte	.LASF27
+ 490 0193 01       		.byte	0x1
+ 491 0194 40       		.byte	0x40
+ 492 0195 92000000 		.4byte	0x92
+ 493 0199 A5010000 		.4byte	.LLST11
+ 494 019d 09       		.uleb128 0x9
+ 495 019e EB000000 		.4byte	.LASF28
+ 496 01a2 01       		.byte	0x1
+ 497 01a3 41       		.byte	0x41
+ 498 01a4 92000000 		.4byte	0x92
+ 499 01a8 D3010000 		.4byte	.LLST12
+ 500 01ac 0A       		.uleb128 0xa
+ 501 01ad 10000000 		.4byte	.LVL0
+ 502 01b1 E2020000 		.4byte	0x2e2
+ 503 01b5 C4010000 		.4byte	0x1c4
+ 504 01b9 0B       		.uleb128 0xb
+ 505 01ba 01       		.uleb128 0x1
+ 506 01bb 50       		.byte	0x50
+ 507 01bc 01       		.uleb128 0x1
+ 508 01bd 30       		.byte	0x30
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 12
 
 
- 524 01fc 30       		.byte	0x30
- 525 01fd 00       		.byte	0
- 526 01fe 0B       		.uleb128 0xb
- 527 01ff 8C000000 		.4byte	.LVL20
- 528 0203 E8020000 		.4byte	0x2e8
- 529 0207 11020000 		.4byte	0x211
- 530 020b 0C       		.uleb128 0xc
- 531 020c 01       		.uleb128 0x1
- 532 020d 50       		.byte	0x50
- 533 020e 01       		.uleb128 0x1
- 534 020f 31       		.byte	0x31
- 535 0210 00       		.byte	0
- 536 0211 0B       		.uleb128 0xb
- 537 0212 96000000 		.4byte	.LVL22
- 538 0216 E8020000 		.4byte	0x2e8
- 539 021a 24020000 		.4byte	0x224
- 540 021e 0C       		.uleb128 0xc
- 541 021f 01       		.uleb128 0x1
- 542 0220 50       		.byte	0x50
- 543 0221 01       		.uleb128 0x1
- 544 0222 32       		.byte	0x32
- 545 0223 00       		.byte	0
- 546 0224 0B       		.uleb128 0xb
- 547 0225 2A010000 		.4byte	.LVL48
- 548 0229 F3020000 		.4byte	0x2f3
- 549 022d 42020000 		.4byte	0x242
- 550 0231 0C       		.uleb128 0xc
- 551 0232 01       		.uleb128 0x1
- 552 0233 50       		.byte	0x50
- 553 0234 03       		.uleb128 0x3
- 554 0235 91       		.byte	0x91
- 555 0236 D87D     		.sleb128 -296
- 556 0238 0C       		.uleb128 0xc
- 557 0239 01       		.uleb128 0x1
- 558 023a 51       		.byte	0x51
- 559 023b 05       		.uleb128 0x5
- 560 023c 03       		.byte	0x3
- 561 023d 00000000 		.4byte	.LC0
- 562 0241 00       		.byte	0
- 563 0242 0D       		.uleb128 0xd
- 564 0243 2E010000 		.4byte	.LVL49
- 565 0247 FE020000 		.4byte	0x2fe
- 566 024b 0B       		.uleb128 0xb
- 567 024c 38010000 		.4byte	.LVL50
- 568 0250 09030000 		.4byte	0x309
- 569 0254 60020000 		.4byte	0x260
- 570 0258 0C       		.uleb128 0xc
- 571 0259 01       		.uleb128 0x1
- 572 025a 50       		.byte	0x50
- 573 025b 03       		.uleb128 0x3
- 574 025c 91       		.byte	0x91
- 575 025d D87D     		.sleb128 -296
- 576 025f 00       		.byte	0
- 577 0260 0E       		.uleb128 0xe
- 578 0261 40010000 		.4byte	.LVL52
- 579 0265 14030000 		.4byte	0x314
- 580 0269 0C       		.uleb128 0xc
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 13
+ 509 01be 0B       		.uleb128 0xb
+ 510 01bf 01       		.uleb128 0x1
+ 511 01c0 51       		.byte	0x51
+ 512 01c1 01       		.uleb128 0x1
+ 513 01c2 31       		.byte	0x31
+ 514 01c3 00       		.byte	0
+ 515 01c4 0C       		.uleb128 0xc
+ 516 01c5 14000000 		.4byte	.LVL1
+ 517 01c9 EE020000 		.4byte	0x2ee
+ 518 01cd 0C       		.uleb128 0xc
+ 519 01ce 18000000 		.4byte	.LVL2
+ 520 01d2 F9020000 		.4byte	0x2f9
+ 521 01d6 0C       		.uleb128 0xc
+ 522 01d7 1C000000 		.4byte	.LVL3
+ 523 01db 04030000 		.4byte	0x304
+ 524 01df 0A       		.uleb128 0xa
+ 525 01e0 2A000000 		.4byte	.LVL4
+ 526 01e4 0F030000 		.4byte	0x30f
+ 527 01e8 00020000 		.4byte	0x200
+ 528 01ec 0B       		.uleb128 0xb
+ 529 01ed 01       		.uleb128 0x1
+ 530 01ee 50       		.byte	0x50
+ 531 01ef 03       		.uleb128 0x3
+ 532 01f0 91       		.byte	0x91
+ 533 01f1 E47D     		.sleb128 -284
+ 534 01f3 0B       		.uleb128 0xb
+ 535 01f4 01       		.uleb128 0x1
+ 536 01f5 51       		.byte	0x51
+ 537 01f6 02       		.uleb128 0x2
+ 538 01f7 75       		.byte	0x75
+ 539 01f8 00       		.sleb128 0
+ 540 01f9 0B       		.uleb128 0xb
+ 541 01fa 01       		.uleb128 0x1
+ 542 01fb 52       		.byte	0x52
+ 543 01fc 02       		.uleb128 0x2
+ 544 01fd 08       		.byte	0x8
+ 545 01fe FB       		.byte	0xfb
+ 546 01ff 00       		.byte	0
+ 547 0200 0C       		.uleb128 0xc
+ 548 0201 2E000000 		.4byte	.LVL5
+ 549 0205 18030000 		.4byte	0x318
+ 550 0209 0C       		.uleb128 0xc
+ 551 020a 34000000 		.4byte	.LVL7
+ 552 020e 18030000 		.4byte	0x318
+ 553 0212 0C       		.uleb128 0xc
+ 554 0213 7C000000 		.4byte	.LVL20
+ 555 0217 23030000 		.4byte	0x323
+ 556 021b 0C       		.uleb128 0xc
+ 557 021c 9E000000 		.4byte	.LVL25
+ 558 0220 2E030000 		.4byte	0x32e
+ 559 0224 0C       		.uleb128 0xc
+ 560 0225 A2000000 		.4byte	.LVL26
+ 561 0229 39030000 		.4byte	0x339
+ 562 022d 0A       		.uleb128 0xa
+ 563 022e A8000000 		.4byte	.LVL27
+ 564 0232 44030000 		.4byte	0x344
+ 565 0236 40020000 		.4byte	0x240
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 13
 
 
- 581 026a 01       		.uleb128 0x1
- 582 026b 50       		.byte	0x50
- 583 026c 01       		.uleb128 0x1
- 584 026d 31       		.byte	0x31
- 585 026e 00       		.byte	0
- 586 026f 00       		.byte	0
- 587 0270 0F       		.uleb128 0xf
- 588 0271 84000000 		.4byte	0x84
- 589 0275 80020000 		.4byte	0x280
- 590 0279 10       		.uleb128 0x10
- 591 027a 7D000000 		.4byte	0x7d
- 592 027e FE       		.byte	0xfe
- 593 027f 00       		.byte	0
- 594 0280 11       		.uleb128 0x11
- 595 0281 17010000 		.4byte	.LASF41
- 596 0285 0C       		.byte	0xc
- 597 0286 1207     		.2byte	0x712
- 598 0288 8C020000 		.4byte	0x28c
- 599 028c 12       		.uleb128 0x12
- 600 028d 99000000 		.4byte	0x99
- 601 0291 13       		.uleb128 0x13
- 602 0292 B1010000 		.4byte	.LASF26
- 603 0296 B1010000 		.4byte	.LASF26
- 604 029a 06       		.byte	0x6
- 605 029b 2A01     		.2byte	0x12a
- 606 029d 14       		.uleb128 0x14
- 607 029e 97020000 		.4byte	.LASF27
- 608 02a2 97020000 		.4byte	.LASF27
- 609 02a6 07       		.byte	0x7
- 610 02a7 31       		.byte	0x31
- 611 02a8 14       		.uleb128 0x14
- 612 02a9 17000000 		.4byte	.LASF28
- 613 02ad 17000000 		.4byte	.LASF28
- 614 02b1 08       		.byte	0x8
- 615 02b2 33       		.byte	0x33
- 616 02b3 15       		.uleb128 0x15
- 617 02b4 3B010000 		.4byte	.LASF42
- 618 02b8 3B010000 		.4byte	.LASF42
- 619 02bc 16       		.uleb128 0x16
- 620 02bd 73696E00 		.ascii	"sin\000"
- 621 02c1 73696E00 		.ascii	"sin\000"
- 622 02c5 0D       		.byte	0xd
- 623 02c6 6F       		.byte	0x6f
- 624 02c7 14       		.uleb128 0x14
- 625 02c8 24010000 		.4byte	.LASF29
- 626 02cc 24010000 		.4byte	.LASF29
- 627 02d0 08       		.byte	0x8
- 628 02d1 37       		.byte	0x37
- 629 02d2 14       		.uleb128 0x14
- 630 02d3 60010000 		.4byte	.LASF30
- 631 02d7 60010000 		.4byte	.LASF30
- 632 02db 07       		.byte	0x7
- 633 02dc A1       		.byte	0xa1
- 634 02dd 14       		.uleb128 0x14
- 635 02de 13020000 		.4byte	.LASF31
- 636 02e2 13020000 		.4byte	.LASF31
- 637 02e6 07       		.byte	0x7
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 14
+ 566 023a 0B       		.uleb128 0xb
+ 567 023b 01       		.uleb128 0x1
+ 568 023c 50       		.byte	0x50
+ 569 023d 01       		.uleb128 0x1
+ 570 023e 30       		.byte	0x30
+ 571 023f 00       		.byte	0
+ 572 0240 0A       		.uleb128 0xa
+ 573 0241 AE000000 		.4byte	.LVL28
+ 574 0245 4F030000 		.4byte	0x34f
+ 575 0249 53020000 		.4byte	0x253
+ 576 024d 0B       		.uleb128 0xb
+ 577 024e 01       		.uleb128 0x1
+ 578 024f 50       		.byte	0x50
+ 579 0250 01       		.uleb128 0x1
+ 580 0251 30       		.byte	0x30
+ 581 0252 00       		.byte	0
+ 582 0253 0A       		.uleb128 0xa
+ 583 0254 B8000000 		.4byte	.LVL30
+ 584 0258 4F030000 		.4byte	0x34f
+ 585 025c 66020000 		.4byte	0x266
+ 586 0260 0B       		.uleb128 0xb
+ 587 0261 01       		.uleb128 0x1
+ 588 0262 50       		.byte	0x50
+ 589 0263 01       		.uleb128 0x1
+ 590 0264 31       		.byte	0x31
+ 591 0265 00       		.byte	0
+ 592 0266 0A       		.uleb128 0xa
+ 593 0267 C0000000 		.4byte	.LVL32
+ 594 026b 4F030000 		.4byte	0x34f
+ 595 026f 79020000 		.4byte	0x279
+ 596 0273 0B       		.uleb128 0xb
+ 597 0274 01       		.uleb128 0x1
+ 598 0275 50       		.byte	0x50
+ 599 0276 01       		.uleb128 0x1
+ 600 0277 32       		.byte	0x32
+ 601 0278 00       		.byte	0
+ 602 0279 0A       		.uleb128 0xa
+ 603 027a 54010000 		.4byte	.LVL58
+ 604 027e 5A030000 		.4byte	0x35a
+ 605 0282 A6020000 		.4byte	0x2a6
+ 606 0286 0B       		.uleb128 0xb
+ 607 0287 01       		.uleb128 0x1
+ 608 0288 50       		.byte	0x50
+ 609 0289 03       		.uleb128 0x3
+ 610 028a 91       		.byte	0x91
+ 611 028b E07D     		.sleb128 -288
+ 612 028d 0B       		.uleb128 0xb
+ 613 028e 01       		.uleb128 0x1
+ 614 028f 51       		.byte	0x51
+ 615 0290 05       		.uleb128 0x5
+ 616 0291 03       		.byte	0x3
+ 617 0292 00000000 		.4byte	.LC0
+ 618 0296 0B       		.uleb128 0xb
+ 619 0297 06       		.uleb128 0x6
+ 620 0298 52       		.byte	0x52
+ 621 0299 93       		.byte	0x93
+ 622 029a 04       		.uleb128 0x4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 14
 
 
- 638 02e7 34       		.byte	0x34
- 639 02e8 14       		.uleb128 0x14
- 640 02e9 DC000000 		.4byte	.LASF32
- 641 02ed DC000000 		.4byte	.LASF32
- 642 02f1 07       		.byte	0x7
- 643 02f2 35       		.byte	0x35
- 644 02f3 14       		.uleb128 0x14
- 645 02f4 A9010000 		.4byte	.LASF33
- 646 02f8 A9010000 		.4byte	.LASF33
- 647 02fc 09       		.byte	0x9
- 648 02fd E7       		.byte	0xe7
- 649 02fe 14       		.uleb128 0x14
- 650 02ff 6E020000 		.4byte	.LASF34
- 651 0303 6E020000 		.4byte	.LASF34
- 652 0307 0A       		.byte	0xa
- 653 0308 28       		.byte	0x28
- 654 0309 14       		.uleb128 0x14
- 655 030a 4B020000 		.4byte	.LASF35
- 656 030e 4B020000 		.4byte	.LASF35
- 657 0312 0A       		.byte	0xa
- 658 0313 24       		.byte	0x24
- 659 0314 14       		.uleb128 0x14
- 660 0315 A7020000 		.4byte	.LASF36
- 661 0319 A7020000 		.4byte	.LASF36
- 662 031d 0B       		.byte	0xb
- 663 031e 76       		.byte	0x76
- 664 031f 00       		.byte	0
- 665              		.section	.debug_abbrev,"",%progbits
- 666              	.Ldebug_abbrev0:
- 667 0000 01       		.uleb128 0x1
- 668 0001 11       		.uleb128 0x11
- 669 0002 01       		.byte	0x1
- 670 0003 25       		.uleb128 0x25
- 671 0004 0E       		.uleb128 0xe
- 672 0005 13       		.uleb128 0x13
- 673 0006 0B       		.uleb128 0xb
- 674 0007 03       		.uleb128 0x3
- 675 0008 0E       		.uleb128 0xe
- 676 0009 1B       		.uleb128 0x1b
- 677 000a 0E       		.uleb128 0xe
- 678 000b 55       		.uleb128 0x55
- 679 000c 17       		.uleb128 0x17
- 680 000d 11       		.uleb128 0x11
- 681 000e 01       		.uleb128 0x1
- 682 000f 10       		.uleb128 0x10
- 683 0010 17       		.uleb128 0x17
- 684 0011 00       		.byte	0
- 685 0012 00       		.byte	0
- 686 0013 02       		.uleb128 0x2
- 687 0014 24       		.uleb128 0x24
- 688 0015 00       		.byte	0
- 689 0016 0B       		.uleb128 0xb
- 690 0017 0B       		.uleb128 0xb
- 691 0018 3E       		.uleb128 0x3e
- 692 0019 0B       		.uleb128 0xb
- 693 001a 03       		.uleb128 0x3
- 694 001b 08       		.uleb128 0x8
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 15
+ 623 029b 53       		.byte	0x53
+ 624 029c 93       		.byte	0x93
+ 625 029d 04       		.uleb128 0x4
+ 626 029e 06       		.uleb128 0x6
+ 627 029f 91       		.byte	0x91
+ 628 02a0 D87D     		.sleb128 -296
+ 629 02a2 F6       		.byte	0xf6
+ 630 02a3 08       		.byte	0x8
+ 631 02a4 25       		.uleb128 0x25
+ 632 02a5 00       		.byte	0
+ 633 02a6 0C       		.uleb128 0xc
+ 634 02a7 58010000 		.4byte	.LVL59
+ 635 02ab 65030000 		.4byte	0x365
+ 636 02af 0D       		.uleb128 0xd
+ 637 02b0 62010000 		.4byte	.LVL60
+ 638 02b4 70030000 		.4byte	0x370
+ 639 02b8 0B       		.uleb128 0xb
+ 640 02b9 01       		.uleb128 0x1
+ 641 02ba 50       		.byte	0x50
+ 642 02bb 03       		.uleb128 0x3
+ 643 02bc 91       		.byte	0x91
+ 644 02bd E07D     		.sleb128 -288
+ 645 02bf 00       		.byte	0
+ 646 02c0 00       		.byte	0
+ 647 02c1 0E       		.uleb128 0xe
+ 648 02c2 8B000000 		.4byte	0x8b
+ 649 02c6 D1020000 		.4byte	0x2d1
+ 650 02ca 0F       		.uleb128 0xf
+ 651 02cb 84000000 		.4byte	0x84
+ 652 02cf FE       		.byte	0xfe
+ 653 02d0 00       		.byte	0
+ 654 02d1 10       		.uleb128 0x10
+ 655 02d2 32010000 		.4byte	.LASF45
+ 656 02d6 0C       		.byte	0xc
+ 657 02d7 1207     		.2byte	0x712
+ 658 02d9 DD020000 		.4byte	0x2dd
+ 659 02dd 11       		.uleb128 0x11
+ 660 02de 99000000 		.4byte	0x99
+ 661 02e2 12       		.uleb128 0x12
+ 662 02e3 E9010000 		.4byte	.LASF29
+ 663 02e7 E9010000 		.4byte	.LASF29
+ 664 02eb 06       		.byte	0x6
+ 665 02ec 2A01     		.2byte	0x12a
+ 666 02ee 13       		.uleb128 0x13
+ 667 02ef D5020000 		.4byte	.LASF30
+ 668 02f3 D5020000 		.4byte	.LASF30
+ 669 02f7 07       		.byte	0x7
+ 670 02f8 31       		.byte	0x31
+ 671 02f9 13       		.uleb128 0x13
+ 672 02fa 27000000 		.4byte	.LASF31
+ 673 02fe 27000000 		.4byte	.LASF31
+ 674 0302 08       		.byte	0x8
+ 675 0303 33       		.byte	0x33
+ 676 0304 13       		.uleb128 0x13
+ 677 0305 81010000 		.4byte	.LASF32
+ 678 0309 81010000 		.4byte	.LASF32
+ 679 030d 09       		.byte	0x9
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 15
 
 
- 695 001c 00       		.byte	0
- 696 001d 00       		.byte	0
- 697 001e 03       		.uleb128 0x3
- 698 001f 24       		.uleb128 0x24
- 699 0020 00       		.byte	0
- 700 0021 0B       		.uleb128 0xb
- 701 0022 0B       		.uleb128 0xb
- 702 0023 3E       		.uleb128 0x3e
- 703 0024 0B       		.uleb128 0xb
- 704 0025 03       		.uleb128 0x3
- 705 0026 0E       		.uleb128 0xe
- 706 0027 00       		.byte	0
- 707 0028 00       		.byte	0
- 708 0029 04       		.uleb128 0x4
- 709 002a 16       		.uleb128 0x16
- 710 002b 00       		.byte	0
- 711 002c 03       		.uleb128 0x3
- 712 002d 0E       		.uleb128 0xe
- 713 002e 3A       		.uleb128 0x3a
- 714 002f 0B       		.uleb128 0xb
- 715 0030 3B       		.uleb128 0x3b
- 716 0031 0B       		.uleb128 0xb
- 717 0032 49       		.uleb128 0x49
- 718 0033 13       		.uleb128 0x13
- 719 0034 00       		.byte	0
- 720 0035 00       		.byte	0
- 721 0036 05       		.uleb128 0x5
- 722 0037 16       		.uleb128 0x16
- 723 0038 00       		.byte	0
- 724 0039 03       		.uleb128 0x3
- 725 003a 0E       		.uleb128 0xe
- 726 003b 3A       		.uleb128 0x3a
- 727 003c 0B       		.uleb128 0xb
- 728 003d 3B       		.uleb128 0x3b
- 729 003e 05       		.uleb128 0x5
- 730 003f 49       		.uleb128 0x49
- 731 0040 13       		.uleb128 0x13
- 732 0041 00       		.byte	0
- 733 0042 00       		.byte	0
- 734 0043 06       		.uleb128 0x6
- 735 0044 2E       		.uleb128 0x2e
- 736 0045 01       		.byte	0x1
- 737 0046 3F       		.uleb128 0x3f
- 738 0047 19       		.uleb128 0x19
- 739 0048 03       		.uleb128 0x3
- 740 0049 0E       		.uleb128 0xe
- 741 004a 3A       		.uleb128 0x3a
- 742 004b 0B       		.uleb128 0xb
- 743 004c 3B       		.uleb128 0x3b
- 744 004d 0B       		.uleb128 0xb
- 745 004e 27       		.uleb128 0x27
- 746 004f 19       		.uleb128 0x19
- 747 0050 49       		.uleb128 0x49
- 748 0051 13       		.uleb128 0x13
- 749 0052 8701     		.uleb128 0x87
- 750 0054 19       		.uleb128 0x19
- 751 0055 11       		.uleb128 0x11
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 16
+ 680 030e 4F       		.byte	0x4f
+ 681 030f 14       		.uleb128 0x14
+ 682 0310 56010000 		.4byte	.LASF46
+ 683 0314 56010000 		.4byte	.LASF46
+ 684 0318 13       		.uleb128 0x13
+ 685 0319 09010000 		.4byte	.LASF33
+ 686 031d 09010000 		.4byte	.LASF33
+ 687 0321 09       		.byte	0x9
+ 688 0322 5D       		.byte	0x5d
+ 689 0323 15       		.uleb128 0x15
+ 690 0324 73696E00 		.ascii	"sin\000"
+ 691 0328 73696E00 		.ascii	"sin\000"
+ 692 032c 0D       		.byte	0xd
+ 693 032d 6F       		.byte	0x6f
+ 694 032e 13       		.uleb128 0x13
+ 695 032f 3F010000 		.4byte	.LASF34
+ 696 0333 3F010000 		.4byte	.LASF34
+ 697 0337 08       		.byte	0x8
+ 698 0338 37       		.byte	0x37
+ 699 0339 13       		.uleb128 0x13
+ 700 033a 91010000 		.4byte	.LASF35
+ 701 033e 91010000 		.4byte	.LASF35
+ 702 0342 07       		.byte	0x7
+ 703 0343 A1       		.byte	0xa1
+ 704 0344 13       		.uleb128 0x13
+ 705 0345 4B020000 		.4byte	.LASF36
+ 706 0349 4B020000 		.4byte	.LASF36
+ 707 034d 07       		.byte	0x7
+ 708 034e 34       		.byte	0x34
+ 709 034f 13       		.uleb128 0x13
+ 710 0350 F3000000 		.4byte	.LASF37
+ 711 0354 F3000000 		.4byte	.LASF37
+ 712 0358 07       		.byte	0x7
+ 713 0359 35       		.byte	0x35
+ 714 035a 13       		.uleb128 0x13
+ 715 035b E1010000 		.4byte	.LASF38
+ 716 035f E1010000 		.4byte	.LASF38
+ 717 0363 0A       		.byte	0xa
+ 718 0364 E7       		.byte	0xe7
+ 719 0365 13       		.uleb128 0x13
+ 720 0366 AC020000 		.4byte	.LASF39
+ 721 036a AC020000 		.4byte	.LASF39
+ 722 036e 0B       		.byte	0xb
+ 723 036f 28       		.byte	0x28
+ 724 0370 13       		.uleb128 0x13
+ 725 0371 83020000 		.4byte	.LASF40
+ 726 0375 83020000 		.4byte	.LASF40
+ 727 0379 0B       		.byte	0xb
+ 728 037a 24       		.byte	0x24
+ 729 037b 00       		.byte	0
+ 730              		.section	.debug_abbrev,"",%progbits
+ 731              	.Ldebug_abbrev0:
+ 732 0000 01       		.uleb128 0x1
+ 733 0001 11       		.uleb128 0x11
+ 734 0002 01       		.byte	0x1
+ 735 0003 25       		.uleb128 0x25
+ 736 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 16
 
 
- 752 0056 01       		.uleb128 0x1
- 753 0057 12       		.uleb128 0x12
- 754 0058 06       		.uleb128 0x6
- 755 0059 40       		.uleb128 0x40
- 756 005a 18       		.uleb128 0x18
- 757 005b 9642     		.uleb128 0x2116
- 758 005d 19       		.uleb128 0x19
- 759 005e 01       		.uleb128 0x1
- 760 005f 13       		.uleb128 0x13
- 761 0060 00       		.byte	0
- 762 0061 00       		.byte	0
- 763 0062 07       		.uleb128 0x7
- 764 0063 34       		.uleb128 0x34
- 765 0064 00       		.byte	0
- 766 0065 03       		.uleb128 0x3
- 767 0066 0E       		.uleb128 0xe
- 768 0067 3A       		.uleb128 0x3a
- 769 0068 0B       		.uleb128 0xb
- 770 0069 3B       		.uleb128 0x3b
- 771 006a 0B       		.uleb128 0xb
- 772 006b 49       		.uleb128 0x49
- 773 006c 13       		.uleb128 0x13
- 774 006d 02       		.uleb128 0x2
- 775 006e 18       		.uleb128 0x18
- 776 006f 00       		.byte	0
- 777 0070 00       		.byte	0
- 778 0071 08       		.uleb128 0x8
- 779 0072 34       		.uleb128 0x34
- 780 0073 00       		.byte	0
- 781 0074 03       		.uleb128 0x3
- 782 0075 08       		.uleb128 0x8
- 783 0076 3A       		.uleb128 0x3a
- 784 0077 0B       		.uleb128 0xb
- 785 0078 3B       		.uleb128 0x3b
- 786 0079 0B       		.uleb128 0xb
- 787 007a 49       		.uleb128 0x49
- 788 007b 13       		.uleb128 0x13
- 789 007c 02       		.uleb128 0x2
- 790 007d 18       		.uleb128 0x18
- 791 007e 00       		.byte	0
- 792 007f 00       		.byte	0
- 793 0080 09       		.uleb128 0x9
- 794 0081 34       		.uleb128 0x34
- 795 0082 00       		.byte	0
- 796 0083 03       		.uleb128 0x3
- 797 0084 08       		.uleb128 0x8
- 798 0085 3A       		.uleb128 0x3a
- 799 0086 0B       		.uleb128 0xb
- 800 0087 3B       		.uleb128 0x3b
- 801 0088 0B       		.uleb128 0xb
- 802 0089 49       		.uleb128 0x49
- 803 008a 13       		.uleb128 0x13
- 804 008b 02       		.uleb128 0x2
- 805 008c 17       		.uleb128 0x17
- 806 008d 00       		.byte	0
- 807 008e 00       		.byte	0
- 808 008f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 17
+ 737 0005 13       		.uleb128 0x13
+ 738 0006 0B       		.uleb128 0xb
+ 739 0007 03       		.uleb128 0x3
+ 740 0008 0E       		.uleb128 0xe
+ 741 0009 1B       		.uleb128 0x1b
+ 742 000a 0E       		.uleb128 0xe
+ 743 000b 55       		.uleb128 0x55
+ 744 000c 17       		.uleb128 0x17
+ 745 000d 11       		.uleb128 0x11
+ 746 000e 01       		.uleb128 0x1
+ 747 000f 10       		.uleb128 0x10
+ 748 0010 17       		.uleb128 0x17
+ 749 0011 00       		.byte	0
+ 750 0012 00       		.byte	0
+ 751 0013 02       		.uleb128 0x2
+ 752 0014 24       		.uleb128 0x24
+ 753 0015 00       		.byte	0
+ 754 0016 0B       		.uleb128 0xb
+ 755 0017 0B       		.uleb128 0xb
+ 756 0018 3E       		.uleb128 0x3e
+ 757 0019 0B       		.uleb128 0xb
+ 758 001a 03       		.uleb128 0x3
+ 759 001b 0E       		.uleb128 0xe
+ 760 001c 00       		.byte	0
+ 761 001d 00       		.byte	0
+ 762 001e 03       		.uleb128 0x3
+ 763 001f 24       		.uleb128 0x24
+ 764 0020 00       		.byte	0
+ 765 0021 0B       		.uleb128 0xb
+ 766 0022 0B       		.uleb128 0xb
+ 767 0023 3E       		.uleb128 0x3e
+ 768 0024 0B       		.uleb128 0xb
+ 769 0025 03       		.uleb128 0x3
+ 770 0026 08       		.uleb128 0x8
+ 771 0027 00       		.byte	0
+ 772 0028 00       		.byte	0
+ 773 0029 04       		.uleb128 0x4
+ 774 002a 16       		.uleb128 0x16
+ 775 002b 00       		.byte	0
+ 776 002c 03       		.uleb128 0x3
+ 777 002d 0E       		.uleb128 0xe
+ 778 002e 3A       		.uleb128 0x3a
+ 779 002f 0B       		.uleb128 0xb
+ 780 0030 3B       		.uleb128 0x3b
+ 781 0031 0B       		.uleb128 0xb
+ 782 0032 49       		.uleb128 0x49
+ 783 0033 13       		.uleb128 0x13
+ 784 0034 00       		.byte	0
+ 785 0035 00       		.byte	0
+ 786 0036 05       		.uleb128 0x5
+ 787 0037 16       		.uleb128 0x16
+ 788 0038 00       		.byte	0
+ 789 0039 03       		.uleb128 0x3
+ 790 003a 0E       		.uleb128 0xe
+ 791 003b 3A       		.uleb128 0x3a
+ 792 003c 0B       		.uleb128 0xb
+ 793 003d 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 17
 
 
- 809 0090 34       		.uleb128 0x34
- 810 0091 00       		.byte	0
- 811 0092 03       		.uleb128 0x3
- 812 0093 0E       		.uleb128 0xe
- 813 0094 3A       		.uleb128 0x3a
- 814 0095 0B       		.uleb128 0xb
- 815 0096 3B       		.uleb128 0x3b
- 816 0097 0B       		.uleb128 0xb
- 817 0098 49       		.uleb128 0x49
- 818 0099 13       		.uleb128 0x13
- 819 009a 02       		.uleb128 0x2
- 820 009b 17       		.uleb128 0x17
- 821 009c 00       		.byte	0
- 822 009d 00       		.byte	0
- 823 009e 0B       		.uleb128 0xb
- 824 009f 898201   		.uleb128 0x4109
- 825 00a2 01       		.byte	0x1
- 826 00a3 11       		.uleb128 0x11
- 827 00a4 01       		.uleb128 0x1
- 828 00a5 31       		.uleb128 0x31
- 829 00a6 13       		.uleb128 0x13
- 830 00a7 01       		.uleb128 0x1
- 831 00a8 13       		.uleb128 0x13
- 832 00a9 00       		.byte	0
- 833 00aa 00       		.byte	0
- 834 00ab 0C       		.uleb128 0xc
- 835 00ac 8A8201   		.uleb128 0x410a
- 836 00af 00       		.byte	0
- 837 00b0 02       		.uleb128 0x2
- 838 00b1 18       		.uleb128 0x18
- 839 00b2 9142     		.uleb128 0x2111
- 840 00b4 18       		.uleb128 0x18
- 841 00b5 00       		.byte	0
- 842 00b6 00       		.byte	0
- 843 00b7 0D       		.uleb128 0xd
- 844 00b8 898201   		.uleb128 0x4109
- 845 00bb 00       		.byte	0
- 846 00bc 11       		.uleb128 0x11
- 847 00bd 01       		.uleb128 0x1
- 848 00be 31       		.uleb128 0x31
- 849 00bf 13       		.uleb128 0x13
- 850 00c0 00       		.byte	0
- 851 00c1 00       		.byte	0
- 852 00c2 0E       		.uleb128 0xe
- 853 00c3 898201   		.uleb128 0x4109
- 854 00c6 01       		.byte	0x1
- 855 00c7 11       		.uleb128 0x11
- 856 00c8 01       		.uleb128 0x1
- 857 00c9 31       		.uleb128 0x31
- 858 00ca 13       		.uleb128 0x13
- 859 00cb 00       		.byte	0
- 860 00cc 00       		.byte	0
- 861 00cd 0F       		.uleb128 0xf
- 862 00ce 01       		.uleb128 0x1
- 863 00cf 01       		.byte	0x1
- 864 00d0 49       		.uleb128 0x49
- 865 00d1 13       		.uleb128 0x13
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 18
+ 794 003e 05       		.uleb128 0x5
+ 795 003f 49       		.uleb128 0x49
+ 796 0040 13       		.uleb128 0x13
+ 797 0041 00       		.byte	0
+ 798 0042 00       		.byte	0
+ 799 0043 06       		.uleb128 0x6
+ 800 0044 2E       		.uleb128 0x2e
+ 801 0045 01       		.byte	0x1
+ 802 0046 3F       		.uleb128 0x3f
+ 803 0047 19       		.uleb128 0x19
+ 804 0048 03       		.uleb128 0x3
+ 805 0049 0E       		.uleb128 0xe
+ 806 004a 3A       		.uleb128 0x3a
+ 807 004b 0B       		.uleb128 0xb
+ 808 004c 3B       		.uleb128 0x3b
+ 809 004d 0B       		.uleb128 0xb
+ 810 004e 27       		.uleb128 0x27
+ 811 004f 19       		.uleb128 0x19
+ 812 0050 49       		.uleb128 0x49
+ 813 0051 13       		.uleb128 0x13
+ 814 0052 8701     		.uleb128 0x87
+ 815 0054 19       		.uleb128 0x19
+ 816 0055 11       		.uleb128 0x11
+ 817 0056 01       		.uleb128 0x1
+ 818 0057 12       		.uleb128 0x12
+ 819 0058 06       		.uleb128 0x6
+ 820 0059 40       		.uleb128 0x40
+ 821 005a 18       		.uleb128 0x18
+ 822 005b 9642     		.uleb128 0x2116
+ 823 005d 19       		.uleb128 0x19
+ 824 005e 01       		.uleb128 0x1
+ 825 005f 13       		.uleb128 0x13
+ 826 0060 00       		.byte	0
+ 827 0061 00       		.byte	0
+ 828 0062 07       		.uleb128 0x7
+ 829 0063 34       		.uleb128 0x34
+ 830 0064 00       		.byte	0
+ 831 0065 03       		.uleb128 0x3
+ 832 0066 0E       		.uleb128 0xe
+ 833 0067 3A       		.uleb128 0x3a
+ 834 0068 0B       		.uleb128 0xb
+ 835 0069 3B       		.uleb128 0x3b
+ 836 006a 0B       		.uleb128 0xb
+ 837 006b 49       		.uleb128 0x49
+ 838 006c 13       		.uleb128 0x13
+ 839 006d 02       		.uleb128 0x2
+ 840 006e 18       		.uleb128 0x18
+ 841 006f 00       		.byte	0
+ 842 0070 00       		.byte	0
+ 843 0071 08       		.uleb128 0x8
+ 844 0072 34       		.uleb128 0x34
+ 845 0073 00       		.byte	0
+ 846 0074 03       		.uleb128 0x3
+ 847 0075 08       		.uleb128 0x8
+ 848 0076 3A       		.uleb128 0x3a
+ 849 0077 0B       		.uleb128 0xb
+ 850 0078 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 18
 
 
- 866 00d2 01       		.uleb128 0x1
- 867 00d3 13       		.uleb128 0x13
- 868 00d4 00       		.byte	0
- 869 00d5 00       		.byte	0
- 870 00d6 10       		.uleb128 0x10
- 871 00d7 21       		.uleb128 0x21
- 872 00d8 00       		.byte	0
- 873 00d9 49       		.uleb128 0x49
- 874 00da 13       		.uleb128 0x13
- 875 00db 2F       		.uleb128 0x2f
- 876 00dc 0B       		.uleb128 0xb
- 877 00dd 00       		.byte	0
- 878 00de 00       		.byte	0
- 879 00df 11       		.uleb128 0x11
- 880 00e0 34       		.uleb128 0x34
- 881 00e1 00       		.byte	0
- 882 00e2 03       		.uleb128 0x3
- 883 00e3 0E       		.uleb128 0xe
- 884 00e4 3A       		.uleb128 0x3a
- 885 00e5 0B       		.uleb128 0xb
- 886 00e6 3B       		.uleb128 0x3b
- 887 00e7 05       		.uleb128 0x5
- 888 00e8 49       		.uleb128 0x49
- 889 00e9 13       		.uleb128 0x13
- 890 00ea 3F       		.uleb128 0x3f
- 891 00eb 19       		.uleb128 0x19
- 892 00ec 3C       		.uleb128 0x3c
- 893 00ed 19       		.uleb128 0x19
- 894 00ee 00       		.byte	0
- 895 00ef 00       		.byte	0
- 896 00f0 12       		.uleb128 0x12
- 897 00f1 35       		.uleb128 0x35
- 898 00f2 00       		.byte	0
- 899 00f3 49       		.uleb128 0x49
- 900 00f4 13       		.uleb128 0x13
- 901 00f5 00       		.byte	0
- 902 00f6 00       		.byte	0
- 903 00f7 13       		.uleb128 0x13
- 904 00f8 2E       		.uleb128 0x2e
- 905 00f9 00       		.byte	0
- 906 00fa 3F       		.uleb128 0x3f
- 907 00fb 19       		.uleb128 0x19
- 908 00fc 3C       		.uleb128 0x3c
- 909 00fd 19       		.uleb128 0x19
- 910 00fe 6E       		.uleb128 0x6e
- 911 00ff 0E       		.uleb128 0xe
- 912 0100 03       		.uleb128 0x3
- 913 0101 0E       		.uleb128 0xe
- 914 0102 3A       		.uleb128 0x3a
- 915 0103 0B       		.uleb128 0xb
- 916 0104 3B       		.uleb128 0x3b
- 917 0105 05       		.uleb128 0x5
- 918 0106 00       		.byte	0
- 919 0107 00       		.byte	0
- 920 0108 14       		.uleb128 0x14
- 921 0109 2E       		.uleb128 0x2e
- 922 010a 00       		.byte	0
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 19
+ 851 0079 0B       		.uleb128 0xb
+ 852 007a 49       		.uleb128 0x49
+ 853 007b 13       		.uleb128 0x13
+ 854 007c 02       		.uleb128 0x2
+ 855 007d 17       		.uleb128 0x17
+ 856 007e 00       		.byte	0
+ 857 007f 00       		.byte	0
+ 858 0080 09       		.uleb128 0x9
+ 859 0081 34       		.uleb128 0x34
+ 860 0082 00       		.byte	0
+ 861 0083 03       		.uleb128 0x3
+ 862 0084 0E       		.uleb128 0xe
+ 863 0085 3A       		.uleb128 0x3a
+ 864 0086 0B       		.uleb128 0xb
+ 865 0087 3B       		.uleb128 0x3b
+ 866 0088 0B       		.uleb128 0xb
+ 867 0089 49       		.uleb128 0x49
+ 868 008a 13       		.uleb128 0x13
+ 869 008b 02       		.uleb128 0x2
+ 870 008c 17       		.uleb128 0x17
+ 871 008d 00       		.byte	0
+ 872 008e 00       		.byte	0
+ 873 008f 0A       		.uleb128 0xa
+ 874 0090 898201   		.uleb128 0x4109
+ 875 0093 01       		.byte	0x1
+ 876 0094 11       		.uleb128 0x11
+ 877 0095 01       		.uleb128 0x1
+ 878 0096 31       		.uleb128 0x31
+ 879 0097 13       		.uleb128 0x13
+ 880 0098 01       		.uleb128 0x1
+ 881 0099 13       		.uleb128 0x13
+ 882 009a 00       		.byte	0
+ 883 009b 00       		.byte	0
+ 884 009c 0B       		.uleb128 0xb
+ 885 009d 8A8201   		.uleb128 0x410a
+ 886 00a0 00       		.byte	0
+ 887 00a1 02       		.uleb128 0x2
+ 888 00a2 18       		.uleb128 0x18
+ 889 00a3 9142     		.uleb128 0x2111
+ 890 00a5 18       		.uleb128 0x18
+ 891 00a6 00       		.byte	0
+ 892 00a7 00       		.byte	0
+ 893 00a8 0C       		.uleb128 0xc
+ 894 00a9 898201   		.uleb128 0x4109
+ 895 00ac 00       		.byte	0
+ 896 00ad 11       		.uleb128 0x11
+ 897 00ae 01       		.uleb128 0x1
+ 898 00af 31       		.uleb128 0x31
+ 899 00b0 13       		.uleb128 0x13
+ 900 00b1 00       		.byte	0
+ 901 00b2 00       		.byte	0
+ 902 00b3 0D       		.uleb128 0xd
+ 903 00b4 898201   		.uleb128 0x4109
+ 904 00b7 01       		.byte	0x1
+ 905 00b8 11       		.uleb128 0x11
+ 906 00b9 01       		.uleb128 0x1
+ 907 00ba 31       		.uleb128 0x31
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 19
 
 
- 923 010b 3F       		.uleb128 0x3f
- 924 010c 19       		.uleb128 0x19
- 925 010d 3C       		.uleb128 0x3c
- 926 010e 19       		.uleb128 0x19
- 927 010f 6E       		.uleb128 0x6e
- 928 0110 0E       		.uleb128 0xe
- 929 0111 03       		.uleb128 0x3
- 930 0112 0E       		.uleb128 0xe
- 931 0113 3A       		.uleb128 0x3a
- 932 0114 0B       		.uleb128 0xb
- 933 0115 3B       		.uleb128 0x3b
- 934 0116 0B       		.uleb128 0xb
- 935 0117 00       		.byte	0
- 936 0118 00       		.byte	0
- 937 0119 15       		.uleb128 0x15
- 938 011a 2E       		.uleb128 0x2e
- 939 011b 00       		.byte	0
- 940 011c 3F       		.uleb128 0x3f
- 941 011d 19       		.uleb128 0x19
- 942 011e 3C       		.uleb128 0x3c
- 943 011f 19       		.uleb128 0x19
- 944 0120 6E       		.uleb128 0x6e
- 945 0121 0E       		.uleb128 0xe
- 946 0122 03       		.uleb128 0x3
- 947 0123 0E       		.uleb128 0xe
- 948 0124 00       		.byte	0
- 949 0125 00       		.byte	0
- 950 0126 16       		.uleb128 0x16
- 951 0127 2E       		.uleb128 0x2e
- 952 0128 00       		.byte	0
- 953 0129 3F       		.uleb128 0x3f
- 954 012a 19       		.uleb128 0x19
- 955 012b 3C       		.uleb128 0x3c
- 956 012c 19       		.uleb128 0x19
- 957 012d 6E       		.uleb128 0x6e
- 958 012e 08       		.uleb128 0x8
- 959 012f 03       		.uleb128 0x3
- 960 0130 08       		.uleb128 0x8
- 961 0131 3A       		.uleb128 0x3a
- 962 0132 0B       		.uleb128 0xb
- 963 0133 3B       		.uleb128 0x3b
- 964 0134 0B       		.uleb128 0xb
- 965 0135 00       		.byte	0
- 966 0136 00       		.byte	0
- 967 0137 00       		.byte	0
- 968              		.section	.debug_loc,"",%progbits
- 969              	.Ldebug_loc0:
- 970              	.LLST0:
- 971 0000 3A000000 		.4byte	.LVL7
- 972 0004 7C010000 		.4byte	.LFE64
- 973 0008 0600     		.2byte	0x6
- 974 000a 56       		.byte	0x56
- 975 000b 93       		.byte	0x93
- 976 000c 04       		.uleb128 0x4
- 977 000d 57       		.byte	0x57
- 978 000e 93       		.byte	0x93
- 979 000f 04       		.uleb128 0x4
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 20
+ 908 00bb 13       		.uleb128 0x13
+ 909 00bc 00       		.byte	0
+ 910 00bd 00       		.byte	0
+ 911 00be 0E       		.uleb128 0xe
+ 912 00bf 01       		.uleb128 0x1
+ 913 00c0 01       		.byte	0x1
+ 914 00c1 49       		.uleb128 0x49
+ 915 00c2 13       		.uleb128 0x13
+ 916 00c3 01       		.uleb128 0x1
+ 917 00c4 13       		.uleb128 0x13
+ 918 00c5 00       		.byte	0
+ 919 00c6 00       		.byte	0
+ 920 00c7 0F       		.uleb128 0xf
+ 921 00c8 21       		.uleb128 0x21
+ 922 00c9 00       		.byte	0
+ 923 00ca 49       		.uleb128 0x49
+ 924 00cb 13       		.uleb128 0x13
+ 925 00cc 2F       		.uleb128 0x2f
+ 926 00cd 0B       		.uleb128 0xb
+ 927 00ce 00       		.byte	0
+ 928 00cf 00       		.byte	0
+ 929 00d0 10       		.uleb128 0x10
+ 930 00d1 34       		.uleb128 0x34
+ 931 00d2 00       		.byte	0
+ 932 00d3 03       		.uleb128 0x3
+ 933 00d4 0E       		.uleb128 0xe
+ 934 00d5 3A       		.uleb128 0x3a
+ 935 00d6 0B       		.uleb128 0xb
+ 936 00d7 3B       		.uleb128 0x3b
+ 937 00d8 05       		.uleb128 0x5
+ 938 00d9 49       		.uleb128 0x49
+ 939 00da 13       		.uleb128 0x13
+ 940 00db 3F       		.uleb128 0x3f
+ 941 00dc 19       		.uleb128 0x19
+ 942 00dd 3C       		.uleb128 0x3c
+ 943 00de 19       		.uleb128 0x19
+ 944 00df 00       		.byte	0
+ 945 00e0 00       		.byte	0
+ 946 00e1 11       		.uleb128 0x11
+ 947 00e2 35       		.uleb128 0x35
+ 948 00e3 00       		.byte	0
+ 949 00e4 49       		.uleb128 0x49
+ 950 00e5 13       		.uleb128 0x13
+ 951 00e6 00       		.byte	0
+ 952 00e7 00       		.byte	0
+ 953 00e8 12       		.uleb128 0x12
+ 954 00e9 2E       		.uleb128 0x2e
+ 955 00ea 00       		.byte	0
+ 956 00eb 3F       		.uleb128 0x3f
+ 957 00ec 19       		.uleb128 0x19
+ 958 00ed 3C       		.uleb128 0x3c
+ 959 00ee 19       		.uleb128 0x19
+ 960 00ef 6E       		.uleb128 0x6e
+ 961 00f0 0E       		.uleb128 0xe
+ 962 00f1 03       		.uleb128 0x3
+ 963 00f2 0E       		.uleb128 0xe
+ 964 00f3 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 20
 
 
- 980 0010 00000000 		.4byte	0
- 981 0014 00000000 		.4byte	0
- 982              	.LLST1:
- 983 0018 68000000 		.4byte	.LVL13
- 984 001c BE000000 		.4byte	.LVL29
- 985 0020 0600     		.2byte	0x6
- 986 0022 58       		.byte	0x58
- 987 0023 93       		.byte	0x93
- 988 0024 04       		.uleb128 0x4
- 989 0025 59       		.byte	0x59
- 990 0026 93       		.byte	0x93
- 991 0027 04       		.uleb128 0x4
- 992 0028 00000000 		.4byte	0
- 993 002c 00000000 		.4byte	0
- 994              	.LLST2:
- 995 0030 86000000 		.4byte	.LVL19
- 996 0034 7C010000 		.4byte	.LFE64
- 997 0038 0100     		.2byte	0x1
- 998 003a 5B       		.byte	0x5b
- 999 003b 00000000 		.4byte	0
- 1000 003f 00000000 		.4byte	0
- 1001              	.LLST3:
- 1002 0043 90000000 		.4byte	.LVL21
- 1003 0047 E6000000 		.4byte	.LVL39
- 1004 004b 0100     		.2byte	0x1
- 1005 004d 5A       		.byte	0x5a
- 1006 004e 00000000 		.4byte	0
- 1007 0052 00000000 		.4byte	0
- 1008              	.LLST4:
- 1009 0056 98000000 		.4byte	.LVL23
- 1010 005a 7C010000 		.4byte	.LFE64
- 1011 005e 0100     		.2byte	0x1
- 1012 0060 55       		.byte	0x55
- 1013 0061 00000000 		.4byte	0
- 1014 0065 00000000 		.4byte	0
- 1015              	.LLST5:
- 1016 0069 BE000000 		.4byte	.LVL29
- 1017 006d C0000000 		.4byte	.LVL30
- 1018 0071 0100     		.2byte	0x1
- 1019 0073 50       		.byte	0x50
- 1020 0074 C0000000 		.4byte	.LVL30
- 1021 0078 7C010000 		.4byte	.LFE64
- 1022 007c 0100     		.2byte	0x1
- 1023 007e 58       		.byte	0x58
- 1024 007f 00000000 		.4byte	0
- 1025 0083 00000000 		.4byte	0
- 1026              	.LLST6:
- 1027 0087 D2000000 		.4byte	.LVL34
- 1028 008b D4000000 		.4byte	.LVL35
- 1029 008f 0100     		.2byte	0x1
- 1030 0091 50       		.byte	0x50
- 1031 0092 D4000000 		.4byte	.LVL35
- 1032 0096 7C010000 		.4byte	.LFE64
- 1033 009a 0100     		.2byte	0x1
- 1034 009c 59       		.byte	0x59
- 1035 009d 00000000 		.4byte	0
- 1036 00a1 00000000 		.4byte	0
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 21
+ 965 00f4 0B       		.uleb128 0xb
+ 966 00f5 3B       		.uleb128 0x3b
+ 967 00f6 05       		.uleb128 0x5
+ 968 00f7 00       		.byte	0
+ 969 00f8 00       		.byte	0
+ 970 00f9 13       		.uleb128 0x13
+ 971 00fa 2E       		.uleb128 0x2e
+ 972 00fb 00       		.byte	0
+ 973 00fc 3F       		.uleb128 0x3f
+ 974 00fd 19       		.uleb128 0x19
+ 975 00fe 3C       		.uleb128 0x3c
+ 976 00ff 19       		.uleb128 0x19
+ 977 0100 6E       		.uleb128 0x6e
+ 978 0101 0E       		.uleb128 0xe
+ 979 0102 03       		.uleb128 0x3
+ 980 0103 0E       		.uleb128 0xe
+ 981 0104 3A       		.uleb128 0x3a
+ 982 0105 0B       		.uleb128 0xb
+ 983 0106 3B       		.uleb128 0x3b
+ 984 0107 0B       		.uleb128 0xb
+ 985 0108 00       		.byte	0
+ 986 0109 00       		.byte	0
+ 987 010a 14       		.uleb128 0x14
+ 988 010b 2E       		.uleb128 0x2e
+ 989 010c 00       		.byte	0
+ 990 010d 3F       		.uleb128 0x3f
+ 991 010e 19       		.uleb128 0x19
+ 992 010f 3C       		.uleb128 0x3c
+ 993 0110 19       		.uleb128 0x19
+ 994 0111 6E       		.uleb128 0x6e
+ 995 0112 0E       		.uleb128 0xe
+ 996 0113 03       		.uleb128 0x3
+ 997 0114 0E       		.uleb128 0xe
+ 998 0115 00       		.byte	0
+ 999 0116 00       		.byte	0
+ 1000 0117 15       		.uleb128 0x15
+ 1001 0118 2E       		.uleb128 0x2e
+ 1002 0119 00       		.byte	0
+ 1003 011a 3F       		.uleb128 0x3f
+ 1004 011b 19       		.uleb128 0x19
+ 1005 011c 3C       		.uleb128 0x3c
+ 1006 011d 19       		.uleb128 0x19
+ 1007 011e 6E       		.uleb128 0x6e
+ 1008 011f 08       		.uleb128 0x8
+ 1009 0120 03       		.uleb128 0x3
+ 1010 0121 08       		.uleb128 0x8
+ 1011 0122 3A       		.uleb128 0x3a
+ 1012 0123 0B       		.uleb128 0xb
+ 1013 0124 3B       		.uleb128 0x3b
+ 1014 0125 0B       		.uleb128 0xb
+ 1015 0126 00       		.byte	0
+ 1016 0127 00       		.byte	0
+ 1017 0128 00       		.byte	0
+ 1018              		.section	.debug_loc,"",%progbits
+ 1019              	.Ldebug_loc0:
+ 1020              	.LLST0:
+ 1021 0000 2A000000 		.4byte	.LVL4
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 21
 
 
- 1037              	.LLST7:
- 1038 00a5 E6000000 		.4byte	.LVL39
- 1039 00a9 E8000000 		.4byte	.LVL40
- 1040 00ad 0100     		.2byte	0x1
- 1041 00af 50       		.byte	0x50
- 1042 00b0 E8000000 		.4byte	.LVL40
- 1043 00b4 7C010000 		.4byte	.LFE64
- 1044 00b8 0100     		.2byte	0x1
- 1045 00ba 5A       		.byte	0x5a
- 1046 00bb 00000000 		.4byte	0
- 1047 00bf 00000000 		.4byte	0
- 1048              	.LLST8:
- 1049 00c3 F8000000 		.4byte	.LVL43
- 1050 00c7 FB000000 		.4byte	.LVL44-1
- 1051 00cb 0100     		.2byte	0x1
- 1052 00cd 50       		.byte	0x50
- 1053 00ce 00000000 		.4byte	0
- 1054 00d2 00000000 		.4byte	0
- 1055              		.section	.debug_aranges,"",%progbits
- 1056 0000 1C000000 		.4byte	0x1c
- 1057 0004 0200     		.2byte	0x2
- 1058 0006 00000000 		.4byte	.Ldebug_info0
- 1059 000a 04       		.byte	0x4
- 1060 000b 00       		.byte	0
- 1061 000c 0000     		.2byte	0
- 1062 000e 0000     		.2byte	0
- 1063 0010 00000000 		.4byte	.LFB64
- 1064 0014 7C010000 		.4byte	.LFE64-.LFB64
- 1065 0018 00000000 		.4byte	0
- 1066 001c 00000000 		.4byte	0
- 1067              		.section	.debug_ranges,"",%progbits
- 1068              	.Ldebug_ranges0:
- 1069 0000 00000000 		.4byte	.LFB64
- 1070 0004 7C010000 		.4byte	.LFE64
- 1071 0008 00000000 		.4byte	0
- 1072 000c 00000000 		.4byte	0
- 1073              		.section	.debug_line,"",%progbits
- 1074              	.Ldebug_line0:
- 1075 0000 48020000 		.section	.debug_str,"MS",%progbits,1
- 1075      02001302 
- 1075      00000201 
- 1075      FB0E0D00 
- 1075      01010101 
- 1076              	.LASF18:
- 1077 0000 6D657373 		.ascii	"message\000"
- 1077      61676500 
- 1078              	.LASF14:
- 1079 0008 5F5F696E 		.ascii	"__int32_t\000"
- 1079      7433325F 
- 1079      7400
- 1080              	.LASF11:
- 1081 0012 63686172 		.ascii	"char\000"
- 1081      00
- 1082              	.LASF28:
- 1083 0017 6D794441 		.ascii	"myDAC_Start\000"
- 1083      435F5374 
- 1083      61727400 
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 22
+ 1022 0004 30000000 		.4byte	.LVL6
+ 1023 0008 0200     		.2byte	0x2
+ 1024 000a 30       		.byte	0x30
+ 1025 000b 9F       		.byte	0x9f
+ 1026 000c 00000000 		.4byte	0
+ 1027 0010 00000000 		.4byte	0
+ 1028              	.LLST1:
+ 1029 0014 2A000000 		.4byte	.LVL4
+ 1030 0018 30000000 		.4byte	.LVL6
+ 1031 001c 0A00     		.2byte	0xa
+ 1032 001e 9E       		.byte	0x9e
+ 1033 001f 08       		.uleb128 0x8
+ 1034 0020 00000000 		.4byte	0
+ 1035 0024 00000000 		.4byte	0
+ 1036 0028 66000000 		.4byte	.LVL17
+ 1037 002c 6F000000 		.4byte	.LVL18-1
+ 1038 0030 0600     		.2byte	0x6
+ 1039 0032 50       		.byte	0x50
+ 1040 0033 93       		.byte	0x93
+ 1041 0034 04       		.uleb128 0x4
+ 1042 0035 51       		.byte	0x51
+ 1043 0036 93       		.byte	0x93
+ 1044 0037 04       		.uleb128 0x4
+ 1045 0038 6F000000 		.4byte	.LVL18-1
+ 1046 003c 9C010000 		.4byte	.LFE64
+ 1047 0040 0300     		.2byte	0x3
+ 1048 0042 91       		.byte	0x91
+ 1049 0043 D87D     		.sleb128 -296
+ 1050 0045 00000000 		.4byte	0
+ 1051 0049 00000000 		.4byte	0
+ 1052              	.LLST2:
+ 1053 004d 2A000000 		.4byte	.LVL4
+ 1054 0051 30000000 		.4byte	.LVL6
+ 1055 0055 0A00     		.2byte	0xa
+ 1056 0057 9E       		.byte	0x9e
+ 1057 0058 08       		.uleb128 0x8
+ 1058 0059 00000000 		.4byte	0
+ 1059 005d 00000000 		.4byte	0
+ 1060 0061 94000000 		.4byte	.LVL23
+ 1061 0065 E8000000 		.4byte	.LVL39
+ 1062 0069 0600     		.2byte	0x6
+ 1063 006b 58       		.byte	0x58
+ 1064 006c 93       		.byte	0x93
+ 1065 006d 04       		.uleb128 0x4
+ 1066 006e 59       		.byte	0x59
+ 1067 006f 93       		.byte	0x93
+ 1068 0070 04       		.uleb128 0x4
+ 1069 0071 00000000 		.4byte	0
+ 1070 0075 00000000 		.4byte	0
+ 1071              	.LLST3:
+ 1072 0079 2A000000 		.4byte	.LVL4
+ 1073 007d 30000000 		.4byte	.LVL6
+ 1074 0081 0200     		.2byte	0x2
+ 1075 0083 30       		.byte	0x30
+ 1076 0084 9F       		.byte	0x9f
+ 1077 0085 B2000000 		.4byte	.LVL29
+ 1078 0089 9C010000 		.4byte	.LFE64
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 22
 
 
- 1084              	.LASF19:
- 1085 0023 76616C75 		.ascii	"value0\000"
- 1085      653000
- 1086              	.LASF20:
- 1087 002a 76616C75 		.ascii	"value1\000"
- 1087      653100
- 1088              	.LASF21:
- 1089 0031 76616C75 		.ascii	"value2\000"
- 1089      653200
- 1090              	.LASF13:
- 1091 0038 666C6F61 		.ascii	"float\000"
- 1091      7400
- 1092              	.LASF23:
- 1093 003e 6676616C 		.ascii	"fvalue0\000"
- 1093      75653000 
- 1094              	.LASF37:
- 1095 0046 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1095      43313120 
- 1095      352E342E 
- 1095      31203230 
- 1095      31363036 
- 1096 0079 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1096      20726576 
- 1096      6973696F 
- 1096      6E203233 
- 1096      37373135 
- 1097 00ac 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1097      66756E63 
- 1097      74696F6E 
- 1097      2D736563 
- 1097      74696F6E 
- 1098              	.LASF25:
- 1099 00d4 6676616C 		.ascii	"fvalue2\000"
- 1099      75653200 
- 1100              	.LASF32:
- 1101 00dc 6D794144 		.ascii	"myADC_SEQ_GetResult16\000"
- 1101      435F5345 
- 1101      515F4765 
- 1101      74526573 
- 1101      756C7431 
- 1102              	.LASF8:
- 1103 00f2 6C6F6E67 		.ascii	"long unsigned int\000"
- 1103      20756E73 
- 1103      69676E65 
- 1103      6420696E 
- 1103      7400
- 1104              	.LASF6:
- 1105 0104 73686F72 		.ascii	"short unsigned int\000"
- 1105      7420756E 
- 1105      7369676E 
- 1105      65642069 
- 1105      6E7400
- 1106              	.LASF41:
- 1107 0117 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1107      52784275 
- 1107      66666572 
- 1107      00
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 23
+ 1079 008d 0100     		.2byte	0x1
+ 1080 008f 5A       		.byte	0x5a
+ 1081 0090 00000000 		.4byte	0
+ 1082 0094 00000000 		.4byte	0
+ 1083              	.LLST4:
+ 1084 0098 2A000000 		.4byte	.LVL4
+ 1085 009c 30000000 		.4byte	.LVL6
+ 1086 00a0 0200     		.2byte	0x2
+ 1087 00a2 30       		.byte	0x30
+ 1088 00a3 9F       		.byte	0x9f
+ 1089 00a4 BA000000 		.4byte	.LVL31
+ 1090 00a8 10010000 		.4byte	.LVL49
+ 1091 00ac 0100     		.2byte	0x1
+ 1092 00ae 57       		.byte	0x57
+ 1093 00af 00000000 		.4byte	0
+ 1094 00b3 00000000 		.4byte	0
+ 1095              	.LLST5:
+ 1096 00b7 2A000000 		.4byte	.LVL4
+ 1097 00bb 30000000 		.4byte	.LVL6
+ 1098 00bf 0200     		.2byte	0x2
+ 1099 00c1 30       		.byte	0x30
+ 1100 00c2 9F       		.byte	0x9f
+ 1101 00c3 C2000000 		.4byte	.LVL33
+ 1102 00c7 64010000 		.4byte	.LVL61
+ 1103 00cb 0100     		.2byte	0x1
+ 1104 00cd 56       		.byte	0x56
+ 1105 00ce 00000000 		.4byte	0
+ 1106 00d2 00000000 		.4byte	0
+ 1107              	.LLST6:
+ 1108 00d6 2A000000 		.4byte	.LVL4
+ 1109 00da 30000000 		.4byte	.LVL6
+ 1110 00de 0200     		.2byte	0x2
+ 1111 00e0 30       		.byte	0x30
+ 1112 00e1 9F       		.byte	0x9f
+ 1113 00e2 36000000 		.4byte	.LVL8
+ 1114 00e6 40000000 		.4byte	.LVL10
+ 1115 00ea 0100     		.2byte	0x1
+ 1116 00ec 50       		.byte	0x50
+ 1117 00ed 40000000 		.4byte	.LVL10
+ 1118 00f1 9C010000 		.4byte	.LFE64
+ 1119 00f5 0100     		.2byte	0x1
+ 1120 00f7 54       		.byte	0x54
+ 1121 00f8 00000000 		.4byte	0
+ 1122 00fc 00000000 		.4byte	0
+ 1123              	.LLST7:
+ 1124 0100 2A000000 		.4byte	.LVL4
+ 1125 0104 30000000 		.4byte	.LVL6
+ 1126 0108 0200     		.2byte	0x2
+ 1127 010a 30       		.byte	0x30
+ 1128 010b 9F       		.byte	0x9f
+ 1129 010c 30000000 		.4byte	.LVL6
+ 1130 0110 4E000000 		.4byte	.LVL13
+ 1131 0114 0100     		.2byte	0x1
+ 1132 0116 56       		.byte	0x56
+ 1133 0117 62010000 		.4byte	.LVL60
+ 1134 011b 9C010000 		.4byte	.LFE64
+ 1135 011f 0100     		.2byte	0x1
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 23
 
 
- 1108              	.LASF29:
- 1109 0124 6D794441 		.ascii	"myDAC_SetValue\000"
- 1109      435F5365 
- 1109      7456616C 
- 1109      756500
- 1110              	.LASF24:
- 1111 0133 6676616C 		.ascii	"fvalue1\000"
- 1111      75653100 
- 1112              	.LASF42:
- 1113 013b 6D656D73 		.ascii	"memset\000"
- 1113      657400
- 1114              	.LASF12:
- 1115 0142 646F7562 		.ascii	"double\000"
- 1115      6C6500
- 1116              	.LASF22:
- 1117 0149 66616F75 		.ascii	"faout\000"
- 1117      7400
- 1118              	.LASF40:
- 1119 014f 6D61696E 		.ascii	"main\000"
- 1119      00
- 1120              	.LASF17:
- 1121 0154 75696E74 		.ascii	"uint16\000"
- 1121      313600
- 1122              	.LASF16:
- 1123 015b 75696E74 		.ascii	"uint\000"
- 1123      00
- 1124              	.LASF30:
- 1125 0160 6D794144 		.ascii	"myADC_SEQ_StartConvert\000"
- 1125      435F5345 
- 1125      515F5374 
- 1125      61727443 
- 1125      6F6E7665 
- 1126              	.LASF4:
- 1127 0177 756E7369 		.ascii	"unsigned char\000"
- 1127      676E6564 
- 1127      20636861 
- 1127      7200
- 1128              	.LASF0:
- 1129 0185 756E7369 		.ascii	"unsigned int\000"
- 1129      676E6564 
- 1129      20696E74 
- 1129      00
- 1130              	.LASF9:
- 1131 0192 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1131      206C6F6E 
- 1131      6720756E 
- 1131      7369676E 
- 1131      65642069 
- 1132              	.LASF33:
- 1133 01a9 73707269 		.ascii	"sprintf\000"
- 1133      6E746600 
- 1134              	.LASF26:
- 1135 01b1 6D795553 		.ascii	"myUSB_Start\000"
- 1135      425F5374 
- 1135      61727400 
- 1136              	.LASF39:
- 1137 01bd 433A5C55 		.ascii	"C:\\Users\\danaukes\\projects\\code_pyscilloscope\\"
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 24
+ 1136 0121 54       		.byte	0x54
+ 1137 0122 00000000 		.4byte	0
+ 1138 0126 00000000 		.4byte	0
+ 1139              	.LLST8:
+ 1140 012a 2A000000 		.4byte	.LVL4
+ 1141 012e 30000000 		.4byte	.LVL6
+ 1142 0132 0200     		.2byte	0x2
+ 1143 0134 30       		.byte	0x30
+ 1144 0135 9F       		.byte	0x9f
+ 1145 0136 30000000 		.4byte	.LVL6
+ 1146 013a 9C010000 		.4byte	.LFE64
+ 1147 013e 0100     		.2byte	0x1
+ 1148 0140 55       		.byte	0x55
+ 1149 0141 00000000 		.4byte	0
+ 1150 0145 00000000 		.4byte	0
+ 1151              	.LLST9:
+ 1152 0149 2A000000 		.4byte	.LVL4
+ 1153 014d 30000000 		.4byte	.LVL6
+ 1154 0151 0600     		.2byte	0x6
+ 1155 0153 9E       		.byte	0x9e
+ 1156 0154 04       		.uleb128 0x4
+ 1157 0155 00000000 		.4byte	0
+ 1158 0159 E8000000 		.4byte	.LVL39
+ 1159 015d EA000000 		.4byte	.LVL40
+ 1160 0161 0100     		.2byte	0x1
+ 1161 0163 50       		.byte	0x50
+ 1162 0164 EA000000 		.4byte	.LVL40
+ 1163 0168 9C010000 		.4byte	.LFE64
+ 1164 016c 0100     		.2byte	0x1
+ 1165 016e 58       		.byte	0x58
+ 1166 016f 00000000 		.4byte	0
+ 1167 0173 00000000 		.4byte	0
+ 1168              	.LLST10:
+ 1169 0177 2A000000 		.4byte	.LVL4
+ 1170 017b 30000000 		.4byte	.LVL6
+ 1171 017f 0600     		.2byte	0x6
+ 1172 0181 9E       		.byte	0x9e
+ 1173 0182 04       		.uleb128 0x4
+ 1174 0183 00000000 		.4byte	0
+ 1175 0187 FC000000 		.4byte	.LVL44
+ 1176 018b FE000000 		.4byte	.LVL45
+ 1177 018f 0100     		.2byte	0x1
+ 1178 0191 50       		.byte	0x50
+ 1179 0192 FE000000 		.4byte	.LVL45
+ 1180 0196 9C010000 		.4byte	.LFE64
+ 1181 019a 0100     		.2byte	0x1
+ 1182 019c 59       		.byte	0x59
+ 1183 019d 00000000 		.4byte	0
+ 1184 01a1 00000000 		.4byte	0
+ 1185              	.LLST11:
+ 1186 01a5 2A000000 		.4byte	.LVL4
+ 1187 01a9 30000000 		.4byte	.LVL6
+ 1188 01ad 0600     		.2byte	0x6
+ 1189 01af 9E       		.byte	0x9e
+ 1190 01b0 04       		.uleb128 0x4
+ 1191 01b1 00000000 		.4byte	0
+ 1192 01b5 10010000 		.4byte	.LVL49
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 24
 
 
- 1137      73657273 
- 1137      5C64616E 
- 1137      61756B65 
- 1137      735C7072 
- 1138 01eb 70736F63 		.ascii	"psoc\\Workspace01\\Design01.cydsn\000"
- 1138      5C576F72 
- 1138      6B737061 
- 1138      63653031 
- 1138      5C446573 
- 1139              	.LASF15:
- 1140 020b 696E7433 		.ascii	"int32_t\000"
- 1140      325F7400 
- 1141              	.LASF31:
- 1142 0213 6D794144 		.ascii	"myADC_SEQ_IsEndConversion\000"
- 1142      435F5345 
- 1142      515F4973 
- 1142      456E6443 
- 1142      6F6E7665 
- 1143              	.LASF10:
- 1144 022d 73697A65 		.ascii	"sizetype\000"
- 1144      74797065 
- 1144      00
- 1145              	.LASF1:
- 1146 0236 6C6F6E67 		.ascii	"long long int\000"
- 1146      206C6F6E 
- 1146      6720696E 
- 1146      7400
- 1147              	.LASF38:
- 1148 0244 6D61696E 		.ascii	"main.c\000"
- 1148      2E6300
- 1149              	.LASF35:
- 1150 024b 6D795553 		.ascii	"myUSB_PutString\000"
- 1150      425F5075 
- 1150      74537472 
- 1150      696E6700 
- 1151              	.LASF5:
- 1152 025b 73686F72 		.ascii	"short int\000"
- 1152      7420696E 
- 1152      7400
- 1153              	.LASF7:
- 1154 0265 6C6F6E67 		.ascii	"long int\000"
- 1154      20696E74 
- 1154      00
- 1155              	.LASF34:
- 1156 026e 6D795553 		.ascii	"myUSB_CDCIsReady\000"
- 1156      425F4344 
- 1156      43497352 
- 1156      65616479 
- 1156      00
- 1157              	.LASF2:
- 1158 027f 6C6F6E67 		.ascii	"long double\000"
- 1158      20646F75 
- 1158      626C6500 
- 1159              	.LASF3:
- 1160 028b 7369676E 		.ascii	"signed char\000"
- 1160      65642063 
- 1160      68617200 
-ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccJInmY2.s 			page 25
+ 1193 01b9 12010000 		.4byte	.LVL50
+ 1194 01bd 0100     		.2byte	0x1
+ 1195 01bf 50       		.byte	0x50
+ 1196 01c0 12010000 		.4byte	.LVL50
+ 1197 01c4 9C010000 		.4byte	.LFE64
+ 1198 01c8 0100     		.2byte	0x1
+ 1199 01ca 57       		.byte	0x57
+ 1200 01cb 00000000 		.4byte	0
+ 1201 01cf 00000000 		.4byte	0
+ 1202              	.LLST12:
+ 1203 01d3 2A000000 		.4byte	.LVL4
+ 1204 01d7 30000000 		.4byte	.LVL6
+ 1205 01db 0600     		.2byte	0x6
+ 1206 01dd 9E       		.byte	0x9e
+ 1207 01de 04       		.uleb128 0x4
+ 1208 01df 00000000 		.4byte	0
+ 1209 01e3 22010000 		.4byte	.LVL53
+ 1210 01e7 25010000 		.4byte	.LVL54-1
+ 1211 01eb 0100     		.2byte	0x1
+ 1212 01ed 50       		.byte	0x50
+ 1213 01ee 00000000 		.4byte	0
+ 1214 01f2 00000000 		.4byte	0
+ 1215              		.section	.debug_aranges,"",%progbits
+ 1216 0000 1C000000 		.4byte	0x1c
+ 1217 0004 0200     		.2byte	0x2
+ 1218 0006 00000000 		.4byte	.Ldebug_info0
+ 1219 000a 04       		.byte	0x4
+ 1220 000b 00       		.byte	0
+ 1221 000c 0000     		.2byte	0
+ 1222 000e 0000     		.2byte	0
+ 1223 0010 00000000 		.4byte	.LFB64
+ 1224 0014 9C010000 		.4byte	.LFE64-.LFB64
+ 1225 0018 00000000 		.4byte	0
+ 1226 001c 00000000 		.4byte	0
+ 1227              		.section	.debug_ranges,"",%progbits
+ 1228              	.Ldebug_ranges0:
+ 1229 0000 00000000 		.4byte	.LFB64
+ 1230 0004 9C010000 		.4byte	.LFE64
+ 1231 0008 00000000 		.4byte	0
+ 1232 000c 00000000 		.4byte	0
+ 1233              		.section	.debug_line,"",%progbits
+ 1234              	.Ldebug_line0:
+ 1235 0000 57020000 		.section	.debug_str,"MS",%progbits,1
+ 1235      02001702 
+ 1235      00000201 
+ 1235      FB0E0D00 
+ 1235      01010101 
+ 1236              	.LASF19:
+ 1237 0000 6D657373 		.ascii	"message\000"
+ 1237      61676500 
+ 1238              	.LASF16:
+ 1239 0008 75696E74 		.ascii	"uint\000"
+ 1239      00
+ 1240              	.LASF14:
+ 1241 000d 5F5F696E 		.ascii	"__int32_t\000"
+ 1241      7433325F 
+ 1241      7400
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 25
 
 
- 1161              	.LASF27:
- 1162 0297 6D794144 		.ascii	"myADC_SEQ_Start\000"
- 1162      435F5345 
- 1162      515F5374 
- 1162      61727400 
- 1163              	.LASF36:
- 1164 02a7 43794465 		.ascii	"CyDelay\000"
- 1164      6C617900 
- 1165              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1242              	.LASF12:
+ 1243 0017 63686172 		.ascii	"char\000"
+ 1243      00
+ 1244              	.LASF24:
+ 1245 001c 636F756E 		.ascii	"count_last\000"
+ 1245      745F6C61 
+ 1245      737400
+ 1246              	.LASF31:
+ 1247 0027 6D794441 		.ascii	"myDAC_Start\000"
+ 1247      435F5374 
+ 1247      61727400 
+ 1248              	.LASF0:
+ 1249 0033 646F7562 		.ascii	"double\000"
+ 1249      6C6500
+ 1250              	.LASF20:
+ 1251 003a 76616C75 		.ascii	"value0\000"
+ 1251      653000
+ 1252              	.LASF21:
+ 1253 0041 76616C75 		.ascii	"value1\000"
+ 1253      653100
+ 1254              	.LASF22:
+ 1255 0048 76616C75 		.ascii	"value2\000"
+ 1255      653200
+ 1256              	.LASF13:
+ 1257 004f 666C6F61 		.ascii	"float\000"
+ 1257      7400
+ 1258              	.LASF26:
+ 1259 0055 6676616C 		.ascii	"fvalue0\000"
+ 1259      75653000 
+ 1260              	.LASF41:
+ 1261 005d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1261      43313120 
+ 1261      352E342E 
+ 1261      31203230 
+ 1261      31363036 
+ 1262 0090 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1262      20726576 
+ 1262      6973696F 
+ 1262      6E203233 
+ 1262      37373135 
+ 1263 00c3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1263      66756E63 
+ 1263      74696F6E 
+ 1263      2D736563 
+ 1263      74696F6E 
+ 1264              	.LASF28:
+ 1265 00eb 6676616C 		.ascii	"fvalue2\000"
+ 1265      75653200 
+ 1266              	.LASF37:
+ 1267 00f3 6D794144 		.ascii	"myADC_SEQ_GetResult16\000"
+ 1267      435F5345 
+ 1267      515F4765 
+ 1267      74526573 
+ 1267      756C7431 
+ 1268              	.LASF33:
+ 1269 0109 6D79436F 		.ascii	"myCounter_ReadCounter\000"
+ 1269      756E7465 
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 26
+
+
+ 1269      725F5265 
+ 1269      6164436F 
+ 1269      756E7465 
+ 1270              	.LASF7:
+ 1271 011f 73686F72 		.ascii	"short unsigned int\000"
+ 1271      7420756E 
+ 1271      7369676E 
+ 1271      65642069 
+ 1271      6E7400
+ 1272              	.LASF45:
+ 1273 0132 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1273      52784275 
+ 1273      66666572 
+ 1273      00
+ 1274              	.LASF34:
+ 1275 013f 6D794441 		.ascii	"myDAC_SetValue\000"
+ 1275      435F5365 
+ 1275      7456616C 
+ 1275      756500
+ 1276              	.LASF27:
+ 1277 014e 6676616C 		.ascii	"fvalue1\000"
+ 1277      75653100 
+ 1278              	.LASF46:
+ 1279 0156 6D656D73 		.ascii	"memset\000"
+ 1279      657400
+ 1280              	.LASF9:
+ 1281 015d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1281      20756E73 
+ 1281      69676E65 
+ 1281      6420696E 
+ 1281      7400
+ 1282              	.LASF25:
+ 1283 016f 66616F75 		.ascii	"faout\000"
+ 1283      7400
+ 1284              	.LASF44:
+ 1285 0175 6D61696E 		.ascii	"main\000"
+ 1285      00
+ 1286              	.LASF17:
+ 1287 017a 75696E74 		.ascii	"uint16\000"
+ 1287      313600
+ 1288              	.LASF32:
+ 1289 0181 6D79436F 		.ascii	"myCounter_Start\000"
+ 1289      756E7465 
+ 1289      725F5374 
+ 1289      61727400 
+ 1290              	.LASF35:
+ 1291 0191 6D794144 		.ascii	"myADC_SEQ_StartConvert\000"
+ 1291      435F5345 
+ 1291      515F5374 
+ 1291      61727443 
+ 1291      6F6E7665 
+ 1292              	.LASF18:
+ 1293 01a8 75696E74 		.ascii	"uint32\000"
+ 1293      333200
+ 1294              	.LASF5:
+ 1295 01af 756E7369 		.ascii	"unsigned char\000"
+ 1295      676E6564 
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 27
+
+
+ 1295      20636861 
+ 1295      7200
+ 1296              	.LASF1:
+ 1297 01bd 756E7369 		.ascii	"unsigned int\000"
+ 1297      676E6564 
+ 1297      20696E74 
+ 1297      00
+ 1298              	.LASF10:
+ 1299 01ca 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1299      206C6F6E 
+ 1299      6720756E 
+ 1299      7369676E 
+ 1299      65642069 
+ 1300              	.LASF38:
+ 1301 01e1 73707269 		.ascii	"sprintf\000"
+ 1301      6E746600 
+ 1302              	.LASF29:
+ 1303 01e9 6D795553 		.ascii	"myUSB_Start\000"
+ 1303      425F5374 
+ 1303      61727400 
+ 1304              	.LASF43:
+ 1305 01f5 433A5C55 		.ascii	"C:\\Users\\danaukes\\projects\\code_pyscilloscope\\"
+ 1305      73657273 
+ 1305      5C64616E 
+ 1305      61756B65 
+ 1305      735C7072 
+ 1306 0223 70736F63 		.ascii	"psoc\\Workspace01\\Design01.cydsn\000"
+ 1306      5C576F72 
+ 1306      6B737061 
+ 1306      63653031 
+ 1306      5C446573 
+ 1307              	.LASF15:
+ 1308 0243 696E7433 		.ascii	"int32_t\000"
+ 1308      325F7400 
+ 1309              	.LASF36:
+ 1310 024b 6D794144 		.ascii	"myADC_SEQ_IsEndConversion\000"
+ 1310      435F5345 
+ 1310      515F4973 
+ 1310      456E6443 
+ 1310      6F6E7665 
+ 1311              	.LASF11:
+ 1312 0265 73697A65 		.ascii	"sizetype\000"
+ 1312      74797065 
+ 1312      00
+ 1313              	.LASF2:
+ 1314 026e 6C6F6E67 		.ascii	"long long int\000"
+ 1314      206C6F6E 
+ 1314      6720696E 
+ 1314      7400
+ 1315              	.LASF42:
+ 1316 027c 6D61696E 		.ascii	"main.c\000"
+ 1316      2E6300
+ 1317              	.LASF40:
+ 1318 0283 6D795553 		.ascii	"myUSB_PutString\000"
+ 1318      425F5075 
+ 1318      74537472 
+ 1318      696E6700 
+ARM GAS  C:\Users\danaukes\AppData\Local\Temp\ccw685Es.s 			page 28
+
+
+ 1319              	.LASF23:
+ 1320 0293 636F756E 		.ascii	"count\000"
+ 1320      7400
+ 1321              	.LASF6:
+ 1322 0299 73686F72 		.ascii	"short int\000"
+ 1322      7420696E 
+ 1322      7400
+ 1323              	.LASF8:
+ 1324 02a3 6C6F6E67 		.ascii	"long int\000"
+ 1324      20696E74 
+ 1324      00
+ 1325              	.LASF39:
+ 1326 02ac 6D795553 		.ascii	"myUSB_CDCIsReady\000"
+ 1326      425F4344 
+ 1326      43497352 
+ 1326      65616479 
+ 1326      00
+ 1327              	.LASF3:
+ 1328 02bd 6C6F6E67 		.ascii	"long double\000"
+ 1328      20646F75 
+ 1328      626C6500 
+ 1329              	.LASF4:
+ 1330 02c9 7369676E 		.ascii	"signed char\000"
+ 1330      65642063 
+ 1330      68617200 
+ 1331              	.LASF30:
+ 1332 02d5 6D794144 		.ascii	"myADC_SEQ_Start\000"
+ 1332      435F5345 
+ 1332      515F5374 
+ 1332      61727400 
+ 1333              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

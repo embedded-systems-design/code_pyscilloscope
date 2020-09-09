@@ -1,6 +1,6 @@
 // ======================================================================
 // Design01.v generated from TopDesign.cysch
-// 08/30/2020 at 13:21
+// 09/09/2020 at 15:03
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1303,9 +1303,117 @@ module ADC_SAR_SEQ_v2_10_3 (
 
 endmodule
 
+// Component: OneTerminal
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v"
+`endif
+
+// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=3, CompareMode=1, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=60, CONTROL3=1, ControlRegRemoved=0, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, EnableMode=0, FF16=true, FF8=false, FixedFunction=true, FixedFunctionUsed=1, InitCounterValue=60000, InterruptOnCapture=false, InterruptOnCompare=false, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=60000, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=true, Resolution=16, RunMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UseInterrupt=true, VerilogSectionReplacementString=sC16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Counter_v3_0, CY_CONFIG_TITLE=myCounter, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=myCounter, CY_INSTANCE_SHORT_NAME=myCounter, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.3, INSTANCE_NAME=myCounter, )
+module Counter_v3_0_4 (
+    reset,
+    tc,
+    comp,
+    clock,
+    interrupt,
+    enable,
+    capture,
+    upCnt,
+    downCnt,
+    up_ndown,
+    count);
+    input       reset;
+    output      tc;
+    output      comp;
+    input       clock;
+    output      interrupt;
+    input       enable;
+    input       capture;
+    input       upCnt;
+    input       downCnt;
+    input       up_ndown;
+    input       count;
+
+    parameter CaptureMode = 0;
+    parameter ClockMode = 3;
+    parameter CompareMode = 1;
+    parameter CompareStatusEdgeSense = 1;
+    parameter EnableMode = 0;
+    parameter ReloadOnCapture = 0;
+    parameter ReloadOnCompare = 0;
+    parameter ReloadOnOverUnder = 1;
+    parameter ReloadOnReset = 1;
+    parameter Resolution = 16;
+    parameter RunMode = 0;
+    parameter UseInterrupt = 1;
+
+          wire  Net_47;
+          wire  Net_102;
+          wire  Net_95;
+          wire  Net_82;
+          wire  Net_91;
+          wire  Net_89;
+          wire  Net_49;
+          wire  Net_48;
+          wire  Net_42;
+          wire  Net_43;
+
+    cy_psoc3_timer_v1_0 CounterHW (
+        .timer_reset(reset),
+        .capture(capture),
+        .enable(Net_91),
+        .kill(Net_82),
+        .clock(clock),
+        .tc(Net_48),
+        .compare(Net_47),
+        .interrupt(Net_42));
+
+	// int_vm (cy_virtualmux_v1_0)
+	assign interrupt = Net_42;
+
+	// TC_vm (cy_virtualmux_v1_0)
+	assign tc = Net_48;
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_82));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_89 = Net_95;
+
+    ZeroTerminal ZeroTerminal_2 (
+        .z(Net_95));
+
+	// vmEnableMode (cy_virtualmux_v1_0)
+	assign Net_91 = enable;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_288;
+          wire  Net_289;
+          wire  Net_284;
+          wire  Net_283;
+          wire  Net_282;
+          wire  Net_281;
+          wire  Net_280;
+          wire  Net_278;
+          wire  Net_277;
+          wire  Net_276;
+          wire  Net_275;
     electrical  Net_269;
     electrical  Net_268;
     electrical  Net_267;
@@ -1411,6 +1519,7 @@ module top ;
     electrical  Net_174;
           wire  Net_2;
           wire  Net_1;
+          wire  Net_274;
 
     USBFS_v3_20_0 myUSB (
         .sof(Net_1),
@@ -1830,6 +1939,43 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Pin_3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_clock_v1_0
+		#(.id("c8fda3cd-2f9f-46cd-aa38-487d0453fee1"),
+		  .source_clock_id("315365C3-2E3E-4f04-84A2-BB564A173261"),
+		  .divisor(0),
+		  .period("1000000000000"),
+		  .is_direct(0),
+		  .is_digital(1))
+		myClock
+		 (.clock_out(Net_274));
+
+
+    Counter_v3_0_4 myCounter (
+        .reset(1'b0),
+        .tc(Net_277),
+        .comp(Net_278),
+        .clock(Net_274),
+        .interrupt(Net_280),
+        .enable(1'b0),
+        .capture(1'b0),
+        .upCnt(1'b0),
+        .downCnt(1'b0),
+        .up_ndown(1'b1),
+        .count(1'b0));
+    defparam myCounter.CaptureMode = 0;
+    defparam myCounter.ClockMode = 3;
+    defparam myCounter.CompareMode = 1;
+    defparam myCounter.CompareStatusEdgeSense = 1;
+    defparam myCounter.EnableMode = 0;
+    defparam myCounter.ReloadOnCapture = 0;
+    defparam myCounter.ReloadOnCompare = 0;
+    defparam myCounter.ReloadOnOverUnder = 1;
+    defparam myCounter.ReloadOnReset = 1;
+    defparam myCounter.Resolution = 16;
+    defparam myCounter.RunMode = 0;
+    defparam myCounter.UseInterrupt = 1;
 
 
 

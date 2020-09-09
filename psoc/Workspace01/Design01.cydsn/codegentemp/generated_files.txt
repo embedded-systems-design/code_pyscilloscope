@@ -60,6 +60,11 @@
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\Pin_3_aliases.h" value="HEADER;;;;;Pin_3" />
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\Pin_3.c" value="SOURCE_C;CortexM3;;;;Pin_3" />
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\Pin_3.h" value="HEADER;;;;;Pin_3" />
+  <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myClock.c" value="SOURCE_C;CortexM3;;;;myClock" />
+  <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myClock.h" value="HEADER;;;;;myClock" />
+  <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myCounter.c" value="SOURCE_C;CortexM3;;;;myCounter" />
+  <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myCounter.h" value="HEADER;;;;;myCounter" />
+  <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myCounter_PM.c" value="SOURCE_C;CortexM3;;;;myCounter" />
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myUSB_Dm_aliases.h" value="HEADER;;;;;myUSB_Dm" />
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myUSB_Dm.c" value="SOURCE_C;CortexM3;;;;myUSB_Dm" />
   <file name="C:\Users\danaukes\projects\code_pyscilloscope\psoc\Workspace01\Design01.cydsn\codegentemp\myUSB_Dm.h" value="HEADER;;;;;myUSB_Dm" />
