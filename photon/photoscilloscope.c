@@ -8,6 +8,10 @@
 #define PI 3.141592
 #define MESSAGE_FRAMES 1
 #define BUFFER_LENGTH 622
+#define VADCREF 3.3
+#define VDACREF 3.3
+#define ADCBITS 4095
+#define DACBITS 4095
 
 // create a constant variable for message length computed from two other constants
 const uint message_byte_length = MESSAGE_FRAMES*BUFFER_LENGTH;
@@ -74,10 +78,10 @@ void loop()
     
     
     //convert the above values to Volts
-    fvalue_out = (float)value_out*3.3/4095;
-    fvalue0 = (float)value0*3.3/4095;
-    fvalue1 = (float)value1*3.3/4095;
-    fvalue2 = (float)value2*3.3/4095;
+    fvalue_out = (float)value_out*VDACREF/DACBITS;
+    fvalue0 = (float)value0*VADCREF/ADCBITS;
+    fvalue1 = (float)value1*VADCREF/ADCBITS;
+    fvalue2 = (float)value2*VADCREF/ADCBITS;
     
     //print to serial
     Serial.print(String::format("%.3f,%.3f,%.3f,%.3f,%.3f\r\n",t,fvalue_out,fvalue0,fvalue1,fvalue2));

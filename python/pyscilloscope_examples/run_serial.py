@@ -12,6 +12,6 @@ import PyQt5.Qt as qt
 
 if __name__=='__main__':
     
-    pscope = SerialScope('COM1',115200,window_width=1000)
+    pscope = SerialScope(comport='COM1',baudrate=115200,window_width=10000)
     pscope.run()
     qt.QApplication.exec_()
