@@ -135,7 +135,7 @@ class SerialScope(object):
 
 if __name__=='__main__':
     
-    pscope = SerialScope('/dev/ttyACM0',115200,window_width=10000)
+    pscope = SerialScope('/dev/ttyACM0',115200,window_width=100)
     pscope.run()
     
     qt.QApplication.exec_() # you MUST put this at the end
